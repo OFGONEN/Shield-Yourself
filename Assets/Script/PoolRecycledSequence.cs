@@ -8,10 +8,12 @@ using FFStudio;
 [ CreateAssetMenu( fileName = "pool_recycled_sequence", menuName = "FF/Data/Pool/Recycled Sequence" ) ]
 public class PoolRecycledSequence : RuntimePool< RecycledSequence >
 {
+	int init_count;
 
 #region API
 	public override void InitPool()
 	{
+		init_count = 0;
 		stack = new Stack< RecycledSequence >( stackSize );
 
         for( var i = 0; i < stackSize; i++ )
@@ -41,7 +43,7 @@ public class PoolRecycledSequence : RuntimePool< RecycledSequence >
 
 	protected override RecycledSequence InitEntity()
 	{
-		return new RecycledSequence();
+		return new RecycledSequence( init_count++ );
 	}
 #endregion
 
