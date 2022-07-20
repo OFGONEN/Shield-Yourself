@@ -196,4 +196,19 @@ namespace FFStudio
 		public Color color;
 		[ SuffixLabel( "%" ) ] public NormalizedValue threshold;
 	}
+
+	[ Serializable ]
+	public struct ArrowGroupSpawnData
+	{
+		public float arrow_group_spawn_distance;
+		public ArrowGroupData arrow_group_data;
+	}
+
+	[ Serializable ]
+	public struct ArrowData
+	{
+		public float arrow_speed;
+		public float arrow_spawn_height;
+		public float arrow_spawn_delay;
+	}
 }

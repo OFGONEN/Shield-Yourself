@@ -14,6 +14,7 @@ namespace FFStudio
 	[ Title( "Setup" ) ]
 		[ ValueDropdown( "SceneList" ), LabelText( "Scene Index" ) ] public int scene_index;
         [ LabelText( "Override As Active Scene" ) ] public bool scene_overrideAsActiveScene;
+		[ LabelText( "Arrow Group Spawn Data" ) ] public ArrowGroupSpawnData[] arrow_group_data;
 
 #if UNITY_EDITOR
 		static IEnumerable SceneList()

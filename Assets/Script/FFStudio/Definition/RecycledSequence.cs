@@ -6,10 +6,22 @@ namespace FFStudio
 {
 	public class RecycledSequence
 	{
+		public int ID;
+
 		UnityMessage onComplete;
 		Sequence sequence;
 
 		public Sequence Sequence => sequence;
+
+		public RecycledSequence()
+		{
+			ID = 0;
+		}
+
+		public RecycledSequence( int id )
+		{
+			ID = id;
+		}
 
 		public Sequence Recycle( UnityMessage onComplete )
 		{

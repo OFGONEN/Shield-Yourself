@@ -18,6 +18,7 @@ namespace FFStudio
         public EventListenerDelegateResponse tapInputListener;
 
     [ Title( "UI Elements" ) ]
+        public Transform pool_parent;
         public UI_Patrol_Scale level_loadingBar_Scale;
         public TextMeshProUGUI level_count_text;
         public TextMeshProUGUI level_information_text;
@@ -31,6 +32,9 @@ namespace FFStudio
         public GameEvent loadNewLevelEvent;
         public GameEvent resetLevelEvent;
         public ElephantLevelEvent elephantLevelEvent;
+
+    [ Title( "Fired Events" ) ]
+        public PoolUIArrowIndicator pool_ui_arrow_indicator;
 #endregion
 
 #region Unity API
@@ -58,7 +62,9 @@ namespace FFStudio
             tapInputListener.response      = ExtensionMethods.EmptyMethod;
 
 			level_information_text.text = "Tap to Start";
-        }
+
+			pool_ui_arrow_indicator.InitPool( pool_parent, false );
+		}
 #endregion
 
 #region Implementation
