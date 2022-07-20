@@ -33,6 +33,8 @@ public class Arrow : MonoBehaviour, IClusterEntity
 #region API
 	public void Spawn( float height, float speed )
 	{
+		gameObject.SetActive( true );
+
 		//Cache data
 		transform.position    = new Vector3( shared_arrow_spawn_point.sharedValue, height, 0 );
 		arrow_target_position = ( notif_player_target.sharedValue as Transform ).position;
