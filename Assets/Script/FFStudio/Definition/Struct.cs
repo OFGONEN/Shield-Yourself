@@ -198,14 +198,6 @@ namespace FFStudio
 	}
 
 	[ Serializable ]
-	public struct ArrowGroupData
-	{
-		public float arrow_indicator_height;
-		public float arrow_shoot_delay;
-		public ArrowData[] arrow_shoot_group;
-	}
-
-	[ Serializable ]
 	public struct ArrowData
 	{
 		public float arrow_speed;

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FFStudio;
 
-[CreateAssetMenu( fileName = "pool_recycled_sequence", menuName = "FF/Data/Pool/Recycled Sequence" )]
+[ CreateAssetMenu( fileName = "pool_recycled_sequence", menuName = "FF/Data/Pool/Recycled Sequence" ) ]
 public class PoolRecycledSequence : RuntimePool< RecycledSequence >
 {
 
