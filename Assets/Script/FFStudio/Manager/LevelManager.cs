@@ -2,18 +2,25 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Sirenix.OdinInspector;
 
 namespace FFStudio
 {
     public class LevelManager : MonoBehaviour
     {
 #region Fields
-        [ Header( "Fired Events" ) ]
+    [ Title( "Fired Events" ) ]
         public GameEvent levelFailedEvent;
         public GameEvent levelCompleted;
 
-        [ Header( "Level Releated" ) ]
-        public SharedFloatNotifier levelProgress;
+    [ Title( "Level Releated" ) ]
+        public SharedReferenceNotifier notif_camera;
+        public SharedFloatNotifier notif_level_progress;
+        public SharedFloat shared_arrow_spawn_point; 
+    
+
+// Private
+        Camera mainCamera;
 #endregion
 
 #region UnityAPI
@@ -23,7 +30,7 @@ namespace FFStudio
         // Info: Called from Editor.
         public void LevelLoadedResponse()
         {
-			levelProgress.SetValue_NotifyAlways( 0 );
+			notif_level_progress.SetValue_NotifyAlways( 0 );
 
 			var levelData = CurrentLevelData.Instance.levelData;
             // Set Active Scene.
@@ -36,8 +43,13 @@ namespace FFStudio
         // Info: Called from Editor.
         public void LevelRevealedResponse()
         {
+            mainCamera = ( notif_camera.sharedValue as Transform ).GetComponent< Camera >();
 
-        }
+			var mostRightPosition = mainCamera.ScreenToWorldPoint( new Vector3( Screen.width, 0, Mathf.Abs( mainCamera.transform.position.z ) ) );
+			shared_arrow_spawn_point.sharedValue = mostRightPosition.x;
+
+            FFLogger.Log( "Most Right Position: " + mostRightPosition );
+		}
 
         // Info: Called from Editor.
         public void LevelStartedResponse()
