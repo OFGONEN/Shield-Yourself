@@ -17,7 +17,6 @@ namespace FFStudio
         public SharedReferenceNotifier notif_camera;
         public SharedFloatNotifier notif_level_progress;
         public SharedFloat shared_arrow_spawn_point; 
-    
 
 // Private
         Camera mainCamera;

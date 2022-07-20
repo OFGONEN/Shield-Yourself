@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb943f4e034433479742e071c8f7771, type: 3}
+  m_Name: pool_ui_arrow_indicator
+  m_EditorClassIdentifier: 
+  stackSize: 4
+  pool_entity: {fileID: 6253200156180669240, guid: 06d577ea30af739439cbb1c3fba37b48, type: 3}
