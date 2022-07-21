@@ -6,7 +6,7 @@ using UnityEngine;
 using FFStudio;
 using Sirenix.OdinInspector;
 
-public abstract class IncrementalSystem< Incremental > : MonoBehaviour
+public abstract class IncrementalSystem< Incremental > : ScriptableObject where Incremental : struct, IIncrementalData
 {
 #region Fields
   [ Title( "Setup" ) ]
@@ -47,7 +47,10 @@ public abstract class IncrementalSystem< Incremental > : MonoBehaviour
 		return incremental[ PlayerPrefsUtility.Instance.GetInt( incremental_name, 0 ) ];
 	}
 
-    public abstract int Cost();
+    public int Cost()
+    {
+		return CurrentIncremental().Cost();
+	}
 #endregion
 
 #region Implementation
