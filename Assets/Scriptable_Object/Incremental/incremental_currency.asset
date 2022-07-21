@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: incremental_currency
   m_EditorClassIdentifier: 
   incremental: []
-  incremental_name: 
-  currency: {fileID: 0}
+  incremental_name: incremental_currency
+  currency: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
