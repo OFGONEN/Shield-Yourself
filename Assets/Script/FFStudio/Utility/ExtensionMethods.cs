@@ -13,6 +13,9 @@ namespace FFStudio
 	{
 		public static readonly string SAVE_PATH = Application.persistentDataPath + "/Saves/";
 
+		// Keys
+		public static readonly string Currency_Key = "currency";
+
 		static List< Transform > baseModelBones   = new List< Transform >( 96 );
 		static List< Transform > targetModelBones = new List< Transform >( 96 );
 
