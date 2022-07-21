@@ -25,7 +25,7 @@ public class Stamina : SharedFloatNotifier
 #endregion
 
 #region API
-    public void SetUp()
+    public void Default()
     {
 		sharedValue      = 1;
 		stamina_capacity = 1;
