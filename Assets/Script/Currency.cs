@@ -28,6 +28,16 @@ public class Currency : SharedFloatNotifier
 			gain_cooldown = Time.time + rate;
 		}
     }
+
+    public void Load()
+    {
+		SharedValue = PlayerPrefsUtility.Instance.GetFloat( ExtensionMethods.Currency_Key, 0 );
+	}
+
+    public void Save()
+    {
+		PlayerPrefsUtility.Instance.SetFloat( ExtensionMethods.Currency_Key, sharedValue );
+	}
 #endregion
 
 #region Implementation
