@@ -6,7 +6,7 @@ using UnityEngine;
 using FFStudio;
 using Sirenix.OdinInspector;
 
-[ CreateAssetMenu( fileName = "notif_player_currency", menuName = "FF/Game/Curreny" ) ]
+[ CreateAssetMenu( fileName = "notif_player_currency", menuName = "FF/Game/Currency" ) ]
 public class Currency : SharedFloatNotifier
 {
 #region Fields
