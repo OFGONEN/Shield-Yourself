@@ -21,7 +21,7 @@ public class Arrow : MonoBehaviour, IClusterEntity
 
 // Private VariablesSpawn
 	private float arrow_speed;
-	private Vector3 arrow_target_position;
+	private Vector3 arrow_target_direction;
 #endregion
 
 #region Properties
@@ -36,9 +36,11 @@ public class Arrow : MonoBehaviour, IClusterEntity
 		gameObject.SetActive( true );
 
 		//Cache data
-		transform.position    = new Vector3( shared_arrow_spawn_point.sharedValue, height, 0 );
-		arrow_target_position = ( notif_player_target.sharedValue as Transform ).position;
-		arrow_speed           = speed;
+		var arrow_target_position  = ( notif_player_target.sharedValue as Transform ).position;
+		var position               = new Vector3( shared_arrow_spawn_point.sharedValue, height, 0 );
+		    arrow_speed            = speed;
+		    arrow_target_direction = arrow_target_position - position;
+		    transform.position     = position;
 
 		//Configure components
 		arrow_trail_renderer.Clear();
@@ -73,7 +75,8 @@ public class Arrow : MonoBehaviour, IClusterEntity
 
 	public void OnUpdate_Cluster()
 	{
-		transform.position = Vector3.MoveTowards( transform.position, arrow_target_position, Time.deltaTime * arrow_speed );
+		var position = transform.position;
+		transform.position = Vector3.MoveTowards( position, position + arrow_target_direction, Time.deltaTime * arrow_speed );
 	}
 
 	public void Subscribe_Cluster()
