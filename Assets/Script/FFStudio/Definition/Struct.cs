@@ -211,4 +211,28 @@ namespace FFStudio
 		public float arrow_spawn_height;
 		public float arrow_spawn_delay;
 	}
+
+	[ Serializable ]
+	public struct IncrementalStamina
+	{
+		[ LabelText( "Deplete Rate" ) ] public float incremental_stamina_deplete;
+		[ LabelText( "Capacity Deplete Rate" ) ] public float incremental_stamina_deplete_capacity;
+		[ LabelText( "Recover Rate" ) ] public float incremental_stamina_recover;
+		[ LabelText( "Cost" ) ] public float incremental_stamina_cost;
+	}
+
+	[ Serializable ]
+	public struct IncrementalCurrecy
+	{
+		[ LabelText( "Gain Value" ) ] public float incremental_currency_gain_value;
+		[ LabelText( "Gain Rate" ) ] public float incremental_currency_gain_rate;
+		[ LabelText( "Cost" ) ] public float incremental_currency_cost;
+	}
+
+	[ Serializable ]
+	public struct IncrementalHealth
+	{
+		[ LabelText( "Health Value" ) ] public float incremental_health_value;
+		[ LabelText( "Cost" ) ] public float incremental_health_cost;
+	}
 }
