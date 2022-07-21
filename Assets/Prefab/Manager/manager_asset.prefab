@@ -71,6 +71,8 @@ MonoBehaviour:
   currentLevelData: {fileID: 11400000, guid: d35c98ef4c868d94f85bf38a98066033, type: 2}
   pool_UIPopUpText: {fileID: 11400000, guid: eaaacbd90b1464ad2b2a3a962a8a84b2, type: 2}
   pool_recycled_sequence: {fileID: 11400000, guid: 00e1e49622910417ea1f8659057ca4d1, type: 2}
+  pool_arrow: {fileID: 11400000, guid: 8d7a76c998624f24ea024f11566e6fb3, type: 2}
+  pool_arrow_trigger: {fileID: 11400000, guid: e9ec197d1c28b974f876c1db901b4274, type: 2}
 --- !u!114 &7751064681048781016
 MonoBehaviour:
   m_ObjectHideFlags: 0

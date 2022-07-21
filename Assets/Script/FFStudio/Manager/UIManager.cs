@@ -33,7 +33,7 @@ namespace FFStudio
         public GameEvent resetLevelEvent;
         public ElephantLevelEvent elephantLevelEvent;
 
-    [ Title( "Fired Events" ) ]
+    [ Title( "Shared Variables" ) ]
         public PoolUIArrowIndicator pool_ui_arrow_indicator;
 #endregion
 
