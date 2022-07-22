@@ -234,6 +234,7 @@ MonoBehaviour:
   player_health: {fileID: 11400000, guid: 44efa6f89958ef94eb5d4a4c1525008c, type: 2}
   player_health_ratio: {fileID: 11400000, guid: 385d4a576f2076147b9e7c1e8188841d, type: 2}
   player_speed: {fileID: 11400000, guid: 20e87db312556584fa05937b37795bbc, type: 2}
+  shield_arm_target: {fileID: 11400000, guid: 7071bb7852ee36841b1d94103802d2c0, type: 2}
   event_shield_activate: {fileID: 11400000, guid: 7d6cd8a956e18e84a86397a49d36152f, type: 2}
   player_animator: {fileID: 168221933715872396}
   incremental_health: {fileID: 11400000, guid: 74709767fdb8cd646bc62c62e9c22346, type: 2}

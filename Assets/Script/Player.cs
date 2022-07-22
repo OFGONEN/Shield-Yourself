@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] SharedFloatNotifier player_health;
     [ SerializeField ] SharedFloatNotifier player_health_ratio;
     [ SerializeField ] SharedFloatNotifier player_speed;
+    [ SerializeField ] SharedReferenceNotifier shield_arm_target;
     [ SerializeField ] GameEvent event_shield_activate;
 
   [ Title( "Components" ) ]
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] IncrementalStamina incremental_stamina;
     [ SerializeField ] IncrementalCurrency incremental_currency;
 // Private
+	Transform shield_arm_target_transform;
 
     IncrementalHealthData incremental_health_data;
     IncrementalStaminaData incremental_stamina_data;
@@ -84,6 +86,8 @@ public class Player : MonoBehaviour
 		onFingerDown   = FingerDown;
 		onUpdateMethod = PlayerWalking;
 
+		shield_arm_target_transform = shield_arm_target.sharedValue as Transform;
+
 		player_animator.SetBool( "walking", true );
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
 	}
@@ -98,6 +102,8 @@ public class Player : MonoBehaviour
     public void OnShieldActivate()
     {
 		onUpdateMethod = PlayerBlocking;
+
+		player_animator.SetIKPositionWeight( AvatarIKGoal.LeftHand, 1 );
 	}
 
     [ Button() ]
@@ -120,7 +126,7 @@ public class Player : MonoBehaviour
 
     void PlayerBlocking()
     {
-		//todo left arm
+		player_animator.SetIKPosition( AvatarIKGoal.LeftHand, shield_arm_target_transform.position );
 		player_stamina.Deplete( incremental_stamina_data.incremental_stamina_deplete * Time.deltaTime, incremental_stamina_data.incremental_stamina_deplete_capacity * Time.deltaTime );
 
         if( player_stamina.sharedValue <= 0 )
@@ -150,6 +156,8 @@ public class Player : MonoBehaviour
 
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
 		player_animator.SetBool( "walking", true );
+
+		player_animator.SetIKPositionWeight( AvatarIKGoal.LeftHand, 0 );
 	}
 
     void CacheIncrementals()
