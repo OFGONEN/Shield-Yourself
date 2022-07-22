@@ -287,6 +287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c670ba803d3f07c40816b1ebd436bc69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent_rectTransform: {fileID: 3884800935895555642}
+  image_fill: {fileID: 3300300906491236699}
+  notif_player_health_ratio: {fileID: 11400000, guid: 385d4a576f2076147b9e7c1e8188841d, type: 2}
 --- !u!1 &9188485305465551184
 GameObject:
   m_ObjectHideFlags: 0
