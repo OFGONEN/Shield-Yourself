@@ -14,6 +14,8 @@ public class UIHealth : MonoBehaviour
   [ Title( "Components" ) ] 
     [ SerializeField ] GameObject parent_rectTransform;
     [ SerializeField ] Image image_fill;
+
+  [ Title( "Shared Variables" ) ] 
     [ SerializeField ] SharedFloatNotifier notif_player_health_ratio;
 
     RecycledSequence recycledSequence = new RecycledSequence();

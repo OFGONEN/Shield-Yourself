@@ -16,6 +16,7 @@ MonoBehaviour:
   player_arrow_damage: 1
   player_ui_health_fill_speed: 0.5
   player_ui_health_delay: 0.15
+  player_ui_stamina_delay: 0.15
   camera_follow_speed_depth: 2.8
   maxLevelCount: 1
   useRemoteConfig_GameSettings: 0

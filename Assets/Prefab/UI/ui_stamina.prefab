@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5483896595481393443
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52,13 +52,14 @@ GameObject:
   - component: {fileID: 6753639620261034681}
   - component: {fileID: 7510742735126218418}
   - component: {fileID: 4218259653046481933}
+  - component: {fileID: 3887139443841656281}
   m_Layer: 5
   m_Name: ui_stamina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2848472367282871249
 RectTransform:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4218259653046481933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +137,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c655c20ce42ac604a82f29bcf20a865e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent_rectTransform: {fileID: 264182887057100335}
+  image_fill_background: {fileID: 1494981632988830277}
+  image_fill_foreground: {fileID: 1635500448127029787}
+  notif_player_stamina: {fileID: 11400000, guid: 35ac34e1c3ab2244b8f25f5a38d35623, type: 2}
+--- !u!114 &3887139443841656281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418129453990104056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754c99d11d79d440db5c4f75fa946e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedDataNotifier: {fileID: 11400000, guid: 35ac34e1c3ab2244b8f25f5a38d35623, type: 2}
+  notify_event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4218259653046481933}
+        m_TargetAssemblyTypeName: UIStamina, Assembly-CSharp
+        m_MethodName: OnStaminaChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3630262209573229844
 GameObject:
   m_ObjectHideFlags: 0
