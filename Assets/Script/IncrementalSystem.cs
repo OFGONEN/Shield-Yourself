@@ -15,6 +15,9 @@ public abstract class IncrementalSystem< Incremental > : ScriptableObject where 
 
   [ Title( "Setup" ) ]
     [ SerializeField ] SharedFloatNotifier currency;
+  
+    Incremental incremental_current;
+    public Incremental CurrentIncremental => incremental_current;
 #endregion
 
 #region Properties
@@ -42,14 +45,14 @@ public abstract class IncrementalSystem< Incremental > : ScriptableObject where 
 		currency.SharedValue -= Cost();
 	}
 
-    public Incremental CurrentIncremental()
+    public Incremental CacheCurrentIncremental()
     {
-		return incremental[ PlayerPrefsUtility.Instance.GetInt( incremental_name, 0 ) ];
+		return incremental_current = incremental[ PlayerPrefsUtility.Instance.GetInt( incremental_name, 0 ) ];
 	}
 
     public int Cost()
     {
-		return CurrentIncremental().Cost();
+		return incremental_current.Cost();
 	}
 #endregion
 

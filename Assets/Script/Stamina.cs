@@ -15,7 +15,7 @@ public class Stamina : SharedFloatNotifier
     // Incremental upgrades only change recover, deplete and capacity deplete values.
     // Keeping max stamina capacity as 1 on all incremental upgrades
 
-    float stamina_capacity;
+    [ ShowInInspector, ReadOnly ] float stamina_capacity;
 #endregion
 
 #region Properties
@@ -33,13 +33,13 @@ public class Stamina : SharedFloatNotifier
 
     public void Recover( float recover )
     {
-		SharedValue = Mathf.Max( sharedValue + recover, stamina_capacity );
+		SharedValue = Mathf.Min( sharedValue + recover, stamina_capacity );
 	}
 
     public void Deplete( float depleteCurrent, float depleteCapacity )
     {
-		SharedValue -= depleteCurrent;
-		stamina_capacity -= depleteCapacity;
+		SharedValue      = Mathf.Max( 0, sharedValue - depleteCurrent );
+		stamina_capacity = Mathf.Max( 0, stamina_capacity - depleteCapacity );
 	}
 #endregion
 

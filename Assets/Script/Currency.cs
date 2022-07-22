@@ -31,6 +31,7 @@ public class Currency : SharedFloatNotifier
 
     public void Load()
     {
+      	gain_cooldown = 0;
 		SharedValue = PlayerPrefsUtility.Instance.GetFloat( ExtensionMethods.Currency_Key, 0 );
 	}
 

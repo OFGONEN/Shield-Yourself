@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3061f6029acb5884abdec50b7a450554, type: 3}
   m_Name: incremental_currency
   m_EditorClassIdentifier: 
-  incremental: []
+  incremental:
+  - incremental_currency_gain_value: 1
+    incremental_currency_gain_rate: 0.1
+    incremental_currency_cost: 10
+  - incremental_currency_gain_value: 1.2
+    incremental_currency_gain_rate: 0.1
+    incremental_currency_cost: 10
   incremental_name: incremental_currency
   currency: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
