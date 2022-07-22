@@ -15,9 +15,13 @@ public class Player : MonoBehaviour
     [ SerializeField ] Currency player_currency;
     [ SerializeField ] SharedFloatNotifier player_health;
     [ SerializeField ] SharedFloatNotifier player_health_ratio;
+    [ SerializeField ] SharedFloatNotifier player_speed;
     [ SerializeField ] GameEvent event_shield_activate;
 
-  [ Title( "Shared Variables" ) ]
+  [ Title( "Components" ) ]
+    [ SerializeField ] Animator player_animator;
+
+  [ Title( "Incrementals" ) ]
     [ SerializeField ] IncrementalHealth incremental_health;
     [ SerializeField ] IncrementalStamina incremental_stamina;
     [ SerializeField ] IncrementalCurrency incremental_currency;
@@ -52,7 +56,7 @@ public class Player : MonoBehaviour
     {
 		CacheIncrementals();
 
-        // Set incremental properties to default values
+		// Set incremental properties to default values
 		player_stamina.Default();
 		player_health.sharedValue = incremental_health.CurrentIncremental.incremental_health_value;
 		player_health_ratio.sharedValue = 1;
@@ -79,6 +83,9 @@ public class Player : MonoBehaviour
     {
 		onFingerDown   = FingerDown;
 		onUpdateMethod = PlayerWalking;
+
+		player_animator.SetBool( "walking", true );
+		player_speed.SharedValue = GameSettings.Instance.player_speed;
 	}
 
     public void OnIncrementalUnlocked()
@@ -128,9 +135,9 @@ public class Player : MonoBehaviour
 		recycledTween.Recycle( DOVirtual.DelayedCall(
 			GameSettings.Instance.player_shield_activate_delay,
 			event_shield_activate.Raise ) );
-        
-        // todo set player speed = 0
-        // todo do blocking animation
+
+		player_speed.SharedValue = 0;
+		player_animator.SetBool( "walking", false );
 	}
 
     void FingerUp()
@@ -141,8 +148,8 @@ public class Player : MonoBehaviour
 
 		recycledTween.Kill();
 
-        // todo set player speed = GameSetting
-        // todo do walk animation
+		player_speed.SharedValue = GameSettings.Instance.player_speed;
+		player_animator.SetBool( "walking", true );
 	}
 
     void CacheIncrementals()
@@ -161,7 +168,8 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-    }
+		player_animator.SetTrigger( "die" );
+	}
 
 	void SetHealthRatio()
 	{

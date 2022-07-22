@@ -233,7 +233,9 @@ MonoBehaviour:
   player_currency: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
   player_health: {fileID: 11400000, guid: 44efa6f89958ef94eb5d4a4c1525008c, type: 2}
   player_health_ratio: {fileID: 11400000, guid: 385d4a576f2076147b9e7c1e8188841d, type: 2}
+  player_speed: {fileID: 11400000, guid: 20e87db312556584fa05937b37795bbc, type: 2}
   event_shield_activate: {fileID: 11400000, guid: 7d6cd8a956e18e84a86397a49d36152f, type: 2}
+  player_animator: {fileID: 168221933715872396}
   incremental_health: {fileID: 11400000, guid: 74709767fdb8cd646bc62c62e9c22346, type: 2}
   incremental_stamina: {fileID: 11400000, guid: 6e0deb817d461a043aafe65297d182a1, type: 2}
   incremental_currency: {fileID: 11400000, guid: 96b618201b829a84ca81a7f6f87358a5, type: 2}
@@ -302,6 +304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
+--- !u!95 &168221933715872396 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5271149587445999613, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
+  m_PrefabInstance: {fileID: 5436766596904926577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3827243893932041918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9110320668328598479, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
