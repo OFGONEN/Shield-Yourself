@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incremental:
   - incremental_stamina_deplete: 1
-    incremental_stamina_deplete_capacity: 0.8
+    incremental_stamina_deplete_capacity: 0.2
     incremental_stamina_recover: 1
     incremental_stamina_cost: 10
   - incremental_stamina_deplete: 0.95
-    incremental_stamina_deplete_capacity: 0.75
+    incremental_stamina_deplete_capacity: 0.3
     incremental_stamina_recover: 1
     incremental_stamina_cost: 15
   incremental_name: incremental_stamina

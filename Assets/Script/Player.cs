@@ -103,13 +103,13 @@ public class Player : MonoBehaviour
     void PlayerWalking()
     {
 		player_currency.Gain( incremental_currency_data.incremental_currency_gain_value, incremental_currency_data.incremental_currency_gain_rate );
-		player_stamina.Recover( incremental_stamina_data.incremental_stamina_recover );
+		player_stamina.Recover( incremental_stamina_data.incremental_stamina_recover * Time.deltaTime );
 	}
 
     void PlayerBlocking()
     {
 		//todo left arm
-		player_stamina.Deplete( incremental_stamina_data.incremental_stamina_deplete, incremental_stamina_data.incremental_stamina_deplete_capacity );
+		player_stamina.Deplete( incremental_stamina_data.incremental_stamina_deplete * Time.deltaTime, incremental_stamina_data.incremental_stamina_deplete_capacity * Time.deltaTime );
 
         if( player_stamina.sharedValue <= 0 )
 			Die();
