@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] Stamina player_stamina;
     [ SerializeField ] Currency player_currency;
     [ SerializeField ] SharedFloatNotifier player_health;
+    [ SerializeField ] SharedFloatNotifier player_health_ratio;
     [ SerializeField ] GameEvent event_shield_activate;
 
   [ Title( "Shared Variables" ) ]
@@ -49,10 +50,13 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+		CacheIncrementals();
+
         // Set incremental properties to default values
 		player_stamina.Default();
 		player_health.sharedValue = incremental_health.CurrentIncremental.incremental_health_value;
-    }
+		player_health_ratio.sharedValue = 1;
+	}
 
     private void Update()
     {
@@ -75,13 +79,13 @@ public class Player : MonoBehaviour
     {
 		onFingerDown   = FingerDown;
 		onUpdateMethod = PlayerWalking;
-
-		CacheIncrementals();
 	}
 
     public void OnIncrementalUnlocked()
     {
 		CacheIncrementals();
+
+		SetHealthRatio();
 	}
 
     public void OnShieldActivate()
@@ -93,8 +97,9 @@ public class Player : MonoBehaviour
     public void OnArrowHit()
     {
 		player_health.SharedValue -= GameSettings.Instance.player_arrow_damage;
+		SetHealthRatio();
 
-        if( player_health.sharedValue <= 0 )
+		if( player_health.sharedValue <= 0 )
 			Die();
 	}
 #endregion
@@ -157,6 +162,11 @@ public class Player : MonoBehaviour
     void Die()
     {
     }
+
+	void SetHealthRatio()
+	{
+		player_health_ratio.SharedValue = player_health.sharedValue / incremental_health_data.incremental_health_value;
+	}
 #endregion
 
 #region Editor Only
