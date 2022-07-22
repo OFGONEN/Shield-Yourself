@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0ab3b27f3f5ea48a3b1a423fd0c508, type: 3}
   m_Name: incremental_health
   m_EditorClassIdentifier: 
-  incremental: []
+  incremental:
+  - incremental_health_value: 3
+    incremental_health_cost: 10
+  - incremental_health_value: 4
+    incremental_health_cost: 10
   incremental_name: incremental_health
   currency: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
