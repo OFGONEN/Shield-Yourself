@@ -13,6 +13,10 @@ namespace FFStudio
     [ Title( "Player" ) ]
         [ LabelText( "Shield Activate Delay" ) ] public float player_shield_activate_delay;
         [ LabelText( "Arrow Damage Value" ) ] public float player_arrow_damage;
+
+    [ Title( "Player UI" ) ]
+        [ LabelText( "Health Bar Fill Speed" ) ] public float player_ui_health_fill_speed;
+        [ LabelText( "Health Bar Disappear Delay" ) ] public float player_ui_health_delay;
     
     [ Title( "Camera" ) ]
         [ LabelText( "Follow Speed (Z)" ), SuffixLabel( "units/seconds" ), Min( 0 ) ] public float camera_follow_speed_depth = 2.8f;
