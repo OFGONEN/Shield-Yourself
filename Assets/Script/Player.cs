@@ -50,6 +50,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+		CacheIncrementals();
+
         // Set incremental properties to default values
 		player_stamina.Default();
 		player_health.sharedValue = incremental_health.CurrentIncremental.incremental_health_value;
@@ -77,8 +79,6 @@ public class Player : MonoBehaviour
     {
 		onFingerDown   = FingerDown;
 		onUpdateMethod = PlayerWalking;
-
-		CacheIncrementals();
 	}
 
     public void OnIncrementalUnlocked()
