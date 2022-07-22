@@ -38,8 +38,8 @@ public class Stamina : SharedFloatNotifier
 
     public void Deplete( float depleteCurrent, float depleteCapacity )
     {
-		SharedValue -= depleteCurrent;
-		stamina_capacity -= depleteCapacity;
+		SharedValue      = Mathf.Max( 0, sharedValue - depleteCurrent );
+		stamina_capacity = Mathf.Max( 0, stamina_capacity - depleteCapacity );
 	}
 #endregion
 
