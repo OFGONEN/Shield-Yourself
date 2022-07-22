@@ -14,8 +14,10 @@ public class Stamina : SharedFloatNotifier
     // Stamina is always calculated assuming stamina capacity is always 1 as default.
     // Incremental upgrades only change recover, deplete and capacity deplete values.
     // Keeping max stamina capacity as 1 on all incremental upgrades
-
     [ ShowInInspector, ReadOnly ] float stamina_capacity;
+
+    public float StaminaCapacity => stamina_capacity;
+
 #endregion
 
 #region Properties
