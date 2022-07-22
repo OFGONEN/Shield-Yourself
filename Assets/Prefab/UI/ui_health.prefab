@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 1017027219091810033}
   - component: {fileID: 121173876176669353}
   - component: {fileID: 2613997575801693482}
+  - component: {fileID: 2744885722536458928}
   m_Layer: 5
   m_Name: ui_health
   m_TagString: Untagged
@@ -274,7 +275,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2613997575801693482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +291,34 @@ MonoBehaviour:
   parent_rectTransform: {fileID: 3884800935895555642}
   image_fill: {fileID: 3300300906491236699}
   notif_player_health_ratio: {fileID: 11400000, guid: 385d4a576f2076147b9e7c1e8188841d, type: 2}
+--- !u!114 &2744885722536458928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7879319454827928776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754c99d11d79d440db5c4f75fa946e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedDataNotifier: {fileID: 11400000, guid: 385d4a576f2076147b9e7c1e8188841d, type: 2}
+  notify_event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2613997575801693482}
+        m_TargetAssemblyTypeName: UIHealth, Assembly-CSharp
+        m_MethodName: OnHealthChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9188485305465551184
 GameObject:
   m_ObjectHideFlags: 0

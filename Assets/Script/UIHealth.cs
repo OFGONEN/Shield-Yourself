@@ -33,7 +33,7 @@ public class UIHealth : MonoBehaviour
 		recycledSequence.Kill();
 		recycledSequence.Recycle( OnFillComplete );
 
-		var distance = value - image_fill.fillAmount;
+		var distance = Mathf.Abs( image_fill.fillAmount - value );
 		var duration = distance / GameSettings.Instance.player_ui_health_fill_speed;
 
 		var sequence = recycledSequence.Sequence;
