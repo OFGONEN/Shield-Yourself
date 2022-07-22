@@ -30,10 +30,6 @@ namespace FFStudio
 
 // Private
         Camera mainCamera;
-
-        IncrementalStaminaData incremental_stamina_data;
-        IncrementalHealthData incremental_health_data;
-        IncrementalCurrecyData incremental_currency_data;
 #endregion
 
 #region UnityAPI
@@ -63,12 +59,9 @@ namespace FFStudio
 			var mostRightPosition = mainCamera.ScreenToWorldPoint( new Vector3( Screen.width, 0, Mathf.Abs( mainCamera.transform.position.z ) ) );
 			shared_arrow_spawn_point.sharedValue = mostRightPosition.x;
 
-			CacheCurrentIncrementals(); // Cache current incrementals
-
 			// Set Up Player Properties
 			player_currency.Load(); // Currency
 			player_stamina.Default(); // Stamina
-			player_health.sharedValue = incremental_health_data.incremental_health_value; // Health
 		}
 
         // Info: Called from Editor.
@@ -76,13 +69,6 @@ namespace FFStudio
         {
 
         }
-
-        public void CacheCurrentIncrementals()
-        {
-			incremental_stamina_data  = incremental_stamina.CurrentIncremental();
-			incremental_health_data   = incremental_health.CurrentIncremental();
-			incremental_currency_data = incremental_currency.CurrentIncremental();
-		}
 #endregion
 
 #region Implementation
