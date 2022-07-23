@@ -20,7 +20,7 @@ public class Shield : MonoBehaviour
 
   [ Title( "Default" ) ]
     [ LabelText( "Default Local Position" ), SerializeField ] Vector3 default_position; // Local
-    [ LabelText( "Default Local Rotation" ), SerializeField ] float default_rotation; // Local
+    [ LabelText( "Default Local Rotation" ), SerializeField ] Vector3 default_rotation; // Local
 
     float movement_progress;
 	Vector2Message onInputUpdate;
@@ -69,14 +69,15 @@ public class Shield : MonoBehaviour
     {
 		var cofactor = delta_curve.Evaluate( movement_progress );
 		var position = default_position + new Vector3( delta_horizontal * cofactor, delta_vertical * cofactor, 0 );
+		var rotation = default_rotation + Vector3.right * ( delta_rotation * cofactor );
 
-		transform.localPosition    = default_position + position;
-		transform.localEulerAngles = Vector3.right * ( default_rotation + delta_rotation * cofactor );
+		transform.localPosition    = position;
+		transform.localEulerAngles = rotation;
 	}
 
     void InputUpdate( Vector2 input )
     {
-		movement_progress = Mathf.Clamp( movement_progress + input.y * GameSettings.Instance.shield_movement_speed, 0, 1 );
+		movement_progress = Mathf.Clamp( movement_progress + input.y * GameSettings.Instance.shield_movement_speed * Time.deltaTime, 0, 1 );
 		RePosition();
 	}
 #endregion

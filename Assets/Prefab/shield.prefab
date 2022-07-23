@@ -278,7 +278,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   default_position: {x: 0.65, y: 0.85, z: 0}
-  default_rotation: 0
+  default_rotation: {x: 0, y: 90, z: 0}
 --- !u!1 &4542453245450122335
 GameObject:
   m_ObjectHideFlags: 0
