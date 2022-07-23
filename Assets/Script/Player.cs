@@ -177,7 +177,12 @@ public class Player : MonoBehaviour
 		incremental_health_data   = incremental_health.CacheCurrentIncremental();
 		incremental_stamina_data  = incremental_stamina.CacheCurrentIncremental();
 		incremental_currency_data = incremental_currency.CacheCurrentIncremental();
-    }
+
+		// Conver durations to speed
+		incremental_stamina_data.incremental_stamina_deplete          = 1 / incremental_stamina_data.incremental_stamina_deplete;
+		incremental_stamina_data.incremental_stamina_deplete_capacity = 1 / incremental_stamina_data.incremental_stamina_deplete_capacity;
+		incremental_stamina_data.incremental_stamina_recover          = 1 / incremental_stamina_data.incremental_stamina_recover;
+	}
 
     void EmptyDelegates()
     {

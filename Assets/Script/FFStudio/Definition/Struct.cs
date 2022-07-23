@@ -215,9 +215,9 @@ namespace FFStudio
 	[ Serializable ]
 	public struct IncrementalStaminaData : IIncrementalData
 	{
-		[ LabelText( "Deplete Rate" ) ] public float incremental_stamina_deplete;
-		[ LabelText( "Capacity Deplete Rate" ) ] public float incremental_stamina_deplete_capacity;
-		[ LabelText( "Recover Rate" ) ] public float incremental_stamina_recover;
+		[ LabelText( "Deplete Rate Duration" ) ] public float incremental_stamina_deplete;
+		[ LabelText( "Capacity Deplete Rate Duration" ) ] public float incremental_stamina_deplete_capacity;
+		[ LabelText( "Recover Rate Duration" ) ] public float incremental_stamina_recover;
 		[ LabelText( "Cost" ) ] public int incremental_stamina_cost;
 
 		public int Cost()
