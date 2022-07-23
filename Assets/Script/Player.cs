@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] SharedFloatNotifier player_health;
     [ SerializeField ] SharedFloatNotifier player_health_ratio;
     [ SerializeField ] SharedFloatNotifier player_speed;
+    [ SerializeField ] SharedBoolNotifier player_is_blocking;
     [ SerializeField ] SharedReferenceNotifier shield_arm_target;
     [ SerializeField ] GameEvent event_shield_activate;
 
@@ -59,6 +60,7 @@ public class Player : MonoBehaviour
 		CacheIncrementals();
 
 		// Set incremental properties to default values
+		player_is_blocking.SharedValue = false;
 		player_stamina.Default();
 		player_health.sharedValue = incremental_health.CurrentIncremental.incremental_health_value;
 		player_health_ratio.sharedValue = 1;
@@ -102,8 +104,9 @@ public class Player : MonoBehaviour
     public void OnShieldActivate()
     {
 		onUpdateMethod = PlayerBlocking;
-
 		player_animator.SetIKPositionWeight( AvatarIKGoal.LeftHand, 1 );
+
+		player_is_blocking.SharedValue = true;
 	}
 
     [ Button() ]
@@ -158,6 +161,8 @@ public class Player : MonoBehaviour
 		player_animator.SetBool( "walking", true );
 
 		player_animator.SetIKPositionWeight( AvatarIKGoal.LeftHand, 0 );
+
+		player_is_blocking.SharedValue = false;
 	}
 
     void CacheIncrementals()
