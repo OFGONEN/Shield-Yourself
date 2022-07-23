@@ -897,6 +897,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &6917063440391330380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1480873830538274621, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
+  m_PrefabInstance: {fileID: 5436766596904926577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &170536069134312787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917063440391330380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fcccabad91003d4fa05ccc397b08237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notif_IK_target: {fileID: 11400000, guid: 7071bb7852ee36841b1d94103802d2c0, type: 2}
+  notif_IK_weight: {fileID: 11400000, guid: 5588a2b7374cd064dbb4b88114915f02, type: 2}
+  _animator: {fileID: 168221933715872396}
 --- !u!1 &7346035651982570070 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3350989194376548135, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
