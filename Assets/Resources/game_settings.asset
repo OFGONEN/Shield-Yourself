@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a385bd3b4416492409284c9a366cb52a, type: 3}
   m_Name: game_settings
   m_EditorClassIdentifier: 
+  player_speed: 1
   player_shield_activate_delay: 0.25
   player_arrow_damage: 1
+  player_stamina_threshold:
+    value: 0.75
+  player_stamina_vignette_range: {x: 0, y: 0.30011022}
+  player_stamina_vignette_falloff_duration: 0.25
+  player_redness_speed: 1
+  player_inflation_speedRange: {x: 0, y: 10}
   player_ui_health_fill_speed: 0.5
   player_ui_health_delay: 0.15
   player_ui_stamina_delay: 0.15
