@@ -20,6 +20,8 @@ namespace FFStudio
 		[ LabelText( "Color Update Speed" ), Min( 0 ) ] public float player_redness_speed = 0.75f;
 		[ LabelText( "Infilation Speed Range" ), MinMaxSlider( 0, 10, true )] public Vector2 player_inflation_speedRange = Vector2.up;
  
+    [ Title( "Shield" ) ]
+        [ LabelText( "Shield Movement Speed" ) ] public float shield_movement_speed = 1f;
 
     [ Title( "Player UI" ) ]
         [ LabelText( "Health Bar Fill Speed" ) ] public float player_ui_health_fill_speed;

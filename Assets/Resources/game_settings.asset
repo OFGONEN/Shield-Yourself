@@ -21,6 +21,7 @@ MonoBehaviour:
   player_stamina_vignette_falloff_duration: 0.25
   player_redness_speed: 1
   player_inflation_speedRange: {x: 0, y: 10}
+  shield_movement_speed: 1
   player_ui_health_fill_speed: 0.5
   player_ui_health_delay: 0.15
   player_ui_stamina_delay: 0.15
