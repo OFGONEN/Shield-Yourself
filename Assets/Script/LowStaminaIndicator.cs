@@ -27,7 +27,7 @@ public class LowStaminaIndicator : MonoBehaviour
 #region Unity API
     void Awake()
     {
-		player_inflation.SetValue_NotifyAlways( 0 );
+		player_inflation.SetValue_NotifyAlways( 1 );
 		player_redness.SetValue_NotifyAlways( 1 );
 	}
     
