@@ -18,11 +18,13 @@ public class Player : MonoBehaviour
     [ SerializeField ] SharedFloatNotifier player_speed;
     [ SerializeField ] SharedFloatNotifier player_leftArm_weight;
     [ SerializeField ] SharedBoolNotifier player_is_blocking;
+    [ SerializeField ] SharedReferenceNotifier player_leftArm_target;
     [ SerializeField ] GameEvent event_shield_activate;
     [ SerializeField ] GameEvent event_shield_deactivate;
 
   [ Title( "Components" ) ]
     [ SerializeField ] Animator player_animator;
+    [ SerializeField ] Transform player_shield_transform;
 
   [ Title( "Incrementals" ) ]
     [ SerializeField ] IncrementalHealth incremental_health;
@@ -91,6 +93,8 @@ public class Player : MonoBehaviour
 
 		player_animator.SetBool( "walking", true );
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
+
+		shield_arm_target_transform = player_leftArm_target.SharedValue as Transform;
 	}
 
     public void OnIncrementalUnlocked()
@@ -130,7 +134,9 @@ public class Player : MonoBehaviour
     {
 		player_stamina.Deplete( incremental_stamina_data.incremental_stamina_deplete * Time.deltaTime, incremental_stamina_data.incremental_stamina_deplete_capacity * Time.deltaTime );
 
-        if( player_stamina.sharedValue <= 0 )
+		player_shield_transform.rotation = shield_arm_target_transform.rotation;
+
+		if( player_stamina.sharedValue <= 0 )
 			Die();
 	}
 
