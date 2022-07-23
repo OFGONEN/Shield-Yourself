@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     UnityMessage onFingerDown;
     UnityMessage onFingerUp;
     UnityMessage onUpdateMethod;
+    UnityMessage onAnimatorIKUpdate;
 
     RecycledTween recycledTween = new RecycledTween();
 #endregion
@@ -69,6 +70,11 @@ public class Player : MonoBehaviour
     private void Update()
     {
 		onUpdateMethod();
+	}
+
+	void OnAnimatorIK( int layerIndex )
+	{
+		onAnimatorIKUpdate();
 	}
 #endregion
 
@@ -103,7 +109,8 @@ public class Player : MonoBehaviour
 
     public void OnShieldActivate()
     {
-		onUpdateMethod = PlayerBlocking;
+		onUpdateMethod     = PlayerBlocking;
+		onAnimatorIKUpdate = PositionLeftArm;
 		player_animator.SetIKPositionWeight( AvatarIKGoal.LeftHand, 1 );
 
 		player_is_blocking.SharedValue = true;
@@ -129,7 +136,6 @@ public class Player : MonoBehaviour
 
     void PlayerBlocking()
     {
-		player_animator.SetIKPosition( AvatarIKGoal.LeftHand, shield_arm_target_transform.position );
 		player_stamina.Deplete( incremental_stamina_data.incremental_stamina_deplete * Time.deltaTime, incremental_stamina_data.incremental_stamina_deplete_capacity * Time.deltaTime );
 
         if( player_stamina.sharedValue <= 0 )
@@ -151,9 +157,10 @@ public class Player : MonoBehaviour
 
     void FingerUp()
     {
-		onFingerDown   = FingerDown;
-		onUpdateMethod = PlayerWalking;
-		onFingerUp     = ExtensionMethods.EmptyMethod;
+		onFingerDown       = FingerDown;
+		onUpdateMethod     = PlayerWalking;
+		onFingerUp         = ExtensionMethods.EmptyMethod;
+		onAnimatorIKUpdate = ExtensionMethods.EmptyMethod;
 
 		recycledTween.Kill();
 
@@ -174,10 +181,11 @@ public class Player : MonoBehaviour
 
     void EmptyDelegates()
     {
-		onFingerDown   = ExtensionMethods.EmptyMethod;
-		onFingerUp     = ExtensionMethods.EmptyMethod;
-		onUpdateMethod = ExtensionMethods.EmptyMethod;
-    }
+		onFingerDown       = ExtensionMethods.EmptyMethod;
+		onFingerUp         = ExtensionMethods.EmptyMethod;
+		onUpdateMethod     = ExtensionMethods.EmptyMethod;
+		onAnimatorIKUpdate = ExtensionMethods.EmptyMethod;
+	}
 
     void Die()
     {
@@ -187,6 +195,11 @@ public class Player : MonoBehaviour
 	void SetHealthRatio()
 	{
 		player_health_ratio.SharedValue = player_health.sharedValue / incremental_health_data.incremental_health_value;
+	}
+
+	void PositionLeftArm()
+	{
+		player_animator.SetIKPosition( AvatarIKGoal.LeftHand, shield_arm_target_transform.position );
 	}
 #endregion
 
