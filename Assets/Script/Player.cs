@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] SharedBoolNotifier player_is_blocking;
     [ SerializeField ] SharedReferenceNotifier shield_arm_target;
     [ SerializeField ] GameEvent event_shield_activate;
+    [ SerializeField ] GameEvent event_shield_deactivate;
 
   [ Title( "Components" ) ]
     [ SerializeField ] Animator player_animator;
@@ -165,11 +166,14 @@ public class Player : MonoBehaviour
 		recycledTween.Kill();
 
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
+
 		player_animator.SetBool( "walking", true );
 
 		player_animator.SetIKPositionWeight( AvatarIKGoal.LeftHand, 0 );
 
 		player_is_blocking.SharedValue = false;
+
+		event_shield_deactivate.Raise();
 	}
 
     void CacheIncrementals()
