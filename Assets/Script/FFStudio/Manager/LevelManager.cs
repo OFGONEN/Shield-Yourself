@@ -12,6 +12,7 @@ namespace FFStudio
     [ Title( "Fired Events" ) ]
         public GameEvent levelFailedEvent;
         public GameEvent levelCompleted;
+        public GameEvent event_level_started;
 
     [ Title( "Level Releated" ) ]
         public SharedReferenceNotifier notif_camera;
@@ -53,6 +54,8 @@ namespace FFStudio
             // Determina the most right visible position of the world 
 			var mostRightPosition = mainCamera.ScreenToWorldPoint( new Vector3( Screen.width, 0, Mathf.Abs( mainCamera.transform.position.z ) ) );
 			shared_arrow_spawn_point.sharedValue = mostRightPosition.x;
+
+			event_level_started.Raise();
 		}
 
         // Info: Called from Editor.
