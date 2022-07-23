@@ -475,6 +475,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!137 &3011182755834776156 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7114166413344536365, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
+  m_PrefabInstance: {fileID: 5436766596904926577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3780887064361280633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9154461979000543496, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
@@ -612,6 +617,73 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &8102642177456262311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4251706235199091158, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
+  m_PrefabInstance: {fileID: 5436766596904926577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &933465323386048676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102642177456262311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ccc9b2e36e8df64d8935bc605ed8957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinnedMeshRenderer: {fileID: 3011182755834776156}
+--- !u!114 &5283563809761116433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102642177456262311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754c99d11d79d440db5c4f75fa946e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedDataNotifier: {fileID: 11400000, guid: f2c960798f2fb3f45a582e3de6e0d911, type: 2}
+  notify_event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 933465323386048676}
+        m_TargetAssemblyTypeName: BlendShapeUpdate, Assembly-CSharp
+        m_MethodName: UpdateBlendShape_Inverted
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f2c960798f2fb3f45a582e3de6e0d911, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FFStudio.SharedFloatNotifier, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7795741420627309873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102642177456262311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6216e5fc48840f64d8843bd4460a8720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color_start: {r: 1, g: 1, b: 1, a: 1}
+  colors:
+  - color: {r: 0.83137256, g: 0, b: 0, a: 1}
+    threshold:
+      value: 0
+  - color: {r: 1, g: 1, b: 1, a: 1}
+    threshold:
+      value: 0.75
+  notifier: {fileID: 11400000, guid: d4ba5e80516e92f4caea1b899e658621, type: 2}
 --- !u!1 &8699325706179505456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3731637777553084481, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
