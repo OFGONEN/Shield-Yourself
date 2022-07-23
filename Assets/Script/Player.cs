@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
     [ SerializeField ] SharedFloatNotifier player_health;
     [ SerializeField ] SharedFloatNotifier player_health_ratio;
     [ SerializeField ] SharedFloatNotifier player_speed;
+    [ SerializeField ] SharedFloatNotifier player_leftArm_weight;
     [ SerializeField ] SharedBoolNotifier player_is_blocking;
-    [ SerializeField ] SharedReferenceNotifier shield_arm_target;
     [ SerializeField ] GameEvent event_shield_activate;
     [ SerializeField ] GameEvent event_shield_deactivate;
 
@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
     UnityMessage onFingerDown;
     UnityMessage onFingerUp;
     UnityMessage onUpdateMethod;
-    UnityMessage onAnimatorIKUpdate;
 
     RecycledTween recycledTween = new RecycledTween();
 #endregion
@@ -72,11 +71,6 @@ public class Player : MonoBehaviour
     {
 		onUpdateMethod();
 	}
-
-	void OnAnimatorIK( int layerIndex )
-	{
-		onAnimatorIKUpdate();
-	}
 #endregion
 
 #region API
@@ -95,8 +89,6 @@ public class Player : MonoBehaviour
 		onFingerDown   = FingerDown;
 		onUpdateMethod = PlayerWalking;
 
-		shield_arm_target_transform = shield_arm_target.sharedValue as Transform;
-
 		player_animator.SetBool( "walking", true );
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
 	}
@@ -110,11 +102,10 @@ public class Player : MonoBehaviour
 
     public void OnShieldActivate()
     {
-		onUpdateMethod     = PlayerBlocking;
-		onAnimatorIKUpdate = PositionLeftArm;
-		player_animator.SetIKPositionWeight( AvatarIKGoal.LeftHand, 1 );
+		onUpdateMethod = PlayerBlocking;
 
-		player_is_blocking.SharedValue = true;
+		player_is_blocking.SharedValue    = true;
+		player_leftArm_weight.SharedValue = 1;
 	}
 
     [ Button() ]
@@ -161,7 +152,6 @@ public class Player : MonoBehaviour
 		onFingerDown       = FingerDown;
 		onUpdateMethod     = PlayerWalking;
 		onFingerUp         = ExtensionMethods.EmptyMethod;
-		onAnimatorIKUpdate = ExtensionMethods.EmptyMethod;
 
 		recycledTween.Kill();
 
@@ -169,7 +159,7 @@ public class Player : MonoBehaviour
 
 		player_animator.SetBool( "walking", true );
 
-		player_animator.SetIKPositionWeight( AvatarIKGoal.LeftHand, 0 );
+		player_leftArm_weight.SharedValue = 0;
 
 		player_is_blocking.SharedValue = false;
 
@@ -193,22 +183,19 @@ public class Player : MonoBehaviour
 		onFingerDown       = ExtensionMethods.EmptyMethod;
 		onFingerUp         = ExtensionMethods.EmptyMethod;
 		onUpdateMethod     = ExtensionMethods.EmptyMethod;
-		onAnimatorIKUpdate = ExtensionMethods.EmptyMethod;
 	}
 
     void Die()
     {
 		player_animator.SetTrigger( "die" );
+
+		event_shield_deactivate.Raise();
+		EmptyDelegates();
 	}
 
 	void SetHealthRatio()
 	{
 		player_health_ratio.SharedValue = player_health.sharedValue / incremental_health_data.incremental_health_value;
-	}
-
-	void PositionLeftArm()
-	{
-		player_animator.SetIKPosition( AvatarIKGoal.LeftHand, shield_arm_target_transform.position );
 	}
 #endregion
 
