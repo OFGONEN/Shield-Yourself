@@ -34,16 +34,18 @@ public class Shield : MonoBehaviour
     {
 		onInputUpdate = ExtensionMethods.EmptyMethod;
 	}
+
+	private void Start()
+	{
+		movement_progress = 0;
+		RePosition();
+	}
 #endregion
 
 #region API
     public void OnShieldActivate()
     {
-		movement_progress = 0;
 		shield_collider.enabled = true;
-
-		RePosition();
-
 		onInputUpdate = InputUpdate;
 	}
 
@@ -51,6 +53,9 @@ public class Shield : MonoBehaviour
     {
 		shield_collider.enabled = false;
 		onInputUpdate = ExtensionMethods.EmptyMethod;
+
+		movement_progress = 0;
+		RePosition();
 	}
 
     public void OnTrigger( Collider collider )
