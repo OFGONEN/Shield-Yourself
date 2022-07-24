@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] SharedReferenceNotifier player_leftArm_target;
     [ SerializeField ] GameEvent event_shield_activate;
     [ SerializeField ] GameEvent event_shield_deactivate;
+    [ SerializeField ] ParticleSpawnEventCoolDown player_particle_spawn;
 
   [ Title( "Components" ) ]
     [ SerializeField ] Animator player_animator;
@@ -114,10 +115,12 @@ public class Player : MonoBehaviour
 	}
 
     [ Button() ]
-    public void OnArrowHit()
+    public void OnArrowHit( Collider collider )
     {
 		player_health.SharedValue -= GameSettings.Instance.player_arrow_damage;
 		SetHealthRatio();
+
+		player_particle_spawn.Raise( "hit_player", collider.transform.position );
 
 		if( player_health.sharedValue <= 0 )
 			Die();

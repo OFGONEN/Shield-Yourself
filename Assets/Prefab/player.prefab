@@ -244,6 +244,7 @@ MonoBehaviour:
   player_leftArm_target: {fileID: 11400000, guid: 7071bb7852ee36841b1d94103802d2c0, type: 2}
   event_shield_activate: {fileID: 11400000, guid: 7d6cd8a956e18e84a86397a49d36152f, type: 2}
   event_shield_deactivate: {fileID: 11400000, guid: 7f05214af8f59ee40a82112ba618187d, type: 2}
+  player_particle_spawn: {fileID: 11400000, guid: 8f5a52d894cfdfe4bb458d707ee2081d, type: 2}
   player_animator: {fileID: 168221933715872396}
   player_shield_transform: {fileID: 7289986028533897748}
   incremental_health: {fileID: 11400000, guid: 74709767fdb8cd646bc62c62e9c22346, type: 2}
@@ -649,7 +650,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -682,7 +683,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -715,7 +716,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -748,7 +749,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -781,7 +782,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -819,7 +820,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -862,7 +863,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -895,7 +896,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -948,7 +949,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1048,7 +1049,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1081,7 +1082,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7060169143440091716}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnArrowHit
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
