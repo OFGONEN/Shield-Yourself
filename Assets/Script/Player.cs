@@ -127,6 +127,12 @@ public class Player : MonoBehaviour
 		if( player_health.sharedValue <= 0 )
 			Die();
 	}
+
+	public void RestoreHealthToFull()
+	{
+		player_health.SharedValue = incremental_health.CurrentIncremental.incremental_health_value;
+		SetHealthRatio();
+	}
 #endregion
 
 #region Implementation
