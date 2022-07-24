@@ -119,3 +119,27 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 16f451655a1a28c4a88c7f81b0952a16, type: 2}
+          m_TargetAssemblyTypeName: ParticleSpawnEventCoolDown, Assembly-CSharp
+          m_MethodName: Default
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 8f5a52d894cfdfe4bb458d707ee2081d, type: 2}
+          m_TargetAssemblyTypeName: ParticleSpawnEventCoolDown, Assembly-CSharp
+          m_MethodName: Default
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
