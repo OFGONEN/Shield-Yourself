@@ -9,8 +9,9 @@ using Sirenix.OdinInspector;
 public class Shield : MonoBehaviour
 {
 #region Fields
-  [ Title( "Components" ) ]
+  [ Title( "Setup" ) ]
     [ SerializeField ] Collider shield_collider;
+    [ SerializeField ] ParticleSpawnEventCoolDown shield_particle_spawn;
 
   [ Title( "Configure" ) ]
     [ SerializeField ] float delta_horizontal;
@@ -60,7 +61,7 @@ public class Shield : MonoBehaviour
 
     public void OnTrigger( Collider collider )
     {
-        //todo play shield hit vfx
+        shield_particle_spawn.Raise( "hit_shield", collider.transform.position);
     }
 
     public void OnInputUpdate( Vector2GameEvent gameEvent )

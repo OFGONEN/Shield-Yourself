@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield_collider: {fileID: 7448151936860539818}
+  shield_particle_spawn: {fileID: 11400000, guid: 16f451655a1a28c4a88c7f81b0952a16, type: 2}
   delta_horizontal: -0.05
   delta_vertical: 0.4
   delta_rotation: -20
