@@ -38,6 +38,8 @@ public class Shield : MonoBehaviour
 
 	private void Start()
 	{
+		shield_collider.enabled = false;
+
 		movement_progress = 0;
 		RePosition();
 	}
