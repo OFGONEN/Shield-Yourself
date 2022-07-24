@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
   [ Title( "Components" ) ]
     [ SerializeField ] Animator player_animator;
     [ SerializeField ] Transform player_shield_transform;
+	[ SerializeField ] ParticleSystem particle_die;
 
   [ Title( "Incrementals" ) ]
     [ SerializeField ] IncrementalHealth incremental_health;
@@ -218,6 +219,7 @@ public class Player : MonoBehaviour
     void Die()
     {
 		player_animator.SetTrigger( "die" );
+		particle_die.Play();
 
 		SetLeftArmWeight( 0 );
 
