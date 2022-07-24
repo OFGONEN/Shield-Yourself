@@ -10,6 +10,24 @@ namespace FFStudio
     {
 #region Fields (Settings)
     // Info: You can use Title() attribute ONCE for every game-specific group of settings.
+    [ Title( "Player" ) ]
+        [ LabelText( "Walking Speed" ) ] public float player_speed;
+        [ LabelText( "Shield Activate Delay" ) ] public float player_shield_activate_delay;
+        [ LabelText( "Arrow Damage Value" ) ] public float player_arrow_damage;
+        [ LabelText( "Level Failed Delay" ) ] public float player_death_delay = 1f;
+		[ LabelText( "Stamina Low Threshold" ), SuffixLabel( "%" ) ] public NormalizedValue player_stamina_threshold = 0.75f;
+		[ LabelText( "Stamina Low Vignette Range" ), MinMaxSlider( 0, 1 ) ] public Vector2 player_stamina_vignette_range;
+		[ LabelText( "Vignette effect fall-off duration" ) ] public float player_stamina_vignette_falloff_duration;
+		[ LabelText( "Color Update Speed" ), Min( 0 ) ] public float player_redness_speed = 0.75f;
+		[ LabelText( "Infilation Speed Range" ), MinMaxSlider( 0, 10, true )] public Vector2 player_inflation_speedRange = Vector2.up;
+ 
+    [ Title( "Shield" ) ]
+        [ LabelText( "Shield Movement Speed" ) ] public float shield_movement_speed = 1f;
+
+    [ Title( "Player UI" ) ]
+        [ LabelText( "Health Bar Fill Speed" ) ] public float player_ui_health_fill_speed;
+        [ LabelText( "Health Bar Disappear Delay" ) ] public float player_ui_health_delay;
+        [ LabelText( "Health Bar Disappear Delay" ) ] public float player_ui_stamina_delay;
     
     [ Title( "Camera" ) ]
         [ LabelText( "Follow Speed (Z)" ), SuffixLabel( "units/seconds" ), Min( 0 ) ] public float camera_follow_speed_depth = 2.8f;
