@@ -22,6 +22,7 @@ namespace FFStudio
 
 	[ Title( "Pool" ) ]
 		[ SerializeField ] Pool_UIPopUpText pool_UIPopUpText;
+		[ SerializeField ] UIParticlePool pool_ui_particle;
 		[ SerializeField ] PoolRecycledSequence pool_recycled_sequence;
 		[ SerializeField ] PoolArrow pool_arrow;
 		[ SerializeField ] PoolArrowGroupTrigger pool_arrow_trigger;
@@ -38,6 +39,7 @@ namespace FFStudio
 			Vibration.Init();
 
 			pool_UIPopUpText.InitPool( transform, false );
+			pool_ui_particle.InitPool( transform, false );
 			pool_recycled_sequence.InitPool();
 			pool_arrow.InitPool( transform, false );
 			pool_arrow_trigger.InitPool( transform, false );
