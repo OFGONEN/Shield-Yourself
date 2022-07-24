@@ -219,6 +219,11 @@ public class Player : MonoBehaviour
     {
 		player_animator.SetTrigger( "die" );
 
+		SetLeftArmWeight( 0 );
+
+		recycledTween.Kill();
+		recycledSequence.Kill();
+
 		event_shield_deactivate.Raise();
 		EmptyDelegates();
 	}
