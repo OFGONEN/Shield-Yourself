@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: event_pfx_hit_shield
   m_EditorClassIdentifier: 
   particleSpawnEvent: {fileID: 11400000, guid: fe240f220ab36cc44923227184f9c2a7, type: 2}
-  rate: 0
+  rate: 0.1
