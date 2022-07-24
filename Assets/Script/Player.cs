@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     UnityMessage onUpdateMethod;
 
     RecycledTween recycledTween = new RecycledTween();
-    RecycledTween recycledTween_shield = new RecycledTween();
+    RecycledSequence recycledSequence = new RecycledSequence();
 #endregion
 
 #region Properties
@@ -155,11 +155,14 @@ public class Player : MonoBehaviour
 		player_speed.SharedValue = 0;
 		player_animator.SetBool( "walking", false );
 
-		if( recycledTween_shield.IsPlaying() )
-			shieldActivateDelay -= recycledTween_shield.Tween.Elapsed();
+		if( recycledSequence.IsPlaying() )
+			shieldActivateDelay -= recycledSequence.Sequence.Elapsed();
 
-		recycledTween_shield.Kill();
-		recycledTween_shield.Recycle( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 1, shieldActivateDelay ) );
+		recycledSequence.Kill();
+
+		var sequence = recycledSequence.Recycle();
+		sequence.Append( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 1, shieldActivateDelay ) );
+		sequence.Join( player_shield_transform.DORotate( shield_arm_target_transform.eulerAngles, shieldActivateDelay ) );
 	}
 
     void FingerUp()
@@ -172,11 +175,13 @@ public class Player : MonoBehaviour
 
 		var newDuration = GameSettings.Instance.player_shield_activate_delay;
 
-		if( recycledTween_shield.IsPlaying() )
-			newDuration -= recycledTween_shield.Tween.Elapsed();
+		if( recycledSequence.IsPlaying() )
+			newDuration -= recycledSequence.Sequence.Elapsed();
 
-		recycledTween_shield.Kill();
-		recycledTween_shield.Recycle( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 0, newDuration ) );
+		recycledSequence.Kill();
+		var sequence = recycledSequence.Recycle();
+		sequence.Append( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 0, newDuration ) );
+		sequence.Join( player_shield_transform.DOLocalRotate( Vector3.zero, newDuration ) );
 
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
 
