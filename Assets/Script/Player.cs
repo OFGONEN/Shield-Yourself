@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     UnityMessage onUpdateMethod;
 
     RecycledTween recycledTween = new RecycledTween();
+    RecycledTween recycledTween_shield = new RecycledTween();
 #endregion
 
 #region Properties
@@ -109,7 +110,7 @@ public class Player : MonoBehaviour
 		onUpdateMethod = PlayerBlocking;
 
 		player_is_blocking.SharedValue    = true;
-		player_leftArm_weight.SharedValue = 1;
+		//todo player_leftArm_weight.SharedValue = 1;
 	}
 
     [ Button() ]
@@ -145,12 +146,20 @@ public class Player : MonoBehaviour
 		onFingerDown = ExtensionMethods.EmptyMethod;
 		onFingerUp   = FingerUp;
 
+		var shieldActivateDelay = GameSettings.Instance.player_shield_activate_delay;
+
 		recycledTween.Recycle( DOVirtual.DelayedCall(
-			GameSettings.Instance.player_shield_activate_delay,
+			shieldActivateDelay,
 			event_shield_activate.Raise ) );
 
 		player_speed.SharedValue = 0;
 		player_animator.SetBool( "walking", false );
+
+		if( recycledTween_shield.IsPlaying() )
+			shieldActivateDelay -= recycledTween_shield.Tween.Elapsed();
+
+		recycledTween_shield.Kill();
+		recycledTween_shield.Recycle( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 1, shieldActivateDelay ) );
 	}
 
     void FingerUp()
@@ -161,15 +170,22 @@ public class Player : MonoBehaviour
 
 		recycledTween.Kill();
 
+		var newDuration = GameSettings.Instance.player_shield_activate_delay;
+
+		if( recycledTween_shield.IsPlaying() )
+			newDuration -= recycledTween_shield.Tween.Elapsed();
+
+		recycledTween_shield.Kill();
+		recycledTween_shield.Recycle( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 0, newDuration ) );
+
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
 
 		player_animator.SetBool( "walking", true );
 
-		player_leftArm_weight.SharedValue = 0;
-
 		player_is_blocking.SharedValue = false;
-
 		event_shield_deactivate.Raise();
+
+		player_shield_transform.localRotation = Quaternion.identity;
 	}
 
     void CacheIncrementals()
@@ -202,6 +218,16 @@ public class Player : MonoBehaviour
 	void SetHealthRatio()
 	{
 		player_health_ratio.SharedValue = player_health.sharedValue / incremental_health_data.incremental_health_value;
+	}
+
+	float GetLeftArmWeight()
+	{
+		return player_leftArm_weight.sharedValue;
+	}
+
+	void SetLeftArmWeight( float value )
+	{
+		player_leftArm_weight.SharedValue = value;
 	}
 #endregion
 
