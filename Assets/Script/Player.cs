@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] SharedReferenceNotifier player_leftArm_target;
     [ SerializeField ] GameEvent event_shield_activate;
     [ SerializeField ] GameEvent event_shield_deactivate;
+    [ SerializeField ] GameEvent event_level_failed;
     [ SerializeField ] ParticleSpawnEventCoolDown player_particle_spawn;
 
   [ Title( "Components" ) ]
@@ -221,6 +222,8 @@ public class Player : MonoBehaviour
 		player_animator.SetTrigger( "die" );
 		particle_die.Play();
 
+		player_speed.SharedValue = 0;
+
 		SetLeftArmWeight( 0 );
 
 		recycledTween.Kill();
@@ -228,6 +231,8 @@ public class Player : MonoBehaviour
 
 		event_shield_deactivate.Raise();
 		EmptyDelegates();
+
+		DOVirtual.DelayedCall( GameSettings.Instance.player_death_delay, event_level_failed.Raise );
 	}
 
 	void SetHealthRatio()

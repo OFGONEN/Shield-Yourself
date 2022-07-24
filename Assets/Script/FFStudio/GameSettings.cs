@@ -14,6 +14,7 @@ namespace FFStudio
         [ LabelText( "Walking Speed" ) ] public float player_speed;
         [ LabelText( "Shield Activate Delay" ) ] public float player_shield_activate_delay;
         [ LabelText( "Arrow Damage Value" ) ] public float player_arrow_damage;
+        [ LabelText( "Level Failed Delay" ) ] public float player_death_delay = 1f;
 		[ LabelText( "Stamina Low Threshold" ), SuffixLabel( "%" ) ] public NormalizedValue player_stamina_threshold = 0.75f;
 		[ LabelText( "Stamina Low Vignette Range" ), MinMaxSlider( 0, 1 ) ] public Vector2 player_stamina_vignette_range;
 		[ LabelText( "Vignette effect fall-off duration" ) ] public float player_stamina_vignette_falloff_duration;
