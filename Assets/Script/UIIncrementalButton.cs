@@ -55,7 +55,7 @@ public class UIIncrementalButton< Incremental >  : UIEntity where Incremental : 
 	public void Configure()
 	{
 		ConfigureInteractable();
-		ui_level.text          = "Level " + incremental_system.Level;
+		ui_level.text          = "Level " + ( incremental_system.Level + 1 );
 		ui_cost.text           = incremental_system.Cost.ToString();
 	}
 #endregion
