@@ -748,6 +748,7 @@ MonoBehaviour:
   resetLevelEvent: {fileID: 11400000, guid: 0a3e52cd505ecfc4ba9ef153d4f3ba93, type: 2}
   elephantLevelEvent: {fileID: 11400000, guid: 33ccf5f609258ea46b63b78483df10f5, type: 2}
   pool_ui_arrow_indicator: {fileID: 11400000, guid: ea13a7e80b14df449bb73248b0ea9eb1, type: 2}
+  pool_ui_particle_currency: {fileID: 11400000, guid: 4b7f9225132808a4fb73192bcd777d20, type: 2}
 --- !u!1 &193827666167386678
 GameObject:
   m_ObjectHideFlags: 0

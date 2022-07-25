@@ -35,6 +35,7 @@ namespace FFStudio
 
     [ Title( "Shared Variables" ) ]
         public PoolUIArrowIndicator pool_ui_arrow_indicator;
+        public UIParticlePool pool_ui_particle_currency;
 #endregion
 
 #region Unity API
@@ -64,6 +65,7 @@ namespace FFStudio
 			level_information_text.text = "Tap to Start";
 
 			pool_ui_arrow_indicator.InitPool( pool_parent, false );
+			pool_ui_particle_currency.InitPool( pool_parent, false );
 		}
 #endregion
 
