@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
   [ Title( "Components" ) ]
     [ SerializeField ] Animator player_animator;
     [ SerializeField ] Transform player_shield_transform;
+	[ SerializeField ] ParticleSystem particle_wind;
 	[ SerializeField ] ParticleSystem particle_die;
 
   [ Title( "Incrementals" ) ]
@@ -98,6 +99,8 @@ public class Player : MonoBehaviour
 		player_animator.SetBool( "walking", true );
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
 
+		particle_wind.Play();
+
 		shield_arm_target_transform = player_leftArm_target.SharedValue as Transform;
 	}
 
@@ -165,6 +168,7 @@ public class Player : MonoBehaviour
 
 		player_speed.SharedValue = 0;
 		player_animator.SetBool( "walking", false );
+		particle_wind.Stop( true, ParticleSystemStopBehavior.StopEmitting );
 
 		if( recycledSequence.IsPlaying() )
 			shieldActivateDelay -= recycledSequence.Sequence.Elapsed();
@@ -197,6 +201,7 @@ public class Player : MonoBehaviour
 		player_speed.SharedValue = GameSettings.Instance.player_speed;
 
 		player_animator.SetBool( "walking", true );
+		particle_wind.Play();
 
 		player_is_blocking.SharedValue = false;
 		event_shield_deactivate.Raise();
@@ -227,6 +232,7 @@ public class Player : MonoBehaviour
     {
 		player_animator.SetTrigger( "die" );
 		particle_die.Play();
+		particle_wind.Stop( true, ParticleSystemStopBehavior.StopEmitting );
 
 		player_speed.SharedValue = 0;
 
