@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 4808422903914911776}
   - component: {fileID: 2805087587621998160}
   - component: {fileID: 4446199697116538173}
+  - component: {fileID: 7460606918953658526}
   m_Layer: 5
   m_Name: ui_incremental_button
   m_TagString: Untagged
@@ -393,7 +394,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4808422903914911776}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4446199697116538173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,9 +423,27 @@ MonoBehaviour:
   destinationTransform: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   startScale: {x: 0, y: 0, z: 0}
-  player_currency: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
   incremental_system: {fileID: 11400000, guid: 74709767fdb8cd646bc62c62e9c22346, type: 2}
   event_incremental_unlock: {fileID: 11400000, guid: 06f8a8ef3f2222a4fa01a3c42588a5e7, type: 2}
   ui_level: {fileID: 4460100803857603152}
   ui_cost: {fileID: 4166348218403889807}
   ui_button: {fileID: 2805087587621998160}
+--- !u!114 &7460606918953658526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368097506992175677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245dc21cc9428744fa28ad2d6ce7d327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPairs:
+  - eventListener:
+      gameEvents:
+      - {fileID: 11400000, guid: 06f8a8ef3f2222a4fa01a3c42588a5e7, type: 2}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []

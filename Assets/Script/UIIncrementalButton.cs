@@ -50,17 +50,17 @@ public class UIIncrementalButton< Incremental >  : UIEntity where Incremental : 
 	{
 		incremental_system.Unlock();
 		event_incremental_unlock.Raise();
-		Configure();
+	}
+
+	public void Configure()
+	{
+		ConfigureInteractable();
+		ui_level.text          = "Level " + incremental_system.Level;
+		ui_cost.text           = incremental_system.Cost.ToString();
 	}
 #endregion
 
 #region Implementation
-	void Configure()
-	{
-		ui_level.text          = "Level " + incremental_system.Level;
-		ui_cost.text           = incremental_system.Cost.ToString();
-	}
-
 	void ConfigureInteractable()
 	{
 		ui_button.interactable = incremental_system.CanUnlock();

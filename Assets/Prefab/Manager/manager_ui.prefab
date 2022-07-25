@@ -1520,6 +1520,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 124199663488762607}
     m_Modifications:
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3332377440638731688}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIIncrementalButton`1[[FFStudio.IncrementalHealthData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4446199697116538173, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: destinationTransform
       value: 
@@ -1607,6 +1623,34 @@ PrefabInstance:
     - target: {fileID: 6935253791843802548, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3332377440638731688}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Configure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIIncrementalButton`1[[FFStudio.IncrementalHealthData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8368097506992175677, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_Name
@@ -1853,6 +1897,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 124199663488762607}
     m_Modifications:
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 919539872963049216}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIIncrementalButton`1[[FFStudio.IncrementalStaminaData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4446199697116538173, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: destinationTransform
       value: 
@@ -1945,6 +2005,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 919539872963049216}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Configure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIIncrementalButton`1[[FFStudio.IncrementalStaminaData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8368097506992175677, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_Name
       value: ui_incremental_stamina
@@ -2023,6 +2111,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 124199663488762607}
     m_Modifications:
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5459393070422306213}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIIncrementalButton`1[[FFStudio.IncrementalCurrecyData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4446199697116538173, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: destinationTransform
       value: 
@@ -2114,6 +2218,34 @@ PrefabInstance:
     - target: {fileID: 6935253791843802548, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5459393070422306213}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Configure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIIncrementalButton`1[[FFStudio.IncrementalCurrecyData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460606918953658526, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: eventPairs.Array.data[0].unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8368097506992175677, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_Name
