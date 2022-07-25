@@ -12,7 +12,6 @@ public class UIIncrementalButton< Incremental >  : UIEntity where Incremental : 
 {
 #region Fields
   [ Title( "Shared Variables" ) ]
-    [ SerializeField ] Currency player_currency; 
     [ SerializeField ] IncrementalSystem< Incremental > incremental_system;
     [ SerializeField ] GameEvent event_incremental_unlock;
 

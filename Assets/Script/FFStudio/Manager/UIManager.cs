@@ -26,6 +26,9 @@ namespace FFStudio
         public Image loadingScreenImage;
         public Image foreGroundImage;
         public RectTransform tutorialObjects;
+        public UIIncrementalHealth ui_incremental_health;
+        public UIIncrementalStamina ui_incremental_stamina;
+        public UIIncrementalCurrency ui_incremental_currency;
 
     [ Title( "Fired Events" ) ]
         public GameEvent levelRevealedEvent;
