@@ -12,6 +12,8 @@ namespace FFStudio
 		public RectTransform destinationTransform;
 		[ HideInInspector ] public Vector3 startPosition;
 		[ HideInInspector ] public Vector3 startScale;
+
+		RecycledTween recycledTween = new RecycledTween();
 #endregion
 
 #region UnityAPI
@@ -25,22 +27,26 @@ namespace FFStudio
 #region API
 		public virtual Tween GoToTargetPosition()
 		{
-			return uiTransform.DOMove( destinationTransform.position, GameSettings.Instance.ui_Entity_Fade_TweenDuration );
+			recycledTween.Recycle( uiTransform.DOMove( destinationTransform.position, GameSettings.Instance.ui_Entity_Fade_TweenDuration ) );
+			return recycledTween.Tween;
 		}
 
 		public virtual Tween GoToStartPosition()
 		{
-			return uiTransform.DOMove( startPosition, GameSettings.Instance.ui_Entity_Fade_TweenDuration );
+			recycledTween.Recycle( uiTransform.DOMove( startPosition, GameSettings.Instance.ui_Entity_Fade_TweenDuration ) );
+			return recycledTween.Tween;
 		}
 
 		public virtual Tween Appear()
 		{
-			return uiTransform.DOScale( startScale, GameSettings.Instance.ui_Entity_Scale_TweenDuration );
+			recycledTween.Recycle( uiTransform.DOScale( startScale, GameSettings.Instance.ui_Entity_Scale_TweenDuration ) );
+			return recycledTween.Tween;
 		}
 
 		public virtual Tween Disappear()
 		{
-			return uiTransform.DOScale( Vector3.zero, GameSettings.Instance.ui_Entity_Scale_TweenDuration );
+			recycledTween.Recycle( uiTransform.DOScale( Vector3.zero, GameSettings.Instance.ui_Entity_Scale_TweenDuration ) );
+			return recycledTween.Tween;
 		}
 #endregion
 	}
