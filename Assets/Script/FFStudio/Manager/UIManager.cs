@@ -78,6 +78,7 @@ namespace FFStudio
 			var sequence = DOTween.Sequence()
 								.Append( level_loadingBar_Scale.DoScale_Target( Vector3.zero, GameSettings.Instance.ui_Entity_Scale_TweenDuration ) )
 								.Append( loadingScreenImage.DOFade( 0, GameSettings.Instance.ui_Entity_Fade_TweenDuration ) )
+								.AppendCallback( ShowIncrementalButtons )
 								.Join( foreGroundImage.DOFade( 0, GameSettings.Instance.ui_Entity_Fade_TweenDuration ) )
 								.AppendCallback( () => tapInputListener.response = StartLevel );
 
@@ -98,6 +99,7 @@ namespace FFStudio
 
 			sequence.Append( foreGroundImage.DOFade( 0, GameSettings.Instance.ui_Entity_Fade_TweenDuration ) )
 					// .Append( tween ) // TODO: UIElements tween.
+					.AppendCallback( ShowIncrementalButtons )
 					.Append( level_information_text_Scale.DoScale_Start( GameSettings.Instance.ui_Entity_Scale_TweenDuration ) )
 					.AppendCallback( () => tapInputListener.response = StartLevel );
 
@@ -149,6 +151,7 @@ namespace FFStudio
 
 			level_information_text_Scale.DoScale_Target( Vector3.zero, GameSettings.Instance.ui_Entity_Scale_TweenDuration );
 			level_information_text_Scale.Subscribe_OnComplete( levelRevealedEvent.Raise );
+			HideIncrementalButtons();
 
 			tutorialObjects.gameObject.SetActive( false );
 
@@ -180,6 +183,20 @@ namespace FFStudio
 			        .Join( level_information_text_Scale.DoScale_Target( Vector3.zero, GameSettings.Instance.ui_Entity_Scale_TweenDuration ) )
 			        .AppendCallback( resetLevelEvent.Raise );
 		}
+
+        void ShowIncrementalButtons()
+        {
+			ui_incremental_health.ShowButton();
+			ui_incremental_stamina.ShowButton();
+			ui_incremental_currency.ShowButton();
+		}
+
+        void HideIncrementalButtons()
+        {
+			ui_incremental_health.HideButton();
+			ui_incremental_stamina.HideButton();
+			ui_incremental_currency.HideButton();
+        }
 #endregion
     }
 }

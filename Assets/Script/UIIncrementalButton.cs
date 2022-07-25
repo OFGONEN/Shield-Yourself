@@ -43,7 +43,7 @@ public class UIIncrementalButton< Incremental >  : UIEntity where Incremental : 
 	{
 		DisableInteraction();
 		Configure();
-		GoToTargetPosition();
+		GoToStartPosition();
 	}
 
 	public void OnButtonClick()
