@@ -37,6 +37,18 @@ namespace FFStudio
 			return recycledTween.Tween;
 		}
 
+		public virtual Tween GoToTargetPosition( UnityMessage onComplete )
+		{
+			recycledTween.Recycle( uiTransform.DOMove( destinationTransform.position, GameSettings.Instance.ui_Entity_Fade_TweenDuration ), onComplete );
+			return recycledTween.Tween;
+		}
+
+		public virtual Tween GoToStartPosition( UnityMessage onComplete )
+		{
+			recycledTween.Recycle( uiTransform.DOMove( startPosition, GameSettings.Instance.ui_Entity_Fade_TweenDuration ), onComplete );
+			return recycledTween.Tween;
+		}
+
 		public virtual Tween Appear()
 		{
 			recycledTween.Recycle( uiTransform.DOScale( startScale, GameSettings.Instance.ui_Entity_Scale_TweenDuration ) );
