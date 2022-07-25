@@ -25,10 +25,12 @@ public class Player : MonoBehaviour
     [ SerializeField ] ParticleSpawnEventCoolDown player_particle_spawn;
 
   [ Title( "Components" ) ]
+    [ SerializeField ] LowStaminaIndicator player_lowStamina_indicator;
     [ SerializeField ] Animator player_animator;
     [ SerializeField ] Transform player_shield_transform;
 	[ SerializeField ] ParticleSystem particle_wind;
 	[ SerializeField ] ParticleSystem particle_die;
+	[ SerializeField ] ParticleSystem particle_sweat;
 
   [ Title( "Incrementals" ) ]
     [ SerializeField ] IncrementalHealth incremental_health;
@@ -230,9 +232,12 @@ public class Player : MonoBehaviour
 
     void Die()
     {
+		player_lowStamina_indicator.OnLevelFinished();
+
 		player_animator.SetTrigger( "die" );
 		particle_die.Play();
 		particle_wind.Stop( true, ParticleSystemStopBehavior.StopEmitting );
+		particle_sweat.Stop( true, ParticleSystemStopBehavior.StopEmitting );
 
 		player_speed.SharedValue = 0;
 

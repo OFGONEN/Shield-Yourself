@@ -19,6 +19,8 @@ public class LowStaminaIndicator : MonoBehaviour
     int direction = +1;
 
 	RecycledTween recycledTween = new RecycledTween();
+
+	UnityMessage onUpdateMethod;
 #endregion
 
 #region Properties
@@ -29,10 +31,25 @@ public class LowStaminaIndicator : MonoBehaviour
     {
 		player_inflation.SetValue_NotifyAlways( 1 );
 		player_redness.SetValue_NotifyAlways( 1 );
+		onUpdateMethod = OnUpdate_PlayerAlive;
 	}
     
     void Update()
-    {		
+    {
+		onUpdateMethod();
+	}
+#endregion
+
+#region API
+	public void OnLevelFinished()
+	{
+		onUpdateMethod = OnUpdate_PlayerDead;
+	}
+#endregion
+
+#region Implementation
+	void OnUpdate_PlayerAlive()
+	{
 		var lowStaminaCofactor  = DetermineLowStaminaCofactor();
 		var targetColorRatio    = Mathf.InverseLerp( 0, GameSettings.Instance.player_stamina_threshold.value, lowStaminaCofactor );
 		
@@ -57,12 +74,12 @@ public class LowStaminaIndicator : MonoBehaviour
 		player_redness.SharedValue = Mathf.MoveTowards( player_redness.SharedValue, targetColorRatio,
 															  GameSettings.Instance.player_redness_speed * Time.deltaTime );
 	}
-#endregion
 
-#region API
-#endregion
+	void OnUpdate_PlayerDead()
+	{
+		UpdateCharacterInflation();
+	}
 
-#region Implementation
 	float DetermineLowStaminaCofactor()
 	{
 		// Info: Use stamina as it is for the ratio when inflation is active, current/recoverable as the ratio when inflation is NOT active.
