@@ -148,4 +148,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c7002966fb37cd4eba58ac75e8cf612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pool_ui_particle: {fileID: 0}
+  pool_ui_particle: {fileID: 11400000, guid: 4b7f9225132808a4fb73192bcd777d20, type: 2}
+  ui_text: {fileID: 2653989264183410694}

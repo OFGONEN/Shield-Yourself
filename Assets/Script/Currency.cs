@@ -10,7 +10,14 @@ using Sirenix.OdinInspector;
 public class Currency : SharedFloatNotifier
 {
 #region Fields
+    [ SerializeField ] UIParticlePool pool_ui_particle;
+    [ SerializeField ] SharedReferenceNotifier notif_camera_transform;
+    [ SerializeField ] SharedReferenceNotifier notif_ui_currency_transform;
+
     float gain_cooldown;
+
+    Vector3 player_screen_position;
+    Vector3 ui_currency_position;
 #endregion
 
 #region Properties
@@ -24,8 +31,10 @@ public class Currency : SharedFloatNotifier
     {
         if( Time.time >= gain_cooldown )
         {
-			SharedValue += value;
+			sharedValue += value;
 			gain_cooldown = Time.time + rate;
+
+			pool_ui_particle.Spawn( player_screen_position, ui_currency_position, "+" + value.ToString( "f" ), Notify );
 		}
     }
 
@@ -38,6 +47,12 @@ public class Currency : SharedFloatNotifier
     public void Save()
     {
 		PlayerPrefsUtility.Instance.SetFloat( ExtensionMethods.Currency_Key, sharedValue );
+	}
+
+    public void OnLevelStart()
+    {
+        player_screen_position = ( notif_camera_transform.SharedValue as Transform ).GetComponent< Camera >().WorldToScreenPoint( Vector3.zero );
+        ui_currency_position   = ( notif_ui_currency_transform.SharedValue as Transform ).position;
 	}
 #endregion
 
