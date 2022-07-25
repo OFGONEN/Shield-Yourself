@@ -36,7 +36,7 @@ public class UIIncrementalButton< Incremental >  : UIEntity where Incremental : 
 	{
 		DisableInteraction();
 		Configure();
-		GoToTargetPosition( EnableInteraction );
+		GoToTargetPosition( ConfigureInteractable );
 	}
 
 	public void HideButton()
@@ -57,12 +57,13 @@ public class UIIncrementalButton< Incremental >  : UIEntity where Incremental : 
 #region Implementation
 	void Configure()
 	{
-		ui_button.interactable = incremental_system.CanUnlock();
+		ui_level.text          = "Level " + incremental_system.Level;
+		ui_cost.text           = incremental_system.Cost.ToString();
 	}
 
-	void EnableInteraction()
+	void ConfigureInteractable()
 	{
-		ui_button.interactable = true;
+		ui_button.interactable = incremental_system.CanUnlock();
 	}
 
 	void DisableInteraction()
