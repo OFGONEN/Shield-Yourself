@@ -850,6 +850,7 @@ GameObject:
   - component: {fileID: 8181666341531511127}
   - component: {fileID: 814790689933071612}
   - component: {fileID: 166293825257503232}
+  - component: {fileID: 6090716682221811726}
   m_Layer: 5
   m_Name: text_currency
   m_TagString: Untagged
@@ -987,6 +988,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedDataNotifier: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
+--- !u!114 &6090716682221811726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693100843029573617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775950354093f5b49ae788c9a7d028c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiTransform: {fileID: 3493052915437420836}
+  destinationTransform: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  startScale: {x: 0, y: 0, z: 0}
+  punchScale: 1
+  notifier_count: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
 --- !u!1 &3474085241652285997
 GameObject:
   m_ObjectHideFlags: 0
