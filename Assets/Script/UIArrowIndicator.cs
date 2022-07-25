@@ -18,7 +18,7 @@ public class UIArrowIndicator : MonoBehaviour
 
   [ Title( "Components" ) ] 
 	[ SerializeField ] RectTransform rectTransform;
-	[ SerializeField ] Image image_filled;
+	[ SerializeField ] Image[] image_filled;
 
 // Private
 	RecycledSequence recycledSequence = new RecycledSequence();
@@ -36,7 +36,8 @@ public class UIArrowIndicator : MonoBehaviour
     {
 		gameObject.SetActive( true );
 
-		image_filled.fillAmount = 0;
+		for( var i = 0; i < image_filled.Length; i++ )
+			image_filled[ i ].fillAmount = 0;
 
 		var camera = ( notif_camera.sharedValue as Transform ).GetComponent< Camera >();
 		var screenPosition = camera.WorldToScreenPoint( Vector3.up * height );
@@ -49,7 +50,9 @@ public class UIArrowIndicator : MonoBehaviour
 #endif
 
 		var sequence = recycledSequence.Recycle( OnSequenceComplete );
-		sequence.Append( image_filled.DOFillAmount( 1, delay ) );
+		sequence.Append( image_filled[ 0 ].DOFillAmount( 1, delay / 3f ) );
+		sequence.Append( image_filled[ 1 ].DOFillAmount( 1, delay / 3f ) );
+		sequence.Append( image_filled[ 2 ].DOFillAmount( 1, delay / 3f ) );
 	}
 
 	public void OnLevelFinished()

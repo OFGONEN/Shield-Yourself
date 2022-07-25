@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c61819da0be0149b7819537fd0b112, type: 3}
+  m_Name: pool_ui_particle_currency
+  m_EditorClassIdentifier: 
+  stackSize: 16
+  pool_entity: {fileID: 7948929632715284980, guid: 7bb11c38c5a6b764da7b3bcf69a043d8, type: 3}

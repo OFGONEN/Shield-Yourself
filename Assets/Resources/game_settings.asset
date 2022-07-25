@@ -39,10 +39,10 @@ MonoBehaviour:
   ui_PopUp_duration: 0.75
   ui_particle_spawn_width: 10
   ui_particle_spawn_duration: 0.1
-  ui_particle_spawn_ease: 1
+  ui_particle_spawn_ease: 20
   ui_particle_target_waitTime: 0.16
   ui_particle_target_duration: 0.4
-  ui_particle_target_ease: 1
+  ui_particle_target_ease: 21
   swipeThreshold: 2
   debug_ui_text_float_height: 1
   debug_ui_text_float_duration: 1
