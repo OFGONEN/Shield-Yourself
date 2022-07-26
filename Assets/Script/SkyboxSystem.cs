@@ -54,12 +54,10 @@ public class SkyboxSystem : ScriptableObject
 #region Implementation
     void OnSkyboxChanged()
     {
+		skybox_material_default.CopyPropertiesFromMaterial( skybox_materials[ skybox_index_target ].skybox_material );
 		skybox_index_current = skybox_index_target;
 		PlayerPrefsUtility.Instance.SetInt( ExtensionMethods.Skybox_Key, skybox_index_current );
 	}
-
-    //todo test setting null
-    //todo test textures
 
     float GetLerp() 
     {
@@ -73,7 +71,6 @@ public class SkyboxSystem : ScriptableObject
 
         if( skybox_lerping && recycledTween.Tween.ElapsedPercentage() >= skybox_lerp_percentage )
         {
-            FFLogger.Log( "Setting Textures" );
 			skybox_lerping = false;
 
 			var targetMaterial = skybox_materials[ skybox_index_target ];
