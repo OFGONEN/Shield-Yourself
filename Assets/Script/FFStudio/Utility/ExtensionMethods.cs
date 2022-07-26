@@ -460,6 +460,11 @@ namespace FFStudio
 		{
 			return Mathf.Clamp( value, vector.x, vector.y );
 		}
+
+		public static float ReturnEasedValue( this Vector2 vector, float ratio, Ease ease )
+		{
+			return DOVirtual.EasedValue( vector.x, vector.y, ratio, ease );
+		}
 	}
 }
 

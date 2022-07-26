@@ -60,6 +60,10 @@ public abstract class IncrementalSystem< Incremental > : ScriptableObject where 
 
 #region Editor Only
 #if UNITY_EDITOR
+	public void SetIncremental( Incremental[] value )
+	{
+		incremental = value;
+	}
 #endif
 #endregion
 }

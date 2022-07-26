@@ -119,6 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4436b378b035041b6caab72131695f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  event_arrow_spawn: {fileID: 11400000, guid: b0d59f314f175ce4784f16c7b6cd3bf5, type: 2}
-  pool_arrow_trigger_group: {fileID: 11400000, guid: e9ec197d1c28b974f876c1db901b4274, type: 2}
   arrow_group_trigger_collider: {fileID: 7476347985150124141}
+  event_arrow_shot: {fileID: 11400000, guid: 427c25aeac3354e04a53c8886b942bc6, type: 2}

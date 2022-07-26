@@ -12,7 +12,7 @@ public class Arrow : MonoBehaviour, IClusterEntity
   [ Title( "Shared Variables" ) ]
     [ SerializeField ] Cluster cluster_arrow;
     [ SerializeField ] PoolArrow pool_arrow;
-    [ SerializeField ] SharedReferenceNotifier notif_player_target;
+	[ SerializeField ] SharedReferenceNotifier notif_player_target;
 	[ SerializeField ] SharedFloat shared_arrow_spawn_point;
 
   [ Title( "Components" ) ]
@@ -35,11 +35,20 @@ public class Arrow : MonoBehaviour, IClusterEntity
 	{
 		gameObject.SetActive( true );
 
+		var playerPosition = ( notif_player_target.SharedValue as Transform ).position;
+
 		//Cache data
-		var arrow_target_position  = ( notif_player_target.sharedValue as Transform ).position;
+		var spawnRatio = Mathf.InverseLerp( GameSettings.Instance.arrow_shoot_spawn_range.x,
+										GameSettings.Instance.arrow_shoot_spawn_range.y,
+										height );
+
+		var targetPosition = playerPosition.SetY( Mathf.Lerp( GameSettings.Instance.player_target_range.x,
+								GameSettings.Instance.player_target_range.y,
+								spawnRatio ) );
+
 		var position               = new Vector3( shared_arrow_spawn_point.sharedValue, height, 0 );
 		    arrow_speed            = speed;
-		    arrow_target_direction = arrow_target_position - position;
+		    arrow_target_direction = targetPosition - position;
 		    transform.position     = position;
 
 		//Configure components
@@ -48,7 +57,7 @@ public class Arrow : MonoBehaviour, IClusterEntity
 		arrow_collider.enabled       = true;
 		arrow_trail_renderer.enabled = true;
 
-		transform.LookAt( arrow_target_position, Vector3.up );
+		transform.LookAt( targetPosition, Vector3.up );
 
 		Subscribe_Cluster();
 	}

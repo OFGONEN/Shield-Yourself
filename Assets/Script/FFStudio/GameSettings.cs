@@ -11,6 +11,7 @@ namespace FFStudio
 #region Fields (Settings)
     // Info: You can use Title() attribute ONCE for every game-specific group of settings.
     [ Title( "Player" ) ]
+        [ LabelText( "Target Range" ) ] public Vector2 player_target_range;
         [ LabelText( "Walking Speed" ) ] public float player_speed;
         [ LabelText( "Shield Activate Delay" ) ] public float player_shield_activate_delay;
         [ LabelText( "Arrow Damage Value" ) ] public float player_arrow_damage;
@@ -20,7 +21,18 @@ namespace FFStudio
 		[ LabelText( "Vignette effect fall-off duration" ) ] public float player_stamina_vignette_falloff_duration;
 		[ LabelText( "Color Update Speed" ), Min( 0 ) ] public float player_redness_speed = 0.75f;
 		[ LabelText( "Infilation Speed Range" ), MinMaxSlider( 0, 10, true )] public Vector2 player_inflation_speedRange = Vector2.up;
- 
+
+    [ Title( "Arrow" ) ]
+        [ LabelText( "Arrow Shot Delay Between Arrows" ) ] public Vector2 arrow_shoot_delay_between_range;
+        [ LabelText( "Arrow Shot Delay Between Arrows Difficulty Easing" ) ] public Ease arrow_shoot_delay_between_ease;
+        [ LabelText( "Arrow Shot Delay" ) ] public Vector2 arrow_shoot_delay_range;
+        [ LabelText( "Arrow Shot Delay Difficulty Easing" ) ] public Ease arrow_shoot_delay_ease;
+        [ LabelText( "Arrow Speed Range" ) ] public Vector2 arrow_shoot_speed_range;
+        [ LabelText( "Arrow Speed Difficulty Easing" ) ] public Ease arrow_shoot_speed_ease;
+        [ LabelText( "Arrow Count Range" ) ] public Vector2 arrow_shoot_count_range;
+        [ LabelText( "Arrow Count Difficulty Easing" ) ] public Ease arrow_shoot_count_ease;
+        [ LabelText( "Arrow Spawn Height Range" ) ] public Vector2 arrow_shoot_spawn_range;
+
     [ Title( "Shield" ) ]
         [ LabelText( "Shield Movement Speed" ) ] public float shield_movement_speed = 1f;
 
@@ -34,6 +46,7 @@ namespace FFStudio
     
     [ Title( "Project Setup", "These settings should not be edited by Level Designer(s).", TitleAlignments.Centered ) ]
         public int maxLevelCount;
+        [ LabelText( "Pseudo Level Count" ) ] public int game_level_pseudoCount;
         
         // Info: 3 groups below (coming from template project) are foldout by design: They should remain hidden.
 		[ FoldoutGroup( "Remote Config" ) ] public bool useRemoteConfig_GameSettings;
@@ -56,6 +69,10 @@ namespace FFStudio
 
         [ FoldoutGroup( "Debug" ) ] public float debug_ui_text_float_height;
         [ FoldoutGroup( "Debug" ) ] public float debug_ui_text_float_duration;
+#endregion
+
+#region Properties
+        public float LevelRatio => CurrentLevelData.Instance.currentLevel_Shown / ( float )game_level_pseudoCount;
 #endregion
 
 #region Fields (Singleton Related)
