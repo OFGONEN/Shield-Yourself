@@ -20,7 +20,7 @@ namespace FFStudio
 		[ LabelText( "Vignette effect fall-off duration" ) ] public float player_stamina_vignette_falloff_duration;
 		[ LabelText( "Color Update Speed" ), Min( 0 ) ] public float player_redness_speed = 0.75f;
 		[ LabelText( "Infilation Speed Range" ), MinMaxSlider( 0, 10, true )] public Vector2 player_inflation_speedRange = Vector2.up;
- 
+
     [ Title( "Shield" ) ]
         [ LabelText( "Shield Movement Speed" ) ] public float shield_movement_speed = 1f;
 
@@ -34,6 +34,7 @@ namespace FFStudio
     
     [ Title( "Project Setup", "These settings should not be edited by Level Designer(s).", TitleAlignments.Centered ) ]
         public int maxLevelCount;
+        [ LabelText( "Pseudo Level Count" ) ] public int game_level_count;
         
         // Info: 3 groups below (coming from template project) are foldout by design: They should remain hidden.
 		[ FoldoutGroup( "Remote Config" ) ] public bool useRemoteConfig_GameSettings;
