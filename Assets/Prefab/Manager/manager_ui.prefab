@@ -1633,19 +1633,47 @@ PrefabInstance:
     m_TransformParent: {fileID: 124199663488762607}
     m_Modifications:
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3332377440638731688}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Save
       objectReference: {fileID: 0}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UIIncrementalButton`1[[FFStudio.IncrementalHealthData, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Currency, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4446199697116538173, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
@@ -2058,19 +2086,47 @@ PrefabInstance:
     m_TransformParent: {fileID: 124199663488762607}
     m_Modifications:
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 919539872963049216}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Save
       objectReference: {fileID: 0}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UIIncrementalButton`1[[FFStudio.IncrementalStaminaData, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Currency, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4446199697116538173, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
@@ -2272,19 +2328,47 @@ PrefabInstance:
     m_TransformParent: {fileID: 124199663488762607}
     m_Modifications:
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5459393070422306213}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Save
       objectReference: {fileID: 0}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UIIncrementalButton`1[[FFStudio.IncrementalCurrecyData, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Currency, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805087587621998160, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4446199697116538173, guid: 48d8e0d0afcd840ae9ef2c7851dfbef3, type: 3}
