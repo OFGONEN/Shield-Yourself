@@ -121,9 +121,9 @@ namespace FFStudio
 					.Append( level_information_text_Scale.DoScale_Start( GameSettings.Instance.ui_Entity_Scale_TweenDuration ) )
 					.AppendCallback( () => tapInputListener.response = LoadNewLevel );
 
-            elephantLevelEvent.level             = CurrentLevelData.Instance.currentLevel_Shown;
-            elephantLevelEvent.elephantEventType = ElephantEvent.LevelCompleted;
-            elephantLevelEvent.Raise();
+        //     elephantLevelEvent.level             = CurrentLevelData.Instance.currentLevel_Shown;
+        //     elephantLevelEvent.elephantEventType = ElephantEvent.LevelCompleted;
+        //     elephantLevelEvent.Raise();
         }
 
         private void LevelFailResponse()
