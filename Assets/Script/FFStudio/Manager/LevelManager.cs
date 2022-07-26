@@ -66,6 +66,11 @@ namespace FFStudio
         {
 
         }
+
+        public void OnLevelCompleted()
+        {
+			PlayerPrefsUtility.Instance.DeleteAll();
+		}
 #endregion
 
 #region Implementation
