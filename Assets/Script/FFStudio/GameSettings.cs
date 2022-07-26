@@ -32,6 +32,9 @@ namespace FFStudio
         [ LabelText( "Arrow Count Range" ) ] public Vector2 arrow_shoot_count_range;
         [ LabelText( "Arrow Count Difficulty Easing" ) ] public Ease arrow_shoot_count_ease;
         [ LabelText( "Arrow Spawn Height Range" ) ] public Vector2 arrow_shoot_spawn_range;
+        [ LabelText( "Arrow Trigger Spawn Count" ) ] public int arrow_trigger_spawn_count;
+        [ LabelText( "Arrow Trigger Spawn Ease" ) ] public Ease arrow_trigger_spawn_ease;
+
 
     [ Title( "Shield" ) ]
         [ LabelText( "Shield Movement Speed" ) ] public float shield_movement_speed = 1f;
@@ -47,6 +50,7 @@ namespace FFStudio
     [ Title( "Project Setup", "These settings should not be edited by Level Designer(s).", TitleAlignments.Centered ) ]
         public int maxLevelCount;
         [ LabelText( "Pseudo Level Count" ) ] public int game_level_pseudoCount;
+        [ LabelText( "Game Travel Distance" ) ] public float game_travel_distance = 450;
         
         // Info: 3 groups below (coming from template project) are foldout by design: They should remain hidden.
 		[ FoldoutGroup( "Remote Config" ) ] public bool useRemoteConfig_GameSettings;
