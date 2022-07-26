@@ -18,6 +18,7 @@ namespace FFStudio
         public SharedReferenceNotifier notif_camera;
         public SharedFloatNotifier notif_level_progress;
         public SharedFloat shared_arrow_spawn_point; 
+        public SharedFloat shared_screen_left_position; 
 
     [ Title( "Shared Variables" ) ]
         [ SerializeField ] Currency player_currency;
@@ -53,7 +54,9 @@ namespace FFStudio
 
             // Determina the most right visible position of the world 
 			var mostRightPosition = mainCamera.ScreenToWorldPoint( new Vector3( Screen.width, 0, Mathf.Abs( mainCamera.transform.position.z ) ) );
+			var mostLeftPosition = mainCamera.ScreenToWorldPoint( new Vector3( 0, 0, Mathf.Abs( mainCamera.transform.position.z ) ) );
 			shared_arrow_spawn_point.sharedValue = mostRightPosition.x;
+			shared_screen_left_position.sharedValue = mostLeftPosition.x;
 
 			event_level_started.Raise();
 		}
