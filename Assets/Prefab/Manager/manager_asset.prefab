@@ -147,7 +147,6 @@ MonoBehaviour:
   gameSettings: {fileID: 11400000, guid: 109113abc7450a64db67bb41e0cc2dc0, type: 2}
   currentLevelData: {fileID: 11400000, guid: d35c98ef4c868d94f85bf38a98066033, type: 2}
   pool_UIPopUpText: {fileID: 11400000, guid: eaaacbd90b1464ad2b2a3a962a8a84b2, type: 2}
-  pool_ui_particle: {fileID: 11400000, guid: 4b7f9225132808a4fb73192bcd777d20, type: 2}
   pool_recycled_sequence: {fileID: 11400000, guid: 00e1e49622910417ea1f8659057ca4d1, type: 2}
   pool_arrow: {fileID: 11400000, guid: 8d7a76c998624f24ea024f11566e6fb3, type: 2}
   pool_arrow_trigger: {fileID: 11400000, guid: e9ec197d1c28b974f876c1db901b4274, type: 2}
@@ -249,17 +248,17 @@ MonoBehaviour:
           m_CallState: 2
   - eventListener:
       gameEvents:
-      - {fileID: 11400000, guid: b0d59f314f175ce4784f16c7b6cd3bf5, type: 2}
+      - {fileID: 11400000, guid: 427c25aeac3354e04a53c8886b942bc6, type: 2}
     unityEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 11400000, guid: a87a7af86a9d2b6469bf0eb6283dc00c, type: 2}
           m_TargetAssemblyTypeName: ArrowSystem, Assembly-CSharp
-          m_MethodName: SpawnArrowGroup
-          m_Mode: 2
+          m_MethodName: SpawnArrows
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: b0d59f314f175ce4784f16c7b6cd3bf5, type: 2}
-            m_ObjectArgumentAssemblyTypeName: ArrowGroupDataGameEvent, Assembly-CSharp
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
