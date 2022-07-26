@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
 		CacheIncrementals();
 
 		// Set incremental properties to default values
+		player_speed.SetValue_NotifyAlways( 0 );
 		player_is_blocking.SharedValue = false;
 		player_stamina.Default();
 		player_health.sharedValue = incremental_health.CurrentIncremental.incremental_health_value;
