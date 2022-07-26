@@ -53,6 +53,11 @@ namespace FFStudio
 			return sequence;
 		}
 
+		public bool IsPlaying()
+		{
+			return sequence != null && sequence.IsPlaying();
+		}
+
 		public void Kill()
 		{
 			sequence = sequence.KillProper();

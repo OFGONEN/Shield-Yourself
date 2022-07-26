@@ -94,6 +94,11 @@ namespace FFStudio
 			changeEvent?.Invoke();
 		}
 
+		public void Notify()
+		{
+			changeEvent?.Invoke();
+		}
+
 #if UNITY_EDITOR
 		public bool IsMethodSubscribed( ChangeEvent method )
 		{

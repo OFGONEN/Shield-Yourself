@@ -49,10 +49,7 @@ namespace FFStudio
 		
 		public bool IsPlaying()
 		{
-			if( tween != null )
-				return tween.IsPlaying();
-			else
-				return false;
+			return tween != null && tween.IsPlaying();
 		}
 
 		public void Kill()

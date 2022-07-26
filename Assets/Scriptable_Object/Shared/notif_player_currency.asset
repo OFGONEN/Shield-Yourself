@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c693399179d7c444af61eb0741d231a, type: 3}
+  m_Name: notif_player_currency
+  m_EditorClassIdentifier: 
+  sharedValue: 0
+  pool_ui_particle: {fileID: 11400000, guid: 4b7f9225132808a4fb73192bcd777d20, type: 2}
+  notif_camera_transform: {fileID: 11400000, guid: 488e798dd6f140e4a84fa7485b885dd3, type: 2}
+  notif_ui_currency_transform: {fileID: 11400000, guid: 5a6e933f8b4365e4c865e3eaa3e8a756, type: 2}
