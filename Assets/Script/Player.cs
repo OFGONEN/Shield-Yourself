@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
 		onUpdateMethod = PlayerWalking;
 
 		player_animator.SetBool( "walking", true );
-		player_speed.SharedValue = GameSettings.Instance.player_speed;
+		player_speed.SetValue_NotifyAlways( GameSettings.Instance.player_speed );
 
 		particle_wind.Play();
 
@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
 			shieldActivateDelay,
 			event_shield_activate.Raise ) );
 
-		player_speed.SharedValue = 0;
+		player_speed.SetValue_NotifyAlways( 0 );
 		player_animator.SetBool( "walking", false );
 		particle_wind.Stop( true, ParticleSystemStopBehavior.StopEmitting );
 
@@ -200,7 +200,7 @@ public class Player : MonoBehaviour
 		sequence.Append( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 0, newDuration ) );
 		sequence.Join( player_shield_transform.DOLocalRotate( Vector3.zero, newDuration ) );
 
-		player_speed.SharedValue = GameSettings.Instance.player_speed;
+		player_speed.SetValue_NotifyAlways( GameSettings.Instance.player_speed );
 
 		player_animator.SetBool( "walking", true );
 		particle_wind.Play();
@@ -239,7 +239,7 @@ public class Player : MonoBehaviour
 		particle_wind.Stop( true, ParticleSystemStopBehavior.StopEmitting );
 		particle_sweat.Stop( true, ParticleSystemStopBehavior.StopEmitting );
 
-		player_speed.SharedValue = 0;
+		player_speed.SetValue_NotifyAlways( 0 );
 
 		SetLeftArmWeight( 0 );
 
