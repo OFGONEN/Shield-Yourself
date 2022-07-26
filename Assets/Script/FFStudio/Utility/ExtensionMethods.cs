@@ -15,6 +15,7 @@ namespace FFStudio
 
 		// Keys
 		public static readonly string Currency_Key = "currency";
+		public static readonly string Skybox_Key = "skybox";
 
 		static List< Transform > baseModelBones   = new List< Transform >( 96 );
 		static List< Transform > targetModelBones = new List< Transform >( 96 );

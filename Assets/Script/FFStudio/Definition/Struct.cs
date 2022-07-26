@@ -250,4 +250,17 @@ namespace FFStudio
 			return incremental_health_cost;
 		}
 	}
+
+	[ Serializable ]
+	public struct SkyboxMaterialData
+	{
+		public Material skybox_material;
+		public Texture skybox_texture_twinkling; // _TwinklingTexture
+		public Texture skybox_texture_sun; // _SunTexture
+		public Texture skybox_texture_moon; // _MoonTexture
+		public Texture skybox_cubemap_background; // _BackgroundCubemap
+		public Texture skybox_cubemap_pattern; // _PatternCubemap
+		public Texture skybox_cubemap_starts; // _StarsCubemap
+		public Texture skybox_cubemap_clouds; // _CloudsCubemap
+	}
 }
