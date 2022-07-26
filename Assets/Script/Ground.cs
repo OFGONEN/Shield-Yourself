@@ -61,10 +61,10 @@ public class Ground : MonoBehaviour
     void Movement()
     {
 		var firstGround = ground_queue.Peek();
-
-        if( firstGround.position.x < shared_screen_left_position.sharedValue - ground_lenght )
+		var firstGroundPosition = firstGround.position;
+		if( firstGroundPosition.x < shared_screen_left_position.sharedValue - ground_lenght )
         {
-			firstGround.position = Vector3.right * ( ground_last.position.x + ground_lenght );
+			firstGround.position = firstGroundPosition.SetX( ground_last.position.x + ground_lenght );
 			ground_last = firstGround;
 
 			ground_queue.Dequeue();
