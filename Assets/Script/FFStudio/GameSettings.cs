@@ -11,6 +11,7 @@ namespace FFStudio
 #region Fields (Settings)
     // Info: You can use Title() attribute ONCE for every game-specific group of settings.
     [ Title( "Player" ) ]
+        [ LabelText( "Target Range" ) ] public Vector2 player_target_range;
         [ LabelText( "Walking Speed" ) ] public float player_speed;
         [ LabelText( "Shield Activate Delay" ) ] public float player_shield_activate_delay;
         [ LabelText( "Arrow Damage Value" ) ] public float player_arrow_damage;

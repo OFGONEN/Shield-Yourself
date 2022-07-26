@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a385bd3b4416492409284c9a366cb52a, type: 3}
   m_Name: game_settings
   m_EditorClassIdentifier: 
+  player_target_range: {x: 0.5, y: 1.3}
   player_speed: 1
   player_shield_activate_delay: 0.25
   player_arrow_damage: 1
@@ -30,7 +31,7 @@ MonoBehaviour:
   arrow_shoot_speed_ease: 1
   arrow_shoot_count_range: {x: 3, y: 10}
   arrow_shoot_count_ease: 1
-  arrow_shoot_spawn_range: {x: 0.55, y: 1.5}
+  arrow_shoot_spawn_range: {x: 0.7, y: 2}
   shield_movement_speed: 1
   player_ui_health_fill_speed: 0.5
   player_ui_health_delay: 0.15
