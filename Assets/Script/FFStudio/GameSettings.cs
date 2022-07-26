@@ -45,7 +45,7 @@ namespace FFStudio
     
     [ Title( "Project Setup", "These settings should not be edited by Level Designer(s).", TitleAlignments.Centered ) ]
         public int maxLevelCount;
-        [ LabelText( "Pseudo Level Count" ) ] public int game_level_count;
+        [ LabelText( "Pseudo Level Count" ) ] public int game_level_pseudoCount;
         
         // Info: 3 groups below (coming from template project) are foldout by design: They should remain hidden.
 		[ FoldoutGroup( "Remote Config" ) ] public bool useRemoteConfig_GameSettings;
@@ -68,6 +68,10 @@ namespace FFStudio
 
         [ FoldoutGroup( "Debug" ) ] public float debug_ui_text_float_height;
         [ FoldoutGroup( "Debug" ) ] public float debug_ui_text_float_duration;
+#endregion
+
+#region Properties
+        public float LevelRatio => CurrentLevelData.Instance.currentLevel_Shown / ( float )game_level_pseudoCount;
 #endregion
 
 #region Fields (Singleton Related)
