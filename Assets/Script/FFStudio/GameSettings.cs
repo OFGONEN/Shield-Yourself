@@ -21,6 +21,17 @@ namespace FFStudio
 		[ LabelText( "Color Update Speed" ), Min( 0 ) ] public float player_redness_speed = 0.75f;
 		[ LabelText( "Infilation Speed Range" ), MinMaxSlider( 0, 10, true )] public Vector2 player_inflation_speedRange = Vector2.up;
 
+    [ Title( "Arrow" ) ]
+        [ LabelText( "Arrow Shot Delay Between Arrows" ) ] public Vector2 arrow_shoot_delay_between_range;
+        [ LabelText( "Arrow Shot Delay Between Arrows Difficulty Easing" ) ] public Ease arrow_shoot_delay_between_ease;
+        [ LabelText( "Arrow Shot Delay" ) ] public Vector2 arrow_shoot_delay_range;
+        [ LabelText( "Arrow Shot Delay Difficulty Easing" ) ] public Ease arrow_shoot_delay_ease;
+        [ LabelText( "Arrow Speed Range" ) ] public Vector2 arrow_shoot_speed_range;
+        [ LabelText( "Arrow Speed Difficulty Easing" ) ] public Ease arrow_shoot_speed_ease;
+        [ LabelText( "Arrow Count Range" ) ] public Vector2 arrow_shoot_count_range;
+        [ LabelText( "Arrow Count Difficulty Easing" ) ] public Ease arrow_shoot_count_ease;
+        [ LabelText( "Arrow Spawn Height Range" ) ] public Vector2 arrow_shoot_spawn_range;
+
     [ Title( "Shield" ) ]
         [ LabelText( "Shield Movement Speed" ) ] public float shield_movement_speed = 1f;
 
