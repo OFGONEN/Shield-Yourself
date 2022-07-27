@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 124199665187945364}
   - component: {fileID: 124199665187945363}
   - component: {fileID: 124199665187945367}
+  - component: {fileID: 2443867323485406405}
   m_Layer: 5
   m_Name: manager_ui
   m_TagString: Untagged
@@ -820,9 +821,41 @@ MonoBehaviour:
   levelRevealedEvent: {fileID: 11400000, guid: be5502ede7f194b4cad32082aa9196eb, type: 2}
   loadNewLevelEvent: {fileID: 11400000, guid: f21048912f45f4f4ba5088a96779eb2f, type: 2}
   resetLevelEvent: {fileID: 11400000, guid: 0a3e52cd505ecfc4ba9ef153d4f3ba93, type: 2}
+  event_level_resumed: {fileID: 11400000, guid: 91d7b2a5fde5c9040aa02734c503dce1, type: 2}
   elephantLevelEvent: {fileID: 11400000, guid: 33ccf5f609258ea46b63b78483df10f5, type: 2}
   pool_ui_arrow_indicator: {fileID: 11400000, guid: ea13a7e80b14df449bb73248b0ea9eb1, type: 2}
   pool_ui_particle_currency: {fileID: 11400000, guid: 4b7f9225132808a4fb73192bcd777d20, type: 2}
+--- !u!114 &2443867323485406405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124199665187945362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245dc21cc9428744fa28ad2d6ce7d327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPairs:
+  - eventListener:
+      gameEvents:
+      - {fileID: 11400000, guid: 04ef0ee649f3fca43b9d84228e34d4cd, type: 2}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 124199665187945367}
+          m_TargetAssemblyTypeName: FFStudio.UIManager, Assembly-CSharp
+          m_MethodName: OnLevelCompletePseudo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &193827666167386678
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,11 +34,14 @@ namespace FFStudio
         public GameEvent levelRevealedEvent;
         public GameEvent loadNewLevelEvent;
         public GameEvent resetLevelEvent;
+        public GameEvent event_level_resumed;
         public ElephantLevelEvent elephantLevelEvent;
 
     [ Title( "Shared Variables" ) ]
         public PoolUIArrowIndicator pool_ui_arrow_indicator;
         public UIParticlePool pool_ui_particle_currency;
+
+        RecycledSequence recycledSequence = new RecycledSequence();
 #endregion
 
 #region Unity API
@@ -72,7 +75,32 @@ namespace FFStudio
 		}
 #endregion
 
+#region API
+        public void OnLevelCompletePseudo()
+        {
+			level_information_text.text = "Tap to Continue";
+
+			var sequence = recycledSequence.Recycle( OnShowIncrementalComplete );
+			sequence.AppendCallback( ShowIncrementalButtons );
+			sequence.Join( level_information_text_Scale.DoScale_Start( GameSettings.Instance.ui_Entity_Scale_TweenDuration ) );
+			sequence.AppendInterval( Mathf.Abs( GameSettings.Instance.ui_Entity_Fade_TweenDuration - GameSettings.Instance.ui_Entity_Scale_TweenDuration ) );
+		}
+#endregion
+
 #region Implementation
+        void OnShowIncrementalComplete()
+        {
+			tapInputListener.response = OnContinue;
+		}
+
+        void OnContinue()
+        {
+			tapInputListener.response = ExtensionMethods.EmptyMethod;
+
+			HideIncrementalButtons();
+			level_information_text_Scale.DoScale_Target( Vector3.zero, GameSettings.Instance.ui_Entity_Scale_TweenDuration ).OnComplete( event_level_resumed.Raise);
+		}
+
         private void LevelLoadedResponse()
         {
 			var sequence = DOTween.Sequence()
