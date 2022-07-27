@@ -27,6 +27,10 @@ public class Outpost : MonoBehaviour
 #endregion
 
 #region Unity API
+	private void OnDisable()
+	{
+		onUpdateMethod = ExtensionMethods.EmptyMethod;
+	}
 
     private void Awake()
     {
@@ -52,7 +56,7 @@ public class Outpost : MonoBehaviour
 		PlayerPrefsUtility.Instance.SetInt( ExtensionMethods.Outpost_Key, outpost_index );
 	}
 
-    public void OnTrigger()
+	public void OnTrigger()
     {
 		outpost_collider.enabled = false;
 		outpost_index++;

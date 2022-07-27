@@ -24,11 +24,16 @@ public class ArrowGroupTrigger : MonoBehaviour
 #endregion
 
 #region Unity API
-  private void Awake()
-  {
+	private void OnDisable()
+	{
+		onUpdateMethod = ExtensionMethods.EmptyMethod;
+	}
+
+    private void Awake()
+    {
 		arrow_trigger_index = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.ArrowTrigger_Key, 1 );
 		onUpdateMethod      = ExtensionMethods.EmptyMethod;
-  }
+  	}
 
 	private void Update()
 	{

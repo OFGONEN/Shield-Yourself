@@ -25,6 +25,11 @@ public class OutpostGraphic : MonoBehaviour
 #endregion
 
 #region Unity API
+	private void OnDisable()
+	{
+		onUpdateMethod = ExtensionMethods.EmptyMethod;
+	}
+
     private void Awake()
     {
 		onUpdateMethod = ExtensionMethods.EmptyMethod;
