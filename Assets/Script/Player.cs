@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] SharedFloatNotifier player_health;
     [ SerializeField ] SharedFloatNotifier player_health_ratio;
     [ SerializeField ] SharedFloatNotifier player_speed;
+    [ SerializeField ] SharedFloatNotifier notif_player_travel;
     [ SerializeField ] SharedFloatNotifier player_leftArm_weight;
     [ SerializeField ] SharedBoolNotifier player_is_blocking;
     [ SerializeField ] SharedReferenceNotifier player_leftArm_target;
@@ -70,6 +71,7 @@ public class Player : MonoBehaviour
 		CacheIncrementals();
 
 		// Set incremental properties to default values
+		notif_player_travel.sharedValue = PlayerPrefsUtility.Instance.GetFloat( ExtensionMethods.PlayerTravel_Key, transform.position.x );
 		player_speed.SetValue_NotifyAlways( 0 );
 		player_is_blocking.SharedValue = false;
 		player_stamina.Default();
@@ -146,6 +148,8 @@ public class Player : MonoBehaviour
     {
 		player_currency.Gain( incremental_currency_data.incremental_currency_gain_value, incremental_currency_data.incremental_currency_gain_rate );
 		player_stamina.Recover( incremental_stamina_data.incremental_stamina_recover * Time.deltaTime );
+
+		notif_player_travel.sharedValue += Time.deltaTime * player_speed.sharedValue;
 	}
 
     void PlayerBlocking()

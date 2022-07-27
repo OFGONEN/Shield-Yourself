@@ -262,6 +262,7 @@ MonoBehaviour:
   player_health: {fileID: 11400000, guid: 44efa6f89958ef94eb5d4a4c1525008c, type: 2}
   player_health_ratio: {fileID: 11400000, guid: 385d4a576f2076147b9e7c1e8188841d, type: 2}
   player_speed: {fileID: 11400000, guid: 20e87db312556584fa05937b37795bbc, type: 2}
+  notif_player_travel: {fileID: 11400000, guid: 28d8f3126e21d3841bf31ad2ce378e42, type: 2}
   player_leftArm_weight: {fileID: 11400000, guid: 5588a2b7374cd064dbb4b88114915f02, type: 2}
   player_is_blocking: {fileID: 11400000, guid: 0b647b930e79bf142bd5f30bc6c9c62a, type: 2}
   player_leftArm_target: {fileID: 11400000, guid: 7071bb7852ee36841b1d94103802d2c0, type: 2}

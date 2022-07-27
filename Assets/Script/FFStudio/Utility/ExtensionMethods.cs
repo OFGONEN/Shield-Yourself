@@ -17,6 +17,7 @@ namespace FFStudio
 		public static readonly string Currency_Key = "currency";
 		public static readonly string Skybox_Key = "skybox";
 		public static readonly string ArrowTrigger_Key = "arrow_trigger";
+		public static readonly string PlayerTravel_Key = "player_travel";
 
 		static List< Transform > baseModelBones   = new List< Transform >( 96 );
 		static List< Transform > targetModelBones = new List< Transform >( 96 );
