@@ -52,6 +52,7 @@ MonoBehaviour:
   notif_level_progress: {fileID: 11400000, guid: 43438d720c16f2e4aa5a19d520e1e15f, type: 2}
   shared_arrow_spawn_point: {fileID: 11400000, guid: 9f4b3bdb8bd78f54cb6eadba1000c6a1, type: 2}
   shared_screen_left_position: {fileID: 11400000, guid: 01217574da5bf4681933543a89041aba, type: 2}
+  notif_player_travel: {fileID: 11400000, guid: 28d8f3126e21d3841bf31ad2ce378e42, type: 2}
   player_currency: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
 --- !u!114 &6253295288017648143
 MonoBehaviour:
@@ -165,6 +166,24 @@ MonoBehaviour:
         - m_Target: {fileID: 3087407567312676473}
           m_TargetAssemblyTypeName: FFStudio.LevelManager, Assembly-CSharp
           m_MethodName: OnLevelCompleted
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventListener:
+      gameEvents:
+      - {fileID: 11400000, guid: 0f051fdb4dc770245b48f065469389aa, type: 2}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3087407567312676473}
+          m_TargetAssemblyTypeName: FFStudio.LevelManager, Assembly-CSharp
+          m_MethodName: OnLevelPseudoCompleted
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

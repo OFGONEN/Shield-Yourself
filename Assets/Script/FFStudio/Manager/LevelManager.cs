@@ -19,6 +19,7 @@ namespace FFStudio
         public SharedFloatNotifier notif_level_progress;
         public SharedFloat shared_arrow_spawn_point; 
         public SharedFloat shared_screen_left_position; 
+        public SharedFloatNotifier notif_player_travel;
 
     [ Title( "Shared Variables" ) ]
         [ SerializeField ] Currency player_currency;
@@ -70,6 +71,15 @@ namespace FFStudio
         public void OnLevelCompleted()
         {
 			PlayerPrefsUtility.Instance.DeleteAll();
+		}
+
+        public void OnLevelPseudoCompleted()
+        {
+			CurrentLevelData.Instance.currentLevel_Shown = Mathf.Min( CurrentLevelData.Instance.currentLevel_Shown + 1, GameSettings.Instance.game_level_pseudoCount );
+			PlayerPrefsUtility.Instance.SetInt( "Consecutive Level", CurrentLevelData.Instance.currentLevel_Shown );
+
+            // Save player travel distance
+            PlayerPrefsUtility.Instance.SetFloat( ExtensionMethods.PlayerTravel_Key, notif_player_travel.sharedValue );
 		}
 #endregion
 
