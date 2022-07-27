@@ -13,6 +13,7 @@ public class HighestPoint : MonoBehaviour
     [ SerializeField ] SharedFloatNotifier notif_player_speed;
     [ SerializeField ] SharedFloatNotifier notif_player_travel;
     [ SerializeField ] SharedFloat shared_screen_left_position;
+    [ SerializeField ] GameEvent event_level_paused;
 
   [ Title( "Setup" ) ]
     [ SerializeField ] Collider outpost_collider;
@@ -68,7 +69,8 @@ public class HighestPoint : MonoBehaviour
 
     public void OnTrigger()
     {
-		//todo
+		event_level_paused.Raise();
+
 		outpost_collider.enabled = false;
 		outpost_graphic_inactive.SetActive( false );
 		outpost_graphic_active.SetActive( true );

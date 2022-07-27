@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7db7765e7743540b9d8389579826c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  event_level_pause: {fileID: 11400000, guid: 04ef0ee649f3fca43b9d84228e34d4cd, type: 2}
   event_level_complete_pseudo: {fileID: 11400000, guid: 0f051fdb4dc770245b48f065469389aa, type: 2}
   notif_player_speed: {fileID: 11400000, guid: 20e87db312556584fa05937b37795bbc, type: 2}
   notif_player_travel: {fileID: 11400000, guid: 28d8f3126e21d3841bf31ad2ce378e42, type: 2}

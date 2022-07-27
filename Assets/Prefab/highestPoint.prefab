@@ -52,6 +52,7 @@ MonoBehaviour:
   notif_player_speed: {fileID: 11400000, guid: 20e87db312556584fa05937b37795bbc, type: 2}
   notif_player_travel: {fileID: 11400000, guid: 28d8f3126e21d3841bf31ad2ce378e42, type: 2}
   shared_screen_left_position: {fileID: 11400000, guid: 01217574da5bf4681933543a89041aba, type: 2}
+  event_level_paused: {fileID: 11400000, guid: 04ef0ee649f3fca43b9d84228e34d4cd, type: 2}
   outpost_collider: {fileID: 8490627247918436819}
   outpost_graphic_active: {fileID: 8525269663991997988}
   outpost_graphic_inactive: {fileID: 7564434428715112474}

@@ -12,6 +12,7 @@ public class Outpost : MonoBehaviour
 {
 #region Fields
   [ Title( "Shared Variables" ) ]
+    [ SerializeField ] GameEvent event_level_pause;
     [ SerializeField ] GameEvent event_level_complete_pseudo;
     [ SerializeField ] SharedFloatNotifier notif_player_speed;
     [ SerializeField ] SharedFloatNotifier notif_player_travel;
@@ -68,6 +69,8 @@ public class Outpost : MonoBehaviour
 
 		outpost_collider.enabled = false;
 		outpost_index++;
+
+		event_level_pause.Raise();
 		event_level_complete_pseudo.Raise();
 
 		onUpdateMethod = ExtensionMethods.EmptyMethod;
