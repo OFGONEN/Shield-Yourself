@@ -13,17 +13,25 @@ public class ArrowGroupTrigger : MonoBehaviour
   [ Title( "Setup" ) ]
     [ SerializeField ] Collider arrow_group_trigger_collider;
     [ SerializeField ] GameEvent event_arrow_shot;
+    [ SerializeField ] SharedFloatNotifier notif_player_speed;
 
-	int arrow_trigger_index;
+	[ ShowInInspector, ReadOnly ] int arrow_trigger_index;
+	UnityMessage onUpdateMethod;
 #endregion
 
 #region Properties
 #endregion
 
 #region Unity API
-	private void Awake()
-	{
+  private void Awake()
+  {
 		arrow_trigger_index = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.ArrowTrigger_Key, 1 );
+		onUpdateMethod      = ExtensionMethods.EmptyMethod;
+  }
+
+	private void Update()
+	{
+		onUpdateMethod();
 	}
 #endregion
 
@@ -33,10 +41,19 @@ public class ArrowGroupTrigger : MonoBehaviour
 		Spawn();
 	}
 
+	public void OnLevelFailed()
+	{
+		arrow_trigger_index = Mathf.Max( arrow_trigger_index - 1, 1 );
+		PlayerPrefsUtility.Instance.SetInt( ExtensionMethods.ArrowTrigger_Key, arrow_trigger_index );
+	}
+
     public void OnTrigger()
     {
 		arrow_group_trigger_collider.enabled = false;
 		arrow_trigger_index++;
+		event_arrow_shot.Raise();
+
+		onUpdateMethod = ExtensionMethods.EmptyMethod;
 
 		if( arrow_trigger_index <= GameSettings.Instance.arrow_trigger_spawn_count )
 		{
@@ -47,10 +64,18 @@ public class ArrowGroupTrigger : MonoBehaviour
 #endregion
 
 #region Implementation
+	void Movement()
+	{
+		var position = transform.position;
+		transform.position = Vector3.MoveTowards( position, position + Vector3.left, Time.deltaTime * notif_player_speed.sharedValue );
+	}
+
     void Spawn()
     {
 		transform.position = transform.position.SetX( ReturnSpawnPosition() );
 		arrow_group_trigger_collider.enabled = true;
+
+		onUpdateMethod = Movement;
 	}
 
 	float ReturnSpawnPosition()
