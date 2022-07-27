@@ -16,7 +16,7 @@ public class Arrow : MonoBehaviour, IClusterEntity
 	[ SerializeField ] SharedFloat shared_arrow_spawn_point;
 
   [ Title( "Components" ) ]
-    [ SerializeField ] TrailRenderer arrow_trail_renderer;
+    [ SerializeField ] ParticleSystem arrow_trail_renderer;
     [ SerializeField ] Collider arrow_collider;
 
 // Private VariablesSpawn
@@ -52,12 +52,12 @@ public class Arrow : MonoBehaviour, IClusterEntity
 		    transform.position     = position;
 
 		//Configure components
-		arrow_trail_renderer.Clear();
-
-		arrow_collider.enabled       = true;
-		arrow_trail_renderer.enabled = true;
+		arrow_trail_renderer.Stop( true, ParticleSystemStopBehavior.StopEmittingAndClear );
 
 		transform.LookAt( targetPosition, Vector3.up );
+
+		arrow_collider.enabled = true;
+		arrow_trail_renderer.Play();
 
 		Subscribe_Cluster();
 	}
@@ -65,7 +65,7 @@ public class Arrow : MonoBehaviour, IClusterEntity
 	public void ReturnToPool()
 	{
 		arrow_collider.enabled       = false;
-		arrow_trail_renderer.enabled = false;
+		arrow_trail_renderer.Stop( true, ParticleSystemStopBehavior.StopEmittingAndClear );
 
 		UnSubscribe_Cluster();
 
