@@ -12,10 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793caf44874534c9bb091d18aafaa5dd, type: 3}
   m_Name: tool_incremental_creator
   m_EditorClassIdentifier: 
-  incremental_health: {fileID: 0}
+  incremental_health: {fileID: 11400000, guid: 74709767fdb8cd646bc62c62e9c22346, type: 2}
   data_health:
-    level_max: 0
-    range_health: {x: 0, y: 0}
-    ease_health: 0
-    range_cost: {x: 0, y: 0}
-    ease_cost: 0
+    level_max: 30
+    range_health: {x: 3, y: 50}
+    ease_health: 1
+    range_cost: {x: 10, y: 200}
+    ease_cost: 1
+  incremental_stamina: {fileID: 11400000, guid: 6e0deb817d461a043aafe65297d182a1, type: 2}
+  data_stamina:
+    level_max: 30
+    range_deplete: {x: 5, y: 50}
+    ease_deplete: 1
+    range_deplete_capacity: {x: 10, y: 100}
+    ease_deplete_capacity: 1
+    range_recover: {x: 5, y: 2}
+    ease_recover: 1
+    range_cost: {x: 15, y: 350}
+    ease_cost: 1
+  incremental_currency: {fileID: 11400000, guid: 96b618201b829a84ca81a7f6f87358a5, type: 2}
+  data_currency:
+    level_max: 30
+    range_gain_value: {x: 0.1, y: 5}
+    ease_gain_value: 1
+    range_gain_rate: {x: 1, y: 0.75}
+    ease_gain_rate: 1
+    range_cost: {x: 12, y: 320}
+    ease_cost: 1
