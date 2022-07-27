@@ -78,6 +78,7 @@ MonoBehaviour:
     skybox_cubemap_starts: {fileID: 8900000, guid: 2410ceb2200b01a4cad9ef3c253b8a5a, type: 3}
     skybox_cubemap_clouds: {fileID: 8900000, guid: 5df5f8e237761404a9f395bab51aef82, type: 3}
   skybox_material_default: {fileID: 2100000, guid: 23b4b4e8453454a0ba58f085231393d2, type: 2}
+  skybox_ease: 1
   skybox_lerp_duration: 1
   skybox_lerp_ease: 1
   skybox_lerp_percentage: 0.75
