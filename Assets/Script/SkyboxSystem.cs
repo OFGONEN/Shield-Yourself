@@ -15,6 +15,7 @@ public class SkyboxSystem : ScriptableObject
 #region Fields
     [ SerializeField ] SkyboxMaterialData[] skybox_materials;
     [ SerializeField ] Material skybox_material_default;
+    [ LabelText( "Skybox Change Ease" ), SerializeField ] Ease skybox_ease;
     [ SerializeField ] float skybox_lerp_duration;
     [ SerializeField ] Ease skybox_lerp_ease;
     [ LabelText( "Texture Change Threshold" ), SerializeField ] float skybox_lerp_percentage;
@@ -34,6 +35,17 @@ public class SkyboxSystem : ScriptableObject
 #endregion
 
 #region API
+	public void OnLevelCompletePseudo()
+	{
+		var indexRatio = DOVirtual.EasedValue( 0, 1, GameSettings.Instance.LevelRatio, skybox_ease );
+
+		var currentRatio = (float)skybox_index_current / skybox_materials.Length;
+		var targetRatio = (float)( skybox_index_current + 1 ) / skybox_materials.Length;
+
+		if( targetRatio - indexRatio < indexRatio - currentRatio )
+			LerpToSkybox( skybox_index_current + 1 );
+
+	}
     public void SetDefault()
     {
 		skybox_index_current = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Skybox_Key, 0 );
@@ -44,7 +56,7 @@ public class SkyboxSystem : ScriptableObject
     public void LerpToSkybox( int index )
     {
 		skybox_lerp_amount  = 0;
-		skybox_index_target = index;
+		skybox_index_target = Mathf.Min( index, skybox_materials.Length - 1 );
 		skybox_lerping      = true;
 
 		recycledTween.Recycle( DOTween.To( GetLerp, SetLerp, 1, skybox_lerp_duration ).SetEase( skybox_lerp_ease ), OnSkyboxChanged );
