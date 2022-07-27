@@ -27,7 +27,7 @@ MonoBehaviour:
   arrow_shoot_delay_between_ease: 1
   arrow_shoot_delay_range: {x: 1, y: 1.5}
   arrow_shoot_delay_ease: 1
-  arrow_shoot_speed_range: {x: 1, y: 2}
+  arrow_shoot_speed_range: {x: 2, y: 3}
   arrow_shoot_speed_ease: 1
   arrow_shoot_count_range: {x: 3, y: 10}
   arrow_shoot_count_ease: 1
@@ -35,6 +35,8 @@ MonoBehaviour:
   arrow_trigger_spawn_count: 10
   arrow_trigger_spawn_ease: 1
   shield_movement_speed: 1
+  outpost_spawn_count: 10
+  outpost_spawn_ease: 1
   player_ui_health_fill_speed: 0.5
   player_ui_health_delay: 0.15
   player_ui_stamina_delay: 0.15
