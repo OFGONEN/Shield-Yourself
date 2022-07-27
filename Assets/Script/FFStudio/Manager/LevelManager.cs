@@ -75,11 +75,15 @@ namespace FFStudio
 
         public void OnLevelPseudoCompleted()
         {
-			CurrentLevelData.Instance.currentLevel_Shown = Mathf.Min( CurrentLevelData.Instance.currentLevel_Shown + 1, GameSettings.Instance.game_level_pseudoCount );
+			var pseudoLevel = Mathf.Min( CurrentLevelData.Instance.currentLevel_Shown + 1, GameSettings.Instance.game_level_pseudoCount );
 			PlayerPrefsUtility.Instance.SetInt( "Consecutive Level", CurrentLevelData.Instance.currentLevel_Shown );
 
-            // Save player travel distance
-            PlayerPrefsUtility.Instance.SetFloat( ExtensionMethods.PlayerTravel_Key, notif_player_travel.sharedValue );
+            if( pseudoLevel > GameSettings.Instance.game_level_pseudoCount )
+            {
+				levelCompleted.Raise();
+			}
+            else
+				CurrentLevelData.Instance.currentLevel_Shown = pseudoLevel;
 		}
 #endregion
 
