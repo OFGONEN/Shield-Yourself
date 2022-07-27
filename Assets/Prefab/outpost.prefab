@@ -201,6 +201,7 @@ MonoBehaviour:
   event_level_complete_pseudo: {fileID: 11400000, guid: 0f051fdb4dc770245b48f065469389aa, type: 2}
   notif_player_speed: {fileID: 11400000, guid: 20e87db312556584fa05937b37795bbc, type: 2}
   notif_player_travel: {fileID: 11400000, guid: 28d8f3126e21d3841bf31ad2ce378e42, type: 2}
+  notif_level_progress: {fileID: 11400000, guid: 43438d720c16f2e4aa5a19d520e1e15f, type: 2}
   outpost_collider: {fileID: 5709246396134901481}
 --- !u!114 &2296299440804597620
 MonoBehaviour:

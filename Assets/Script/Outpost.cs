@@ -15,11 +15,13 @@ public class Outpost : MonoBehaviour
     [ SerializeField ] GameEvent event_level_complete_pseudo;
     [ SerializeField ] SharedFloatNotifier notif_player_speed;
     [ SerializeField ] SharedFloatNotifier notif_player_travel;
+    [ SerializeField ] SharedFloatNotifier notif_level_progress;
 
   [ Title( "Setup" ) ]
     [ SerializeField ] Collider outpost_collider;
 
 	[ ShowInInspector, ReadOnly ] int outpost_index;
+	[ ShowInInspector, ReadOnly ] float outpost_spawn_point;
 	UnityMessage onUpdateMethod;
 #endregion
 
@@ -40,6 +42,7 @@ public class Outpost : MonoBehaviour
 
     private void Start()
     {
+		notif_level_progress.SetValue_NotifyAlways( 0 );
 		Spawn();
 	}
 
@@ -78,12 +81,19 @@ public class Outpost : MonoBehaviour
 	void Movement()
 	{
 		var position = transform.position;
-		transform.position = Vector3.MoveTowards( position, position + Vector3.left, Time.deltaTime * notif_player_speed.sharedValue );
+		    position = Vector3.MoveTowards( position, position + Vector3.left, Time.deltaTime * notif_player_speed.sharedValue );
+
+		transform.position = position;
+
+		notif_level_progress.SetValue_NotifyAlways( Mathf.InverseLerp( outpost_spawn_point, 0, position.x ) );
 	}
 
     void Spawn()
     {
-		transform.position = transform.position.SetX( ReturnSpawnPosition() );
+		outpost_spawn_point = ReturnSpawnPosition();
+		notif_level_progress.SetValue_NotifyAlways( 0 );
+
+		transform.position = transform.position.SetX( outpost_spawn_point );
 		outpost_collider.enabled = true;
 
 		onUpdateMethod = Movement;
