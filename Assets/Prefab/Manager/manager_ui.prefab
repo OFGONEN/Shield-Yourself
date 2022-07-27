@@ -286,6 +286,8 @@ GameObject:
   - component: {fileID: 124199664086749823}
   - component: {fileID: 124199664086749822}
   - component: {fileID: 124199664086749821}
+  - component: {fileID: 448455173399388065}
+  - component: {fileID: 7617717484504083210}
   m_Layer: 5
   m_Name: text_level_count
   m_TagString: Untagged
@@ -427,6 +429,69 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0, z: 0}
   startScale: {x: 0, y: 0, z: 0}
   textRenderer: {fileID: 124199664086749822}
+--- !u!114 &448455173399388065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124199664086749819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06cc8bfe8280b94597495aabdf6e9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui_level_text: {fileID: 124199664086749822}
+  punchScale: 1
+--- !u!114 &7617717484504083210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124199664086749819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245dc21cc9428744fa28ad2d6ce7d327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPairs:
+  - eventListener:
+      gameEvents:
+      - {fileID: 11400000, guid: 0f051fdb4dc770245b48f065469389aa, type: 2}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 448455173399388065}
+          m_TargetAssemblyTypeName: UILevelText, Assembly-CSharp
+          m_MethodName: OnLevelCompletePseudo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventListener:
+      gameEvents:
+      - {fileID: 11400000, guid: 08b9079fb856230459ba418b28981185, type: 2}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 448455173399388065}
+          m_TargetAssemblyTypeName: UILevelText, Assembly-CSharp
+          m_MethodName: SetLevelText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &124199664216971437
 GameObject:
   m_ObjectHideFlags: 0
