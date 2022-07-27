@@ -14,6 +14,7 @@ public class ArrowGroupTrigger : MonoBehaviour
     [ SerializeField ] Collider arrow_group_trigger_collider;
     [ SerializeField ] GameEvent event_arrow_shot;
     [ SerializeField ] SharedFloatNotifier notif_player_speed;
+    [ SerializeField ] SharedFloatNotifier notif_player_travel;
 
 	[ ShowInInspector, ReadOnly ] int arrow_trigger_index;
 	UnityMessage onUpdateMethod;
@@ -80,7 +81,7 @@ public class ArrowGroupTrigger : MonoBehaviour
 
 	float ReturnSpawnPosition()
 	{
-		return ( GameSettings.Instance.game_travel_distance - GameSettings.Instance.player_speed ) * DOVirtual.EasedValue( 0, 1, ( float )arrow_trigger_index / GameSettings.Instance.arrow_trigger_spawn_count, GameSettings.Instance.arrow_trigger_spawn_ease );
+		return ( GameSettings.Instance.game_travel_distance - GameSettings.Instance.player_speed ) * DOVirtual.EasedValue( 0, 1, ( float )arrow_trigger_index / GameSettings.Instance.arrow_trigger_spawn_count, GameSettings.Instance.arrow_trigger_spawn_ease ) - notif_player_travel.sharedValue;
 	}
 #endregion
 
