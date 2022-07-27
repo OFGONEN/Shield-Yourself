@@ -44,6 +44,7 @@ public class ArrowGroupTrigger : MonoBehaviour
 
 	public void OnLevelFailed()
 	{
+		//todo WTF to do here
 		arrow_trigger_index = Mathf.Max( arrow_trigger_index - 1, 1 );
 		PlayerPrefsUtility.Instance.SetInt( ExtensionMethods.ArrowTrigger_Key, arrow_trigger_index );
 	}

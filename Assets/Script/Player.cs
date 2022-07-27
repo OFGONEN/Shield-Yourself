@@ -71,7 +71,13 @@ public class Player : MonoBehaviour
 		CacheIncrementals();
 
 		// Set incremental properties to default values
-		notif_player_travel.sharedValue = PlayerPrefsUtility.Instance.GetFloat( ExtensionMethods.PlayerTravel_Key, transform.position.x );
+		var spawnPosition = GameSettings.Instance.game_travel_distance *
+			DOVirtual.EasedValue( 0, 1,
+				( float )PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 1 ) / GameSettings.Instance.outpost_spawn_count,
+				GameSettings.Instance.outpost_spawn_ease );
+
+		notif_player_travel.sharedValue = spawnPosition;
+
 		player_speed.SetValue_NotifyAlways( 0 );
 		player_is_blocking.SharedValue = false;
 		player_stamina.Default();
