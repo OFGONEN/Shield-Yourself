@@ -375,7 +375,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: pfx_outpost
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 483407995634539085, guid: b93fb2a3cacb0134b94d9dd64b9b0eb8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b93fb2a3cacb0134b94d9dd64b9b0eb8, type: 3}
 --- !u!198 &1474027177527394607 stripped
 ParticleSystem:

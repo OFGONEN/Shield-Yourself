@@ -19,6 +19,7 @@ namespace FFStudio
 		public static readonly string ArrowTrigger_Key = "arrow_trigger";
 		public static readonly string PlayerTravel_Key = "player_travel";
 		public static readonly string Outpost_Key = "outpost";
+		public static readonly string HighestPoint_Key = "highest";
 
 		static List< Transform > baseModelBones   = new List< Transform >( 96 );
 		static List< Transform > targetModelBones = new List< Transform >( 96 );
