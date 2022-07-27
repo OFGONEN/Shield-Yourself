@@ -13,7 +13,47 @@ MonoBehaviour:
   m_Name: system_skybox
   m_EditorClassIdentifier: 
   skybox_materials:
+  - skybox_material: {fileID: 2100000, guid: c4c9b8f14ab253e4d8df0e31ec46c658, type: 2}
+    skybox_texture_twinkling: {fileID: 2800000, guid: 4962b985402794749902f8b024ee1934, type: 3}
+    skybox_texture_sun: {fileID: 2800000, guid: e80870b385adcae48871133b9b5759dd, type: 3}
+    skybox_texture_moon: {fileID: 0}
+    skybox_cubemap_background: {fileID: 0}
+    skybox_cubemap_pattern: {fileID: 8900000, guid: 5e08451c0e8bb7a4f9ca20067695cda7, type: 3}
+    skybox_cubemap_starts: {fileID: 8900000, guid: cd8517e16ac507a4ea8c50fa7460ae98, type: 3}
+    skybox_cubemap_clouds: {fileID: 8900000, guid: eb066507e9bb4884e9d201eb874ccf2c, type: 3}
+  - skybox_material: {fileID: 2100000, guid: ad4a53ccb4aa8d343ab163ede5fb2f5c, type: 2}
+    skybox_texture_twinkling: {fileID: 2800000, guid: 4962b985402794749902f8b024ee1934, type: 3}
+    skybox_texture_sun: {fileID: 2800000, guid: e80870b385adcae48871133b9b5759dd, type: 3}
+    skybox_texture_moon: {fileID: 0}
+    skybox_cubemap_background: {fileID: 0}
+    skybox_cubemap_pattern: {fileID: 8900000, guid: 5e08451c0e8bb7a4f9ca20067695cda7, type: 3}
+    skybox_cubemap_starts: {fileID: 8900000, guid: cd8517e16ac507a4ea8c50fa7460ae98, type: 3}
+    skybox_cubemap_clouds: {fileID: 8900000, guid: eb066507e9bb4884e9d201eb874ccf2c, type: 3}
   - skybox_material: {fileID: 2100000, guid: d0523d8917957bb429a32997cb0e52b2, type: 2}
+    skybox_texture_twinkling: {fileID: 2800000, guid: 4962b985402794749902f8b024ee1934, type: 3}
+    skybox_texture_sun: {fileID: 2800000, guid: e80870b385adcae48871133b9b5759dd, type: 3}
+    skybox_texture_moon: {fileID: 0}
+    skybox_cubemap_background: {fileID: 0}
+    skybox_cubemap_pattern: {fileID: 8900000, guid: 5e08451c0e8bb7a4f9ca20067695cda7, type: 3}
+    skybox_cubemap_starts: {fileID: 8900000, guid: cd8517e16ac507a4ea8c50fa7460ae98, type: 3}
+    skybox_cubemap_clouds: {fileID: 8900000, guid: eb066507e9bb4884e9d201eb874ccf2c, type: 3}
+  - skybox_material: {fileID: 2100000, guid: f03022f11927e1248ab953db711e88b7, type: 2}
+    skybox_texture_twinkling: {fileID: 2800000, guid: 4962b985402794749902f8b024ee1934, type: 3}
+    skybox_texture_sun: {fileID: 2800000, guid: e80870b385adcae48871133b9b5759dd, type: 3}
+    skybox_texture_moon: {fileID: 0}
+    skybox_cubemap_background: {fileID: 0}
+    skybox_cubemap_pattern: {fileID: 8900000, guid: 5e08451c0e8bb7a4f9ca20067695cda7, type: 3}
+    skybox_cubemap_starts: {fileID: 8900000, guid: cd8517e16ac507a4ea8c50fa7460ae98, type: 3}
+    skybox_cubemap_clouds: {fileID: 8900000, guid: eb066507e9bb4884e9d201eb874ccf2c, type: 3}
+  - skybox_material: {fileID: 2100000, guid: b4d1e1180d6b45d4eaa6f6b684d18e2b, type: 2}
+    skybox_texture_twinkling: {fileID: 2800000, guid: 4962b985402794749902f8b024ee1934, type: 3}
+    skybox_texture_sun: {fileID: 2800000, guid: b15c2596790c6ce42980282a7e842f57, type: 3}
+    skybox_texture_moon: {fileID: 0}
+    skybox_cubemap_background: {fileID: 0}
+    skybox_cubemap_pattern: {fileID: 8900000, guid: 2496987be02f21244bcd1e6c3bfa5aff, type: 3}
+    skybox_cubemap_starts: {fileID: 8900000, guid: 4136c4d5d7422cf49a21b885d09f4518, type: 3}
+    skybox_cubemap_clouds: {fileID: 8900000, guid: eb066507e9bb4884e9d201eb874ccf2c, type: 3}
+  - skybox_material: {fileID: 2100000, guid: 00c45f6d738943a4b9ee2b0c6f325e43, type: 2}
     skybox_texture_twinkling: {fileID: 2800000, guid: 4962b985402794749902f8b024ee1934, type: 3}
     skybox_texture_sun: {fileID: 2800000, guid: e80870b385adcae48871133b9b5759dd, type: 3}
     skybox_texture_moon: {fileID: 0}
@@ -29,14 +69,6 @@ MonoBehaviour:
     skybox_cubemap_pattern: {fileID: 0}
     skybox_cubemap_starts: {fileID: 8900000, guid: ef37dd05448664543ab7eeb444cec2bf, type: 3}
     skybox_cubemap_clouds: {fileID: 8900000, guid: e3373d7062a4a5044ac0f0745de6c934, type: 3}
-  - skybox_material: {fileID: 2100000, guid: b4d1e1180d6b45d4eaa6f6b684d18e2b, type: 2}
-    skybox_texture_twinkling: {fileID: 2800000, guid: 4962b985402794749902f8b024ee1934, type: 3}
-    skybox_texture_sun: {fileID: 2800000, guid: b15c2596790c6ce42980282a7e842f57, type: 3}
-    skybox_texture_moon: {fileID: 0}
-    skybox_cubemap_background: {fileID: 0}
-    skybox_cubemap_pattern: {fileID: 8900000, guid: 2496987be02f21244bcd1e6c3bfa5aff, type: 3}
-    skybox_cubemap_starts: {fileID: 8900000, guid: 4136c4d5d7422cf49a21b885d09f4518, type: 3}
-    skybox_cubemap_clouds: {fileID: 8900000, guid: eb066507e9bb4884e9d201eb874ccf2c, type: 3}
   - skybox_material: {fileID: 2100000, guid: 188c8ae1d60a5e34faaf71d8ee55a065, type: 2}
     skybox_texture_twinkling: {fileID: 2800000, guid: 4962b985402794749902f8b024ee1934, type: 3}
     skybox_texture_sun: {fileID: 2800000, guid: dd566660fc358aa4098080e42ca0db56, type: 3}
