@@ -8,7 +8,7 @@ using FFStudio;
 using TMPro;
 using Sirenix.OdinInspector;
 
-public class UIIncrementalButton< Incremental >  : UIEntity where Incremental : struct, IIncrementalData
+public abstract class UIIncrementalButton< Incremental >  : UIEntity where Incremental : struct, IIncrementalData
 {
 #region Fields
   [ Title( "Shared Variables" ) ]
