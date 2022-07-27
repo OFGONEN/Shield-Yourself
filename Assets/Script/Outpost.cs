@@ -16,6 +16,7 @@ public class Outpost : MonoBehaviour
     [ SerializeField ] SharedFloatNotifier notif_player_speed;
     [ SerializeField ] SharedFloatNotifier notif_player_travel;
     [ SerializeField ] SharedFloatNotifier notif_level_progress;
+	[ SerializeField ] ElephantLevelEvent event_elephant;
 
   [ Title( "Setup" ) ]
     [ SerializeField ] Collider outpost_collider;
@@ -61,6 +62,10 @@ public class Outpost : MonoBehaviour
 
 	public void OnTrigger()
     {
+		event_elephant.level             = CurrentLevelData.Instance.currentLevel_Shown;
+        event_elephant.elephantEventType = ElephantEvent.LevelCompleted;
+        event_elephant.Raise();
+
 		outpost_collider.enabled = false;
 		outpost_index++;
 		event_level_complete_pseudo.Raise();
