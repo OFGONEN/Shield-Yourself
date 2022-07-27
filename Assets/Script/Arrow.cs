@@ -71,6 +71,16 @@ public class Arrow : MonoBehaviour, IClusterEntity
 
 		pool_arrow.ReturnEntity( this );
 	}
+
+	public void OnLevelPaused()
+	{
+		UnSubscribe_Cluster();
+	}
+
+	public void OnLevelResumed()
+	{
+		Subscribe_Cluster();
+	}
 #endregion
 
 #region Implementation
