@@ -13,6 +13,7 @@ public class Currency : SharedFloatNotifier
     [ SerializeField ] UIParticlePool pool_ui_particle;
     [ SerializeField ] SharedReferenceNotifier notif_camera_transform;
     [ SerializeField ] SharedReferenceNotifier notif_ui_currency_transform;
+    [ SerializeField ] SharedReferenceNotifier notif_player_transform;
 
     float gain_cooldown;
 
@@ -51,7 +52,8 @@ public class Currency : SharedFloatNotifier
 
     public void OnLevelStart()
     {
-        player_screen_position = ( notif_camera_transform.SharedValue as Transform ).GetComponent< Camera >().WorldToScreenPoint( Vector3.zero );
+		var playerPosition = ( notif_player_transform.sharedValue as Transform ).position;
+		player_screen_position = ( notif_camera_transform.SharedValue as Transform ).GetComponent< Camera >().WorldToScreenPoint( playerPosition );
         ui_currency_position   = ( notif_ui_currency_transform.SharedValue as Transform ).position;
 	}
 #endregion
