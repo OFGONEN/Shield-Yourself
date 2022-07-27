@@ -143,6 +143,45 @@ public class Player : MonoBehaviour
 		player_health.SharedValue = incremental_health.CurrentIncremental.incremental_health_value;
 		SetHealthRatio();
 	}
+
+	public void OnPause()
+	{
+		EmptyDelegates();
+		player_animator.speed = 0;
+
+		recycledTween.Kill();
+		recycledSequence.Kill();
+
+		player_speed.SetValue_NotifyAlways( 0 );
+		particle_wind.Stop( true, ParticleSystemStopBehavior.StopEmitting );
+
+		player_is_blocking.SharedValue = false;
+		event_shield_deactivate.Raise();
+	}
+
+	public void OnResume()
+	{
+		onFingerDown   = FingerDown;
+		onUpdateMethod = PlayerWalking;
+		onFingerUp     = ExtensionMethods.EmptyMethod;
+
+		player_animator.speed = 1;
+		player_animator.SetBool( "walking", true );
+		player_speed.SetValue_NotifyAlways( GameSettings.Instance.player_speed );
+
+		player_animator.SetBool( "walking", true );
+		particle_wind.Play();
+
+		player_is_blocking.SharedValue = false;
+		event_shield_deactivate.Raise();
+
+		player_shield_transform.localRotation = Quaternion.identity;
+
+		recycledSequence.Kill();
+		var sequence = recycledSequence.Recycle();
+		sequence.Append( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 0, GameSettings.Instance.player_shield_activate_delay ) );
+		sequence.Join( player_shield_transform.DOLocalRotate( Vector3.zero, GameSettings.Instance.player_shield_activate_delay ) );
+	}
 #endregion
 
 #region Implementation
