@@ -35,9 +35,12 @@ namespace FFStudio
         [ LabelText( "Arrow Trigger Spawn Count" ) ] public int arrow_trigger_spawn_count;
         [ LabelText( "Arrow Trigger Spawn Ease" ) ] public Ease arrow_trigger_spawn_ease;
 
-
     [ Title( "Shield" ) ]
         [ LabelText( "Shield Movement Speed" ) ] public float shield_movement_speed = 1f;
+
+    [ Title( "Outpost" ) ]
+        [ LabelText( "Outpost Spawn Count" ) ] public int outpost_spawn_count;
+        [ LabelText( "Outpost Spawn Ease" ) ] public Ease outpost_spawn_ease;
 
     [ Title( "Player UI" ) ]
         [ LabelText( "Health Bar Fill Speed" ) ] public float player_ui_health_fill_speed;
