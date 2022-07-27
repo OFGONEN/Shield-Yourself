@@ -64,10 +64,6 @@ public class Player : MonoBehaviour
     private void Awake()
     {
 		EmptyDelegates();
-	}
-
-    private void Start()
-    {
 		CacheIncrementals();
 
 		// Set incremental properties to default values

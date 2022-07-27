@@ -27,11 +27,17 @@ public class Outpost : MonoBehaviour
 #endregion
 
 #region Unity API
-  private void Awake()
-  {
+
+    private void Awake()
+    {
 		outpost_index  = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 1 );
 		onUpdateMethod = ExtensionMethods.EmptyMethod;
-  }
+    }
+
+    private void Start()
+    {
+		Spawn();
+	}
 
 	private void Update()
 	{
@@ -40,11 +46,6 @@ public class Outpost : MonoBehaviour
 #endregion
 
 #region API
-	public void OnLevelStart()
-	{
-		Spawn();
-	}
-
 	public void OnLevelFailed()
 	{
 		outpost_index = Mathf.Max( outpost_index - 1, 1 );
