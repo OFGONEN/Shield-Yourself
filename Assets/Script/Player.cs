@@ -253,8 +253,6 @@ public class Player : MonoBehaviour
 
 		player_is_blocking.SharedValue = false;
 		event_shield_deactivate.Raise();
-
-		player_shield_transform.localRotation = Quaternion.identity;
 	}
 
     void CacheIncrementals()
