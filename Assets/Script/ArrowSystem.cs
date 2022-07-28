@@ -47,12 +47,27 @@ public class ArrowSystem : ScriptableObject
 
 		float totalHeight = 0;
 
-		for( var i = 0; i < arrowCount; i++ )
+		var random = Random.Range( 0, 2 );
+
+		if( random == 0 )
 		{
-			var height = GameSettings.Instance.arrow_shoot_spawn_range.ReturnEasedValue( i / ( float )arrowCount, spawnHeightEase );
-			totalHeight += height;
-			sequence.AppendCallback( () => SpawnArrow( height, arrowSpeed ) );
-			sequence.AppendInterval( arrowDelay );
+			for( var i = 0; i < arrowCount; i++ )
+			{
+				var height = GameSettings.Instance.arrow_shoot_spawn_range.ReturnEasedValue( i / ( float )arrowCount, spawnHeightEase );
+				totalHeight += height;
+				sequence.AppendCallback( () => SpawnArrow( height, arrowSpeed ) );
+				sequence.AppendInterval( arrowDelay );
+			}
+		}
+		else
+		{
+			for( var i = arrowCount - 1; i >= 0; i-- )
+			{
+				var height = GameSettings.Instance.arrow_shoot_spawn_range.ReturnEasedValue( i / ( float )arrowCount, spawnHeightEase );
+				totalHeight += height;
+				sequence.AppendCallback( () => SpawnArrow( height, arrowSpeed ) );
+				sequence.AppendInterval( arrowDelay );
+			}
 		}
 
 		var uiArrowIndicator = pool_ui_arrow_indicator.GetEntity();
