@@ -60,6 +60,16 @@ public class UIArrowIndicator : MonoBehaviour
 		recycledSequence.Kill();
 		pool_ui_arrow_indicator.ReturnEntity( this );
 	}
+
+	public void OnGamePaused()
+	{
+		recycledSequence.Pause();
+	}
+
+	public void OnGameResumed()
+	{
+		recycledSequence.Resume();
+	}
 #endregion
 
 #region Implementation
