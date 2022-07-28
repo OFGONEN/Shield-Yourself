@@ -27,6 +27,22 @@ public class ArrowSystem : ScriptableObject
 #endregion
 
 #region API
+	public void OnGamePause()
+	{
+		foreach( var recycledSequence in sequence_active.Values )
+		{
+			recycledSequence.Pause();
+		}
+	}
+
+	public void OnGameResume()
+	{
+		foreach( var recycledSequence in sequence_active.Values )
+		{
+			recycledSequence.Resume();
+		}
+	}
+
 	public void SpawnArrows()
 	{
 		var levelRatio = GameSettings.Instance.LevelRatio;
