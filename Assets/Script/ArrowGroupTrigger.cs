@@ -31,7 +31,7 @@ public class ArrowGroupTrigger : MonoBehaviour
 
     private void Awake()
     {
-		arrow_trigger_index = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.ArrowTrigger_Key, 1 );
+		arrow_trigger_index = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.ArrowTrigger_Key, 0 ) + 1;
 		onUpdateMethod      = ExtensionMethods.EmptyMethod;
   	}
 

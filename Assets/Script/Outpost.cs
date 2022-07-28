@@ -38,7 +38,7 @@ public class Outpost : MonoBehaviour
 
     private void Awake()
     {
-		outpost_index  = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 1 );
+		outpost_index  = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 0 ) + 1;
 		onUpdateMethod = ExtensionMethods.EmptyMethod;
     }
 
