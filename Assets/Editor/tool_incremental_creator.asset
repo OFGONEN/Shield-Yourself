@@ -33,7 +33,7 @@ MonoBehaviour:
   incremental_currency: {fileID: 11400000, guid: 96b618201b829a84ca81a7f6f87358a5, type: 2}
   data_currency:
     level_max: 30
-    range_gain_value: {x: 0.1, y: 5}
+    range_gain_value: {x: 0.5, y: 5}
     ease_gain_value: 1
     range_gain_rate: {x: 1, y: 0.75}
     ease_gain_rate: 1

@@ -13,94 +13,94 @@ MonoBehaviour:
   m_Name: incremental_currency
   m_EditorClassIdentifier: 
   incremental:
-  - incremental_currency_gain_value: 0.1
+  - incremental_currency_gain_value: 0.5
     incremental_currency_gain_rate: 1
     incremental_currency_cost: 12
-  - incremental_currency_gain_value: 0.26333335
+  - incremental_currency_gain_value: 0.65000004
     incremental_currency_gain_rate: 0.9916667
     incremental_currency_cost: 22
-  - incremental_currency_gain_value: 0.42666668
+  - incremental_currency_gain_value: 0.8
     incremental_currency_gain_rate: 0.98333335
     incremental_currency_cost: 33
-  - incremental_currency_gain_value: 0.59000003
+  - incremental_currency_gain_value: 0.95
     incremental_currency_gain_rate: 0.975
     incremental_currency_cost: 43
-  - incremental_currency_gain_value: 0.7533334
+  - incremental_currency_gain_value: 1.1
     incremental_currency_gain_rate: 0.96666664
     incremental_currency_cost: 53
-  - incremental_currency_gain_value: 0.9166667
+  - incremental_currency_gain_value: 1.25
     incremental_currency_gain_rate: 0.9583333
     incremental_currency_cost: 63
-  - incremental_currency_gain_value: 1.08
+  - incremental_currency_gain_value: 1.4
     incremental_currency_gain_rate: 0.95
     incremental_currency_cost: 74
-  - incremental_currency_gain_value: 1.2433333
+  - incremental_currency_gain_value: 1.55
     incremental_currency_gain_rate: 0.94166666
     incremental_currency_cost: 84
-  - incremental_currency_gain_value: 1.4066668
+  - incremental_currency_gain_value: 1.7
     incremental_currency_gain_rate: 0.93333334
     incremental_currency_cost: 94
-  - incremental_currency_gain_value: 1.57
+  - incremental_currency_gain_value: 1.85
     incremental_currency_gain_rate: 0.925
     incremental_currency_cost: 104
-  - incremental_currency_gain_value: 1.7333333
+  - incremental_currency_gain_value: 2
     incremental_currency_gain_rate: 0.9166667
     incremental_currency_cost: 115
-  - incremental_currency_gain_value: 1.8966668
+  - incremental_currency_gain_value: 2.15
     incremental_currency_gain_rate: 0.9083333
     incremental_currency_cost: 125
-  - incremental_currency_gain_value: 2.06
+  - incremental_currency_gain_value: 2.3
     incremental_currency_gain_rate: 0.9
     incremental_currency_cost: 135
-  - incremental_currency_gain_value: 2.2233334
+  - incremental_currency_gain_value: 2.45
     incremental_currency_gain_rate: 0.89166665
     incremental_currency_cost: 145
-  - incremental_currency_gain_value: 2.3866668
+  - incremental_currency_gain_value: 2.6
     incremental_currency_gain_rate: 0.8833333
     incremental_currency_cost: 156
-  - incremental_currency_gain_value: 2.55
+  - incremental_currency_gain_value: 2.75
     incremental_currency_gain_rate: 0.875
     incremental_currency_cost: 166
-  - incremental_currency_gain_value: 2.7133334
+  - incremental_currency_gain_value: 2.9
     incremental_currency_gain_rate: 0.8666667
     incremental_currency_cost: 176
-  - incremental_currency_gain_value: 2.8766665
+  - incremental_currency_gain_value: 3.05
     incremental_currency_gain_rate: 0.85833335
     incremental_currency_cost: 187
-  - incremental_currency_gain_value: 3.0400002
+  - incremental_currency_gain_value: 3.2
     incremental_currency_gain_rate: 0.85
     incremental_currency_cost: 197
-  - incremental_currency_gain_value: 3.2033334
+  - incremental_currency_gain_value: 3.35
     incremental_currency_gain_rate: 0.8416667
     incremental_currency_cost: 207
-  - incremental_currency_gain_value: 3.3666668
+  - incremental_currency_gain_value: 3.5
     incremental_currency_gain_rate: 0.8333333
     incremental_currency_cost: 217
-  - incremental_currency_gain_value: 3.53
+  - incremental_currency_gain_value: 3.6499999
     incremental_currency_gain_rate: 0.825
     incremental_currency_cost: 228
-  - incremental_currency_gain_value: 3.6933334
+  - incremental_currency_gain_value: 3.8000002
     incremental_currency_gain_rate: 0.81666666
     incremental_currency_cost: 238
-  - incremental_currency_gain_value: 3.8566666
+  - incremental_currency_gain_value: 3.9499998
     incremental_currency_gain_rate: 0.80833334
     incremental_currency_cost: 248
-  - incremental_currency_gain_value: 4.02
+  - incremental_currency_gain_value: 4.1
     incremental_currency_gain_rate: 0.8
     incremental_currency_cost: 258
-  - incremental_currency_gain_value: 4.1833334
+  - incremental_currency_gain_value: 4.25
     incremental_currency_gain_rate: 0.7916667
     incremental_currency_cost: 269
-  - incremental_currency_gain_value: 4.346667
+  - incremental_currency_gain_value: 4.4
     incremental_currency_gain_rate: 0.7833333
     incremental_currency_cost: 279
-  - incremental_currency_gain_value: 4.5099998
+  - incremental_currency_gain_value: 4.5499997
     incremental_currency_gain_rate: 0.775
     incremental_currency_cost: 289
-  - incremental_currency_gain_value: 4.673333
+  - incremental_currency_gain_value: 4.7
     incremental_currency_gain_rate: 0.76666665
     incremental_currency_cost: 299
-  - incremental_currency_gain_value: 4.8366666
+  - incremental_currency_gain_value: 4.85
     incremental_currency_gain_rate: 0.7583333
     incremental_currency_cost: 310
   incremental_name: incremental_currency
