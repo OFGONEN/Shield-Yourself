@@ -63,6 +63,16 @@ namespace FFStudio
 			sequence = sequence.KillProper();
 		}
 
+		public void Pause()
+		{
+			sequence?.Pause();
+		}
+
+		public void Resume()
+		{
+			sequence?.Play();
+		}
+
 		void OnComplete_Safe()
 		{
 			sequence = null;
