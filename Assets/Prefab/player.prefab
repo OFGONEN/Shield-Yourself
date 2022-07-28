@@ -738,6 +738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pfx_character_die
       objectReference: {fileID: 0}
+    - target: {fileID: 7803064220452902379, guid: b3a5e2127be609d469f76fc126ded41b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3a5e2127be609d469f76fc126ded41b, type: 3}
 --- !u!198 &1092510617297883911 stripped
@@ -921,6 +925,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7114166413344536365, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa9ee26f02fc48940865dbad0a49f328, type: 2}
     - target: {fileID: 7849158422625202501, guid: 40dea3362f74bcf44ab3eb1ccbbde627, type: 3}
       propertyPath: m_IsTrigger
       value: 1
