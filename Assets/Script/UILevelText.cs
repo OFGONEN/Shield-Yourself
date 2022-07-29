@@ -21,7 +21,7 @@ public class UILevelText : MonoBehaviour
 #endregion
 
 #region Unity API
-    private void Awake()
+    private void Start()
     {
 		level_index = CurrentLevelData.Instance.currentLevel_Shown;
 		SetLevelText();
