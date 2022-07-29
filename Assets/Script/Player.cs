@@ -1,10 +1,10 @@
 /* Created by and for usage of FF Studios (2021). */
 
-using System.Collections;
-using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using FFStudio;
 using DG.Tweening;
+using TMPro;
 using Sirenix.OdinInspector;
 
 public class Player : MonoBehaviour
@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [ SerializeField ] ParticleSpawnEventCoolDown player_particle_spawn;
 
   [ Title( "Components" ) ]
+    [ SerializeField ] TextMeshProUGUI player_travel_text;
     [ SerializeField ] LowStaminaIndicator player_lowStamina_indicator;
     [ SerializeField ] Animator player_animator;
     [ SerializeField ] Transform player_shield_transform;
@@ -50,6 +51,10 @@ public class Player : MonoBehaviour
 
     RecycledTween recycledTween = new RecycledTween();
     RecycledSequence recycledSequence = new RecycledSequence();
+
+	StringBuilder stringBuilder = new StringBuilder( 16 );
+	const string suffix = " .ft";
+
 #endregion
 
 #region Properties
@@ -74,6 +79,8 @@ public class Player : MonoBehaviour
 		player_stamina.Default();
 		player_health.sharedValue = incremental_health.CurrentIncremental.incremental_health_value;
 		player_health_ratio.sharedValue = 1;
+
+		SetPlayerTravelText();
 	}
 
     private void Update()
@@ -186,6 +193,8 @@ public class Player : MonoBehaviour
 		player_stamina.Recover( incremental_stamina_data.incremental_stamina_recover * Time.deltaTime );
 
 		notif_player_travel.sharedValue += Time.deltaTime * player_speed.sharedValue;
+
+		SetPlayerTravelText();
 	}
 
     void PlayerBlocking()
@@ -304,6 +313,15 @@ public class Player : MonoBehaviour
 	void SetLeftArmWeight( float value )
 	{
 		player_leftArm_weight.SharedValue = value;
+	}
+
+	void SetPlayerTravelText()
+	{
+		stringBuilder.Clear();
+		stringBuilder.Append( notif_player_travel.sharedValue.ToString( "f" ) );
+		stringBuilder.Append( suffix );
+
+		player_travel_text.text = stringBuilder.ToString();
 	}
 #endregion
 
