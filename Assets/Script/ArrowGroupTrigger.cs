@@ -12,7 +12,7 @@ public class ArrowGroupTrigger : MonoBehaviour
 #region Fields
   [ Title( "Setup" ) ]
     [ SerializeField ] Collider arrow_group_trigger_collider;
-    [ SerializeField ] GameEvent event_arrow_shot;
+    [ SerializeField ] FloatGameEvent event_arrow_shot;
     [ SerializeField ] SharedFloatNotifier notif_player_speed;
     [ SerializeField ] SharedFloatNotifier notif_player_travel;
 
@@ -56,7 +56,7 @@ public class ArrowGroupTrigger : MonoBehaviour
     {
 		arrow_group_trigger_collider.enabled = false;
 		arrow_trigger_index++;
-		event_arrow_shot.Raise();
+		event_arrow_shot.Raise( (float)arrow_trigger_index / GameSettings.Instance.arrow_trigger_spawn_count );
 
 		onUpdateMethod = ExtensionMethods.EmptyMethod;
 

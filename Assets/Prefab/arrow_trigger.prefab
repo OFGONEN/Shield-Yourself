@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow_group_trigger_collider: {fileID: 4972721328267820767}
-  event_arrow_shot: {fileID: 11400000, guid: 427c25aeac3354e04a53c8886b942bc6, type: 2}
+  event_arrow_shot: {fileID: 0}
   notif_player_speed: {fileID: 11400000, guid: 20e87db312556584fa05937b37795bbc, type: 2}
   notif_player_travel: {fileID: 11400000, guid: 28d8f3126e21d3841bf31ad2ce378e42, type: 2}
 --- !u!65 &4972721328267820767
