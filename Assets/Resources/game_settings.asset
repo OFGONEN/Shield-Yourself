@@ -23,6 +23,7 @@ MonoBehaviour:
   player_stamina_vignette_falloff_duration: 0.25
   player_redness_speed: 1
   player_inflation_speedRange: {x: 0, y: 10}
+  player_travel_text_update_rate: 0.05
   arrow_shoot_delay_between_range: {x: 0.1, y: 0.2}
   arrow_shoot_delay_between_ease: 1
   arrow_shoot_delay_range: {x: 1, y: 1.5}

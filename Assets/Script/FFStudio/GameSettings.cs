@@ -21,6 +21,7 @@ namespace FFStudio
 		[ LabelText( "Vignette effect fall-off duration" ) ] public float player_stamina_vignette_falloff_duration;
 		[ LabelText( "Color Update Speed" ), Min( 0 ) ] public float player_redness_speed = 0.75f;
 		[ LabelText( "Infilation Speed Range" ), MinMaxSlider( 0, 10, true )] public Vector2 player_inflation_speedRange = Vector2.up;
+		[ LabelText( "Player Travel Text Update Rate" ) ] public float player_travel_text_update_rate = 0.1f;
 
     [ Title( "Arrow" ) ]
         [ LabelText( "Arrow Shot Delay Between Arrows" ) ] public Vector2 arrow_shoot_delay_between_range;
