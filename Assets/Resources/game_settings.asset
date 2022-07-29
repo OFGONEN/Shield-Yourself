@@ -19,7 +19,7 @@ MonoBehaviour:
   player_death_delay: 1
   player_stamina_threshold:
     value: 0.75
-  player_stamina_vignette_range: {x: 0, y: 0.5063376}
+  player_stamina_vignette_range: {x: 0, y: 0.3534202}
   player_stamina_vignette_falloff_duration: 0.25
   player_redness_speed: 1
   player_inflation_speedRange: {x: 0, y: 10}
