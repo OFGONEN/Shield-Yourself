@@ -14,6 +14,7 @@ public class UILevelText : MonoBehaviour
     [ SerializeField ] float punchScale;
 
     RecycledTween recycledTween = new RecycledTween();
+    int level_index;
 #endregion
 
 #region Properties
@@ -22,6 +23,7 @@ public class UILevelText : MonoBehaviour
 #region Unity API
     private void Awake()
     {
+		level_index = CurrentLevelData.Instance.currentLevel_Shown;
 		SetLevelText();
 	}
 #endregion
@@ -29,11 +31,12 @@ public class UILevelText : MonoBehaviour
 #region API
     public void SetLevelText()
     {
-        ui_level_text.text = "Level " + CurrentLevelData.Instance.currentLevel_Shown;
+        ui_level_text.text = "Level " + level_index;
     }
 
     public void OnLevelCompletePseudo()
     {
+		level_index++;
 		SetLevelText();
 		recycledTween.Recycle( ui_level_text.rectTransform.DOPunchScale( Vector3.one * punchScale, GameSettings.Instance.ui_Entity_Scale_TweenDuration, 1, 1 ) );
     }
