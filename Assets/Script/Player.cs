@@ -109,8 +109,7 @@ public class Player : MonoBehaviour
     public void OnIncrementalUnlocked()
     {
 		CacheIncrementals();
-
-		SetHealthRatio();
+		RestoreHealthToFull();
 	}
 
     public void OnShieldActivate()
@@ -131,12 +130,6 @@ public class Player : MonoBehaviour
 
 		if( player_health.sharedValue <= 0 )
 			Die();
-	}
-
-	public void RestoreHealthToFull()
-	{
-		player_health.SharedValue = incremental_health.CurrentIncremental.incremental_health_value;
-		SetHealthRatio();
 	}
 
 	public void OnPause()
@@ -176,6 +169,13 @@ public class Player : MonoBehaviour
 		var sequence = recycledSequence.Recycle();
 		sequence.Append( DOTween.To( GetLeftArmWeight, SetLeftArmWeight, 0, GameSettings.Instance.player_shield_activate_delay ) );
 		sequence.Join( player_shield_transform.DOLocalRotate( Vector3.zero, GameSettings.Instance.player_shield_activate_delay ) );
+	}
+
+	public void RestoreHealthToFull()
+	{
+		player_health.SharedValue = incremental_health.CurrentIncremental.incremental_health_value;
+		SetHealthRatio();
+		FFLogger.Log( "Health Ratio: " + player_health_ratio.sharedValue );
 	}
 #endregion
 
