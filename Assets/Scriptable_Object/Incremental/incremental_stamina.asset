@@ -13,125 +13,125 @@ MonoBehaviour:
   m_Name: incremental_stamina
   m_EditorClassIdentifier: 
   incremental:
-  - incremental_stamina_deplete: 5
-    incremental_stamina_deplete_capacity: 10
-    incremental_stamina_recover: 5
+  - incremental_stamina_deplete: 4
+    incremental_stamina_deplete_capacity: 5.5
+    incremental_stamina_recover: 6
     incremental_stamina_cost: 15
-  - incremental_stamina_deplete: 6.5
-    incremental_stamina_deplete_capacity: 13
+  - incremental_stamina_deplete: 5.366667
+    incremental_stamina_deplete_capacity: 7.8166666
+    incremental_stamina_recover: 5.9
+    incremental_stamina_cost: 64
+  - incremental_stamina_deplete: 6.7333336
+    incremental_stamina_deplete_capacity: 10.133333
+    incremental_stamina_recover: 5.8
+    incremental_stamina_cost: 114
+  - incremental_stamina_deplete: 8.1
+    incremental_stamina_deplete_capacity: 12.45
+    incremental_stamina_recover: 5.7
+    incremental_stamina_cost: 164
+  - incremental_stamina_deplete: 9.466667
+    incremental_stamina_deplete_capacity: 14.766667
+    incremental_stamina_recover: 5.6
+    incremental_stamina_cost: 213
+  - incremental_stamina_deplete: 10.833334
+    incremental_stamina_deplete_capacity: 17.083334
+    incremental_stamina_recover: 5.5
+    incremental_stamina_cost: 262
+  - incremental_stamina_deplete: 12.2
+    incremental_stamina_deplete_capacity: 19.4
+    incremental_stamina_recover: 5.4
+    incremental_stamina_cost: 312
+  - incremental_stamina_deplete: 13.566667
+    incremental_stamina_deplete_capacity: 21.716667
+    incremental_stamina_recover: 5.3
+    incremental_stamina_cost: 362
+  - incremental_stamina_deplete: 14.933334
+    incremental_stamina_deplete_capacity: 24.033335
+    incremental_stamina_recover: 5.2
+    incremental_stamina_cost: 411
+  - incremental_stamina_deplete: 16.300001
+    incremental_stamina_deplete_capacity: 26.35
+    incremental_stamina_recover: 5.1
+    incremental_stamina_cost: 461
+  - incremental_stamina_deplete: 17.666668
+    incremental_stamina_deplete_capacity: 28.666668
+    incremental_stamina_recover: 5
+    incremental_stamina_cost: 510
+  - incremental_stamina_deplete: 19.033333
+    incremental_stamina_deplete_capacity: 30.983334
     incremental_stamina_recover: 4.9
-    incremental_stamina_cost: 26
-  - incremental_stamina_deplete: 8
-    incremental_stamina_deplete_capacity: 16
+    incremental_stamina_cost: 560
+  - incremental_stamina_deplete: 20.4
+    incremental_stamina_deplete_capacity: 33.3
     incremental_stamina_recover: 4.8
-    incremental_stamina_cost: 37
-  - incremental_stamina_deplete: 9.5
-    incremental_stamina_deplete_capacity: 19
+    incremental_stamina_cost: 609
+  - incremental_stamina_deplete: 21.766666
+    incremental_stamina_deplete_capacity: 35.61667
     incremental_stamina_recover: 4.7
-    incremental_stamina_cost: 48
-  - incremental_stamina_deplete: 11
-    incremental_stamina_deplete_capacity: 22
+    incremental_stamina_cost: 658
+  - incremental_stamina_deplete: 23.133333
+    incremental_stamina_deplete_capacity: 37.933334
     incremental_stamina_recover: 4.6
-    incremental_stamina_cost: 60
-  - incremental_stamina_deplete: 12.5
-    incremental_stamina_deplete_capacity: 25
-    incremental_stamina_recover: 4.5
-    incremental_stamina_cost: 71
-  - incremental_stamina_deplete: 14
-    incremental_stamina_deplete_capacity: 28
-    incremental_stamina_recover: 4.4
-    incremental_stamina_cost: 82
-  - incremental_stamina_deplete: 15.5
-    incremental_stamina_deplete_capacity: 31
-    incremental_stamina_recover: 4.3
-    incremental_stamina_cost: 93
-  - incremental_stamina_deplete: 17
-    incremental_stamina_deplete_capacity: 34
-    incremental_stamina_recover: 4.2
-    incremental_stamina_cost: 104
-  - incremental_stamina_deplete: 18.5
-    incremental_stamina_deplete_capacity: 37
-    incremental_stamina_recover: 4.1
-    incremental_stamina_cost: 116
-  - incremental_stamina_deplete: 20
-    incremental_stamina_deplete_capacity: 40
-    incremental_stamina_recover: 4
-    incremental_stamina_cost: 127
-  - incremental_stamina_deplete: 21.5
-    incremental_stamina_deplete_capacity: 43
-    incremental_stamina_recover: 3.9
-    incremental_stamina_cost: 138
-  - incremental_stamina_deplete: 23
-    incremental_stamina_deplete_capacity: 46
-    incremental_stamina_recover: 3.8
-    incremental_stamina_cost: 149
+    incremental_stamina_cost: 708
   - incremental_stamina_deplete: 24.5
-    incremental_stamina_deplete_capacity: 49
+    incremental_stamina_deplete_capacity: 40.25
+    incremental_stamina_recover: 4.5
+    incremental_stamina_cost: 758
+  - incremental_stamina_deplete: 25.866669
+    incremental_stamina_deplete_capacity: 42.56667
+    incremental_stamina_recover: 4.4
+    incremental_stamina_cost: 807
+  - incremental_stamina_deplete: 27.233334
+    incremental_stamina_deplete_capacity: 44.88333
+    incremental_stamina_recover: 4.3
+    incremental_stamina_cost: 856
+  - incremental_stamina_deplete: 28.6
+    incremental_stamina_deplete_capacity: 47.2
+    incremental_stamina_recover: 4.2
+    incremental_stamina_cost: 906
+  - incremental_stamina_deplete: 29.966667
+    incremental_stamina_deplete_capacity: 49.516666
+    incremental_stamina_recover: 4.1
+    incremental_stamina_cost: 956
+  - incremental_stamina_deplete: 31.333334
+    incremental_stamina_deplete_capacity: 51.833336
+    incremental_stamina_recover: 4
+    incremental_stamina_cost: 1005
+  - incremental_stamina_deplete: 32.7
+    incremental_stamina_deplete_capacity: 54.149998
+    incremental_stamina_recover: 3.9
+    incremental_stamina_cost: 1054
+  - incremental_stamina_deplete: 34.066666
+    incremental_stamina_deplete_capacity: 56.466667
+    incremental_stamina_recover: 3.8
+    incremental_stamina_cost: 1104
+  - incremental_stamina_deplete: 35.433334
+    incremental_stamina_deplete_capacity: 58.783333
     incremental_stamina_recover: 3.7
-    incremental_stamina_cost: 160
-  - incremental_stamina_deplete: 26
-    incremental_stamina_deplete_capacity: 52
+    incremental_stamina_cost: 1154
+  - incremental_stamina_deplete: 36.8
+    incremental_stamina_deplete_capacity: 61.100002
     incremental_stamina_recover: 3.6
-    incremental_stamina_cost: 171
-  - incremental_stamina_deplete: 27.5
-    incremental_stamina_deplete_capacity: 55
+    incremental_stamina_cost: 1203
+  - incremental_stamina_deplete: 38.166664
+    incremental_stamina_deplete_capacity: 63.416664
     incremental_stamina_recover: 3.5
-    incremental_stamina_cost: 182
-  - incremental_stamina_deplete: 29.000002
-    incremental_stamina_deplete_capacity: 58.000004
-    incremental_stamina_recover: 3.3999999
-    incremental_stamina_cost: 194
-  - incremental_stamina_deplete: 30.5
-    incremental_stamina_deplete_capacity: 61
-    incremental_stamina_recover: 3.3
-    incremental_stamina_cost: 205
-  - incremental_stamina_deplete: 32
-    incremental_stamina_deplete_capacity: 64
-    incremental_stamina_recover: 3.1999998
-    incremental_stamina_cost: 216
-  - incremental_stamina_deplete: 33.5
-    incremental_stamina_deplete_capacity: 67
-    incremental_stamina_recover: 3.1
-    incremental_stamina_cost: 227
-  - incremental_stamina_deplete: 35
-    incremental_stamina_deplete_capacity: 70
-    incremental_stamina_recover: 3
-    incremental_stamina_cost: 238
-  - incremental_stamina_deplete: 36.5
-    incremental_stamina_deplete_capacity: 73
-    incremental_stamina_recover: 2.9
-    incremental_stamina_cost: 250
-  - incremental_stamina_deplete: 38
-    incremental_stamina_deplete_capacity: 76
-    incremental_stamina_recover: 2.8
-    incremental_stamina_cost: 261
-  - incremental_stamina_deplete: 39.5
-    incremental_stamina_deplete_capacity: 79
-    incremental_stamina_recover: 2.7
-    incremental_stamina_cost: 272
-  - incremental_stamina_deplete: 41
-    incremental_stamina_deplete_capacity: 82
-    incremental_stamina_recover: 2.6
-    incremental_stamina_cost: 283
-  - incremental_stamina_deplete: 42.5
-    incremental_stamina_deplete_capacity: 85
-    incremental_stamina_recover: 2.5
-    incremental_stamina_cost: 294
-  - incremental_stamina_deplete: 44
-    incremental_stamina_deplete_capacity: 88
-    incremental_stamina_recover: 2.4
-    incremental_stamina_cost: 305
-  - incremental_stamina_deplete: 45.5
-    incremental_stamina_deplete_capacity: 91
-    incremental_stamina_recover: 2.3000002
-    incremental_stamina_cost: 316
-  - incremental_stamina_deplete: 47
-    incremental_stamina_deplete_capacity: 94
-    incremental_stamina_recover: 2.2
-    incremental_stamina_cost: 328
-  - incremental_stamina_deplete: 48.5
-    incremental_stamina_deplete_capacity: 97
-    incremental_stamina_recover: 2.1000001
-    incremental_stamina_cost: 339
+    incremental_stamina_cost: 1252
+  - incremental_stamina_deplete: 39.533333
+    incremental_stamina_deplete_capacity: 65.73334
+    incremental_stamina_recover: 3.4
+    incremental_stamina_cost: 1302
+  - incremental_stamina_deplete: 40.899998
+    incremental_stamina_deplete_capacity: 68.049995
+    incremental_stamina_recover: 3.3000002
+    incremental_stamina_cost: 1352
+  - incremental_stamina_deplete: 42.266666
+    incremental_stamina_deplete_capacity: 70.36667
+    incremental_stamina_recover: 3.2
+    incremental_stamina_cost: 1401
+  - incremental_stamina_deplete: 43.63333
+    incremental_stamina_deplete_capacity: 72.683334
+    incremental_stamina_recover: 3.1000001
+    incremental_stamina_cost: 1450
   incremental_name: incremental_stamina
   currency: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}

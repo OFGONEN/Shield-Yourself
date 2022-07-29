@@ -13,65 +13,65 @@ MonoBehaviour:
   m_Name: incremental_health
   m_EditorClassIdentifier: 
   incremental:
-  - incremental_health_value: 3
-    incremental_health_cost: 10
-  - incremental_health_value: 4.5666666
-    incremental_health_cost: 16
-  - incremental_health_value: 6.1333337
-    incremental_health_cost: 23
-  - incremental_health_value: 7.7000003
+  - incremental_health_value: 5
+    incremental_health_cost: 8
+  - incremental_health_value: 7.3333335
     incremental_health_cost: 29
-  - incremental_health_value: 9.266667
-    incremental_health_cost: 35
-  - incremental_health_value: 10.833334
-    incremental_health_cost: 42
-  - incremental_health_value: 12.400001
-    incremental_health_cost: 48
-  - incremental_health_value: 13.966667
-    incremental_health_cost: 54
-  - incremental_health_value: 15.533334
-    incremental_health_cost: 61
-  - incremental_health_value: 17.1
-    incremental_health_cost: 67
-  - incremental_health_value: 18.666668
-    incremental_health_cost: 73
-  - incremental_health_value: 20.233334
-    incremental_health_cost: 80
-  - incremental_health_value: 21.800001
-    incremental_health_cost: 86
-  - incremental_health_value: 23.366667
-    incremental_health_cost: 92
-  - incremental_health_value: 24.933334
-    incremental_health_cost: 99
-  - incremental_health_value: 26.5
-    incremental_health_cost: 105
-  - incremental_health_value: 28.066668
-    incremental_health_cost: 111
-  - incremental_health_value: 29.633333
-    incremental_health_cost: 118
-  - incremental_health_value: 31.2
-    incremental_health_cost: 124
-  - incremental_health_value: 32.766666
-    incremental_health_cost: 130
-  - incremental_health_value: 34.333336
-    incremental_health_cost: 137
-  - incremental_health_value: 35.899998
-    incremental_health_cost: 143
-  - incremental_health_value: 37.466667
-    incremental_health_cost: 149
-  - incremental_health_value: 39.033333
-    incremental_health_cost: 156
-  - incremental_health_value: 40.600002
-    incremental_health_cost: 162
-  - incremental_health_value: 42.166664
-    incremental_health_cost: 168
-  - incremental_health_value: 43.733334
-    incremental_health_cost: 175
-  - incremental_health_value: 45.3
-    incremental_health_cost: 181
-  - incremental_health_value: 46.86667
-    incremental_health_cost: 187
-  - incremental_health_value: 48.43333
-    incremental_health_cost: 194
+  - incremental_health_value: 9.666667
+    incremental_health_cost: 51
+  - incremental_health_value: 12
+    incremental_health_cost: 72
+  - incremental_health_value: 14.333334
+    incremental_health_cost: 94
+  - incremental_health_value: 16.666668
+    incremental_health_cost: 115
+  - incremental_health_value: 19
+    incremental_health_cost: 136
+  - incremental_health_value: 21.333334
+    incremental_health_cost: 158
+  - incremental_health_value: 23.666668
+    incremental_health_cost: 179
+  - incremental_health_value: 26
+    incremental_health_cost: 201
+  - incremental_health_value: 28.333334
+    incremental_health_cost: 222
+  - incremental_health_value: 30.666668
+    incremental_health_cost: 243
+  - incremental_health_value: 33
+    incremental_health_cost: 265
+  - incremental_health_value: 35.333332
+    incremental_health_cost: 286
+  - incremental_health_value: 37.666668
+    incremental_health_cost: 308
+  - incremental_health_value: 40
+    incremental_health_cost: 329
+  - incremental_health_value: 42.333336
+    incremental_health_cost: 350
+  - incremental_health_value: 44.666668
+    incremental_health_cost: 372
+  - incremental_health_value: 47
+    incremental_health_cost: 393
+  - incremental_health_value: 49.333332
+    incremental_health_cost: 415
+  - incremental_health_value: 51.666668
+    incremental_health_cost: 436
+  - incremental_health_value: 54
+    incremental_health_cost: 457
+  - incremental_health_value: 56.333336
+    incremental_health_cost: 479
+  - incremental_health_value: 58.666664
+    incremental_health_cost: 500
+  - incremental_health_value: 61
+    incremental_health_cost: 522
+  - incremental_health_value: 63.333332
+    incremental_health_cost: 543
+  - incremental_health_value: 65.666664
+    incremental_health_cost: 564
+  - incremental_health_value: 68
+    incremental_health_cost: 586
+  - incremental_health_value: 70.333336
+    incremental_health_cost: 607
+  - incremental_health_value: 72.666664
+    incremental_health_cost: 629
   incremental_name: incremental_health
   currency: {fileID: 11400000, guid: d25783845b5565341834fb23004a1169, type: 2}
