@@ -43,9 +43,9 @@ public class ArrowSystem : ScriptableObject
 		}
 	}
 
-	public void SpawnArrows()
+	public void SpawnArrows( FloatGameEvent gameEvent )
 	{
-		var levelRatio = GameSettings.Instance.LevelRatio;
+		var ratio = gameEvent.eventValue;
 
 		var recycledSequence = pool_recycled_sequence.GetEntity();
 		recycledSequence.Recycle( () => OnSpawnSequenceComplete( recycledSequence ) );
@@ -53,12 +53,12 @@ public class ArrowSystem : ScriptableObject
 		sequence_active.Add( recycledSequence.ID, recycledSequence );
 		var sequence = recycledSequence.Sequence;
 
-		var delay = GameSettings.Instance.arrow_shoot_delay_range.ReturnEasedValue( levelRatio, GameSettings.Instance.arrow_shoot_delay_ease );
+		var delay = GameSettings.Instance.arrow_shoot_delay_range.ReturnEasedValue( ratio, GameSettings.Instance.arrow_shoot_delay_ease );
 		sequence.AppendInterval( delay );
 
-		var arrowCount = GameSettings.Instance.arrow_shoot_count_range.ReturnEasedValue( levelRatio, GameSettings.Instance.arrow_shoot_count_ease );
-		var arrowSpeed = GameSettings.Instance.arrow_shoot_speed_range.ReturnEasedValue( levelRatio, GameSettings.Instance.arrow_shoot_speed_ease );
-		var arrowDelay = GameSettings.Instance.arrow_shoot_delay_between_range.ReturnEasedValue( levelRatio, GameSettings.Instance.arrow_shoot_delay_between_ease );
+		var arrowCount = GameSettings.Instance.arrow_shoot_count_range.ReturnEasedValue( ratio, GameSettings.Instance.arrow_shoot_count_ease );
+		var arrowSpeed = GameSettings.Instance.arrow_shoot_speed_range.ReturnEasedValue( ratio, GameSettings.Instance.arrow_shoot_speed_ease );
+		var arrowDelay = GameSettings.Instance.arrow_shoot_delay_between_range.ReturnEasedValue( ratio, GameSettings.Instance.arrow_shoot_delay_between_ease );
 		var spawnHeightEase = arrow_spawn_ease.ReturnRandom();
 
 		float totalHeight = 0;
