@@ -20,7 +20,6 @@ namespace FFStudio
     [ Title( "UI Elements" ) ]
         public Transform pool_parent;
         public UI_Patrol_Scale level_loadingBar_Scale;
-        public TextMeshProUGUI level_count_text;
         public TextMeshProUGUI level_information_text;
         public UI_Patrol_Scale level_information_text_Scale;
         public Image loadingScreenImage;
