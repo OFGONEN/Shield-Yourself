@@ -107,5 +107,14 @@ namespace FFStudio
             return instance;
         }
 #endregion
+
+#region Editor Only
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            game_level_pseudoCount = outpost_spawn_count;
+        }
+#endif
+#endregion
     }
 }
