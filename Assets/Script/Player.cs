@@ -67,9 +67,10 @@ public class Player : MonoBehaviour
 		CacheIncrementals();
 
 		// Set incremental properties to default values
+		var outpostIndex = Mathf.Max( 0, PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 0 ) - 1 );
 		var spawnPosition = GameSettings.Instance.game_travel_distance *
 			DOVirtual.EasedValue( 0, 1,
-				( float )PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 0 ) / GameSettings.Instance.outpost_spawn_count,
+				( float )outpostIndex / GameSettings.Instance.outpost_spawn_count,
 				GameSettings.Instance.outpost_spawn_ease );
 
 		notif_player_travel.sharedValue = spawnPosition;
