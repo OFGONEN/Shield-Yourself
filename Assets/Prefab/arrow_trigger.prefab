@@ -125,13 +125,13 @@ MonoBehaviour:
           m_CallState: 2
   - eventListener:
       gameEvents:
-      - {fileID: 11400000, guid: ec850936269bc2e47b26cfebd8bdad97, type: 2}
+      - {fileID: 11400000, guid: 0f051fdb4dc770245b48f065469389aa, type: 2}
     unityEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: -4971217510602328962}
           m_TargetAssemblyTypeName: ArrowGroupTrigger, Assembly-CSharp
-          m_MethodName: OnLevelFailed
+          m_MethodName: OnLevelCompletePseudo
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

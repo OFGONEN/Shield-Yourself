@@ -47,10 +47,8 @@ public class ArrowGroupTrigger : MonoBehaviour
 		Spawn();
 	}
 
-	public void OnLevelFailed()
+	public void OnLevelCompletePseudo()
 	{
-		//todo WTF to do here
-		arrow_trigger_index = Mathf.Max( arrow_trigger_index - 1, 1 );
 		PlayerPrefsUtility.Instance.SetInt( ExtensionMethods.ArrowTrigger_Key, arrow_trigger_index );
 	}
 
@@ -64,7 +62,6 @@ public class ArrowGroupTrigger : MonoBehaviour
 
 		if( arrow_trigger_index <= GameSettings.Instance.arrow_trigger_spawn_count )
 		{
-			PlayerPrefsUtility.Instance.SetInt( ExtensionMethods.ArrowTrigger_Key, arrow_trigger_index );
 			Spawn();
 		}
 	}
