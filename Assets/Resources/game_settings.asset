@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: game_settings
   m_EditorClassIdentifier: 
   player_target_range: {x: 0.5, y: 1.3}
-  player_speed: 1
+  player_speed: 1.5
   player_shield_activate_delay: 0.25
   player_arrow_damage: 1
   player_death_delay: 1
@@ -42,7 +42,7 @@ MonoBehaviour:
   player_ui_stamina_delay: 0.15
   camera_follow_speed_depth: 2.8
   maxLevelCount: 1
-  game_level_pseudoCount: 30
+  game_level_pseudoCount: 10
   game_travel_distance: 350
   useRemoteConfig_GameSettings: 0
   useRemoteConfig_Components: 0
