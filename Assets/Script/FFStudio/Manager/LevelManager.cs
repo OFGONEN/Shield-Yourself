@@ -72,19 +72,6 @@ namespace FFStudio
         {
 			PlayerPrefsUtility.Instance.DeleteAll();
 		}
-
-        public void OnLevelPseudoCompleted()
-        {
-			var pseudoLevel = Mathf.Min( CurrentLevelData.Instance.currentLevel_Shown + 1, GameSettings.Instance.game_level_pseudoCount );
-			PlayerPrefsUtility.Instance.SetInt( "Consecutive Level", CurrentLevelData.Instance.currentLevel_Shown );
-
-            if( pseudoLevel > GameSettings.Instance.game_level_pseudoCount )
-            {
-				levelCompleted.Raise();
-			}
-            else
-				CurrentLevelData.Instance.currentLevel_Shown = pseudoLevel;
-		}
 #endregion
 
 #region Implementation
