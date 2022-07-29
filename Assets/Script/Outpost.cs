@@ -25,6 +25,8 @@ public class Outpost : MonoBehaviour
 	[ ShowInInspector, ReadOnly ] int outpost_index;
 	[ ShowInInspector, ReadOnly ] float outpost_spawn_point;
 	UnityMessage onUpdateMethod;
+	
+	float outpost_spawm_point_actual;
 #endregion
 
 #region Properties
@@ -38,7 +40,7 @@ public class Outpost : MonoBehaviour
 
     private void Awake()
     {
-		outpost_index  = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 0 ) + 1;
+		outpost_index  = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 1 );
 		onUpdateMethod = ExtensionMethods.EmptyMethod;
     }
 
@@ -55,12 +57,6 @@ public class Outpost : MonoBehaviour
 #endregion
 
 #region API
-	public void OnLevelFailed()
-	{
-		outpost_index = Mathf.Max( outpost_index - 1, 1 );
-		PlayerPrefsUtility.Instance.SetInt( ExtensionMethods.Outpost_Key, outpost_index );
-	}
-
 	public void OnTrigger()
     {
 		event_elephant.level             = CurrentLevelData.Instance.currentLevel_Shown;
@@ -69,6 +65,8 @@ public class Outpost : MonoBehaviour
 
 		outpost_collider.enabled = false;
 		outpost_index++;
+
+		PlayerPrefsUtility.Instance.SetFloat( ExtensionMethods.PlayerTravel_Key, outpost_spawm_point_actual );
 
 		event_level_pause.Raise();
 		event_level_complete_pseudo.Raise();
@@ -98,7 +96,9 @@ public class Outpost : MonoBehaviour
 
     void Spawn()
     {
-		outpost_spawn_point = ReturnSpawnPosition();
+		outpost_spawm_point_actual = ReturnSpawnActualPosition();
+		outpost_spawn_point = outpost_spawm_point_actual - notif_player_travel.sharedValue;
+
 		notif_level_progress.SetValue_NotifyAlways( 0 );
 
 		transform.position = transform.position.SetX( outpost_spawn_point );
@@ -107,11 +107,11 @@ public class Outpost : MonoBehaviour
 		onUpdateMethod = Movement;
 	}
 
-	float ReturnSpawnPosition()
+	float ReturnSpawnActualPosition()
 	{
 		return GameSettings.Instance.game_travel_distance * 
             DOVirtual.EasedValue( 0, 1, ( float )outpost_index / GameSettings.Instance.outpost_spawn_count, 
-            GameSettings.Instance.outpost_spawn_ease ) - notif_player_travel.sharedValue;
+            GameSettings.Instance.outpost_spawn_ease );
 	}
 #endregion
 
