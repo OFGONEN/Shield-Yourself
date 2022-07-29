@@ -14,6 +14,7 @@ public class Outpost : MonoBehaviour
   [ Title( "Shared Variables" ) ]
     [ SerializeField ] GameEvent event_level_pause;
     [ SerializeField ] GameEvent event_level_complete_pseudo;
+    [ SerializeField ] GameEvent event_level_complete;
     [ SerializeField ] SharedFloatNotifier notif_player_speed;
     [ SerializeField ] SharedFloatNotifier notif_player_travel;
     [ SerializeField ] SharedFloatNotifier notif_level_progress;
@@ -42,7 +43,10 @@ public class Outpost : MonoBehaviour
     {
 		outpost_index  = PlayerPrefsUtility.Instance.GetInt( ExtensionMethods.Outpost_Key, 1 );
 		onUpdateMethod = ExtensionMethods.EmptyMethod;
-    }
+
+		CurrentLevelData.Instance.currentLevel_Shown = outpost_index;
+		PlayerPrefsUtility.Instance.SetInt( "Consecutive Level", outpost_index );
+	}
 
     private void Start()
     {
@@ -67,19 +71,30 @@ public class Outpost : MonoBehaviour
 		outpost_index++;
 
 		PlayerPrefsUtility.Instance.SetFloat( ExtensionMethods.PlayerTravel_Key, outpost_spawm_point_actual );
-
-		event_level_pause.Raise();
-		event_level_complete_pseudo.Raise();
-
+		
 		onUpdateMethod = ExtensionMethods.EmptyMethod;
 
 		if( outpost_index <= GameSettings.Instance.outpost_spawn_count )
 		{
+			event_level_pause.Raise();
+			event_level_complete_pseudo.Raise();
+
 			PlayerPrefsUtility.Instance.SetInt( ExtensionMethods.Outpost_Key, outpost_index );
 			Spawn();
+
+
 		}
         else
+		{
 			gameObject.SetActive( false );
+			
+			var pseudoLevel = Mathf.Min( outpost_index + 1, GameSettings.Instance.game_level_pseudoCount );
+			PlayerPrefsUtility.Instance.SetInt( "Consecutive Level", pseudoLevel );
+			CurrentLevelData.Instance.currentLevel_Shown = pseudoLevel;
+
+            if( pseudoLevel >= GameSettings.Instance.game_level_pseudoCount )
+				event_level_complete.Raise();
+		}
 	}
 #endregion
 
