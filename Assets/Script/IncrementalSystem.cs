@@ -64,6 +64,16 @@ public abstract class IncrementalSystem< Incremental > : ScriptableObject where 
 	{
 		incremental = value;
 	}
+	public int TotalCost()
+	{
+		int cost = 0;
+		for( var i = 0; i < incremental.Length; i++ )
+		{
+			cost += incremental[ i ].Cost();
+		}
+
+		return cost;
+	}
 #endif
 #endregion
 }

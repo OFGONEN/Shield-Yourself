@@ -16,14 +16,20 @@ public class IncrementalCreator : ScriptableObject
   [ Title( "Health Incremental" ) ] 
     public IncrementalHealth incremental_health;
     public CreateDataHealth data_health;
+    [ ReadOnly, LabelText( "Total Health Cost" ) ] public int incremental_health_cost;
 
   [ Title( "Stamina Incremental" ) ] 
     public IncrementalStamina incremental_stamina;
     public CreateStaminaCurrency data_stamina;
+    [ ReadOnly, LabelText( "Total Stamina Cost" ) ] public int incremental_stamina_cost;
+
 
   [ Title( "Currency Incremental" ) ] 
     public IncrementalCurrency incremental_currency;
     public CreateDataCurrency data_currency;
+    [ ReadOnly, LabelText( "Total Currency Cost" ) ] public int incremental_currency_cost;
+
+    
 #endregion
 
 #region Properties
@@ -118,6 +124,12 @@ public class IncrementalCreator : ScriptableObject
 
 #region Editor Only
 #if UNITY_EDITOR
+    private void OnValidate()
+    {
+		incremental_health_cost   = incremental_health.TotalCost();
+		incremental_stamina_cost  = incremental_stamina.TotalCost();
+		incremental_currency_cost = incremental_currency.TotalCost();
+	}
 #endif
 #endregion
 }
