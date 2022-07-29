@@ -115,7 +115,7 @@ MonoBehaviour:
   colorMode: 0
   colorEnd: {r: 1, g: 1, b: 1, a: 1}
   start: {x: -2, y: 0, z: 0}
-  end: {x: -1.25, y: 0, z: 0}
+  end: {x: -1.5, y: 0, z: 0}
   thickness: 0.05
   thicknessSpace: 0
   endCaps: 2

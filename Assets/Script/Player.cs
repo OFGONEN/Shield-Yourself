@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
 	StringBuilder stringBuilder = new StringBuilder( 16 );
 	const string suffix = " .ft";
 
+	float travel_text_cooldown;
 #endregion
 
 #region Properties
@@ -317,11 +318,16 @@ public class Player : MonoBehaviour
 
 	void SetPlayerTravelText()
 	{
-		stringBuilder.Clear();
-		stringBuilder.Append( notif_player_travel.sharedValue.ToString( "f" ) );
-		stringBuilder.Append( suffix );
+		if( Time.time > travel_text_cooldown )
+		{
+			travel_text_cooldown = Time.time + GameSettings.Instance.player_travel_text_update_rate;
 
-		player_travel_text.text = stringBuilder.ToString();
+			stringBuilder.Clear();
+			stringBuilder.Append( notif_player_travel.sharedValue.ToString( "f" ) );
+			stringBuilder.Append( suffix );
+
+			player_travel_text.text = stringBuilder.ToString();
+		}
 	}
 #endregion
 
