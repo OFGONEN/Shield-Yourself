@@ -6,10 +6,22 @@ namespace FFStudio
 {
 	public class RecycledSequence
 	{
+		public int ID;
+
 		UnityMessage onComplete;
 		Sequence sequence;
 
 		public Sequence Sequence => sequence;
+
+		public RecycledSequence()
+		{
+			ID = 0;
+		}
+
+		public RecycledSequence( int id )
+		{
+			ID = id;
+		}
 
 		public Sequence Recycle( UnityMessage onComplete )
 		{
@@ -41,9 +53,24 @@ namespace FFStudio
 			return sequence;
 		}
 
+		public bool IsPlaying()
+		{
+			return sequence != null && sequence.IsPlaying();
+		}
+
 		public void Kill()
 		{
 			sequence = sequence.KillProper();
+		}
+
+		public void Pause()
+		{
+			sequence?.Pause();
+		}
+
+		public void Resume()
+		{
+			sequence?.Play();
 		}
 
 		void OnComplete_Safe()

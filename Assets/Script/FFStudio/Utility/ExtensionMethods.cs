@@ -13,6 +13,14 @@ namespace FFStudio
 	{
 		public static readonly string SAVE_PATH = Application.persistentDataPath + "/Saves/";
 
+		// Keys
+		public static readonly string Currency_Key = "currency";
+		public static readonly string Skybox_Key = "skybox";
+		public static readonly string ArrowTrigger_Key = "arrow_trigger";
+		public static readonly string PlayerTravel_Key = "player_travel";
+		public static readonly string Outpost_Key = "outpost";
+		public static readonly string HighestPoint_Key = "highest";
+
 		static List< Transform > baseModelBones   = new List< Transform >( 96 );
 		static List< Transform > targetModelBones = new List< Transform >( 96 );
 
@@ -456,6 +464,11 @@ namespace FFStudio
 		public static float ReturnClamped( this Vector2 vector, float value )
 		{
 			return Mathf.Clamp( value, vector.x, vector.y );
+		}
+
+		public static float ReturnEasedValue( this Vector2 vector, float ratio, Ease ease )
+		{
+			return DOVirtual.EasedValue( vector.x, vector.y, ratio, ease );
 		}
 	}
 }

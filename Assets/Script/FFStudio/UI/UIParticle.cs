@@ -13,8 +13,10 @@ namespace FFStudio
 #region Fields
 		[ Title( "SharedVariable" )]
 		[ SerializeField ] UIParticlePool pool_ui_particle;
+		[ SerializeField ] TextMeshProUGUI ui_text;
 
 		RecycledSequence recycledSequence = new RecycledSequence();
+		UnityMessage onSequenceComplete;
 #endregion
 
 #region Properties
@@ -25,9 +27,12 @@ namespace FFStudio
 
 #region API
 		[ Button() ]
-		public void Spawn( Vector3 screenPositionStart, Vector3 screenPositionEnd )
+		public void Spawn( Vector3 screenPositionStart, Vector3 screenPositionEnd, string value, UnityMessage onComplete )
 		{
 			gameObject.SetActive( true );
+
+			onSequenceComplete = onComplete;
+			ui_text.text = value;
 
 			transform.position = screenPositionStart;
 			var spawnTargetPosition = screenPositionStart + Random.insideUnitCircle.ConvertV3() * GameSettings.Instance.ui_particle_spawn_width * Screen.width / 100f;
@@ -46,6 +51,7 @@ namespace FFStudio
 #region Implementation
 		void OnSequenceComplete()
 		{
+			onSequenceComplete?.Invoke();
 			pool_ui_particle.ReturnEntity( this );
 		}
 #endregion

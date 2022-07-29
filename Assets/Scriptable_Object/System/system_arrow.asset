@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5f032bb67a1c74399f89b150ddc446, type: 3}
+  m_Name: system_arrow
+  m_EditorClassIdentifier: 
+  pool_recycled_sequence: {fileID: 11400000, guid: 00e1e49622910417ea1f8659057ca4d1, type: 2}
+  pool_ui_arrow_indicator: {fileID: 11400000, guid: ea13a7e80b14df449bb73248b0ea9eb1, type: 2}
+  pool_arrow: {fileID: 11400000, guid: 8d7a76c998624f24ea024f11566e6fb3, type: 2}
+  arrow_spawn_ease: 0100000002000000080000000e000000140000000300000015000000040000000a0000001000000016000000070000000d00000013000000

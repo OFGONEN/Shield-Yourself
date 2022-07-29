@@ -196,4 +196,71 @@ namespace FFStudio
 		public Color color;
 		[ SuffixLabel( "%" ) ] public NormalizedValue threshold;
 	}
+
+	[ Serializable ]
+	public struct ArrowGroupSpawnData
+	{
+		public float arrow_group_spawn_distance;
+		public ArrowGroupData arrow_group_data;
+	}
+
+	[ Serializable ]
+	public struct ArrowData
+	{
+		public float arrow_speed;
+		public float arrow_spawn_height;
+		public float arrow_spawn_delay;
+	}
+
+	[ Serializable ]
+	public struct IncrementalStaminaData : IIncrementalData
+	{
+		[ LabelText( "Deplete Rate Duration" ) ] public float incremental_stamina_deplete;
+		[ LabelText( "Capacity Deplete Rate Duration" ) ] public float incremental_stamina_deplete_capacity;
+		[ LabelText( "Recover Rate Duration" ) ] public float incremental_stamina_recover;
+		[ LabelText( "Cost" ) ] public int incremental_stamina_cost;
+
+		public int Cost()
+		{
+			return incremental_stamina_cost;
+		}
+	}
+
+	[ Serializable ]
+	public struct IncrementalCurrecyData : IIncrementalData
+	{
+		[ LabelText( "Gain Value" ) ] public float incremental_currency_gain_value;
+		[ LabelText( "Gain Rate" ) ] public float incremental_currency_gain_rate;
+		[ LabelText( "Cost" ) ] public int incremental_currency_cost;
+
+		public int Cost()
+		{
+			return incremental_currency_cost;
+		}
+	}
+
+	[ Serializable ]
+	public struct IncrementalHealthData : IIncrementalData
+	{
+		[ LabelText( "Health Value" ) ] public float incremental_health_value;
+		[ LabelText( "Cost" ) ] public int incremental_health_cost;
+
+		public int Cost()
+		{
+			return incremental_health_cost;
+		}
+	}
+
+	[ Serializable ]
+	public struct SkyboxMaterialData
+	{
+		public Material skybox_material;
+		public Texture skybox_texture_twinkling; // _TwinklingTexture
+		public Texture skybox_texture_sun; // _SunTexture
+		public Texture skybox_texture_moon; // _MoonTexture
+		public Texture skybox_cubemap_background; // _BackgroundCubemap
+		public Texture skybox_cubemap_pattern; // _PatternCubemap
+		public Texture skybox_cubemap_starts; // _StarsCubemap
+		public Texture skybox_cubemap_clouds; // _CloudsCubemap
+	}
 }

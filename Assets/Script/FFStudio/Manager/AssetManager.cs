@@ -22,6 +22,9 @@ namespace FFStudio
 
 	[ Title( "Pool" ) ]
 		[ SerializeField ] Pool_UIPopUpText pool_UIPopUpText;
+		[ SerializeField ] PoolRecycledSequence pool_recycled_sequence;
+		[ SerializeField ] PoolArrow pool_arrow;
+		[ SerializeField ] PoolArrowGroupTrigger pool_arrow_trigger;
 #endregion
 
 #region UnityAPI
@@ -35,6 +38,10 @@ namespace FFStudio
 			Vibration.Init();
 
 			pool_UIPopUpText.InitPool( transform, false );
+			pool_recycled_sequence.InitPool();
+			pool_arrow.InitPool( transform, false );
+			// pool_arrow_trigger.InitPool( transform, false );
+
 			onAwakeEvent.Invoke();
 		}
 

@@ -33,11 +33,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerIntreraction
+  - Interaction
+  - Defence
+  - Projectile
+  - Player
   m_SortingLayers:
   - name: Default
     uniqueID: 0

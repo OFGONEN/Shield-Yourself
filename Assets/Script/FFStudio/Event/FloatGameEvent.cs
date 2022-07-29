@@ -8,5 +8,11 @@ namespace FFStudio
     public class FloatGameEvent : GameEvent
     {
         public float eventValue;
+
+        public void Raise( float value )
+        {
+			eventValue = value;
+			Raise();
+		}
     }
 }
